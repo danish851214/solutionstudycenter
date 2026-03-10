@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admissions - Solution Study Center</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+<div class="container">
+
+<div class="logo">
+SOLUTION STUDY <span>CENTER</span>
+</div>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<nav>
+<ul id="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="course.html">Courses</a></li>
+
+<li><a href="admission.html" class="active">Admissions</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</nav>
+
+</div>
+</header>
+
+<!-- ADMISSION SECTION -->
+
+<section class="admission-section">
+
+<div class="admission-container">
+
+
+
+<h2>📢 प्रवेश प्रारंभ 2026-27</h2>
+<p class="subtitle">सीमित सीटें उपलब्ध – अभी आवेदन करें</p>
+
+<div class="admission-content">
+
+<!-- Admission Form -->
+
+<div class="form-box">
+
+<h2>Student Admission Form</h2>
+
+<form id="admissionForm">
+
+<input type="text" name="name" placeholder="Student Name" required>
+
+<input type="text" name="father" placeholder="Father Name" required>
+
+<input type="text" name="class" placeholder="Class" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="email" name="email" placeholder="Email">
+
+<input type="file" id="photo" required>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+<!-- Batch Timings -->
+
+<div class="batch-section">
+
+<h3 class="batch-title">📚 कक्षा अनुसार बैच समय</h3>
+
+<div class="batch-container">
+
+<div class="batch-card">
+<div class="batch-header">कक्षा 8</div>
+<div class="batch-time">🕕 सुबह 7:00 – 9:00</div>
+<span class="batch-badge">सीटें उपलब्ध</span>
+</div>
+
+<div class="batch-card">
+<div class="batch-header">कक्षा 9</div>
+<div class="batch-time">🕕 सुबह 7:00 – 9:00</div>
+<span class="batch-badge">सीटें उपलब्ध</span>
+</div>
+
+<div class="batch-card">
+<div class="batch-header">कक्षा 10</div>
+<div class="batch-time">🕖 सुबह 6:00 – 9:00</div>
+<span class="batch-badge">सीटें उपलब्ध</span>
+</div>
+
+<div class="batch-card">
+<div class="batch-header">कक्षा 11</div>
+<div class="batch-time">🕑 दोपहर 3:00 – 4:00</div>
+<span class="batch-badge">सीटें उपलब्ध</span>
+</div>
+
+<div class="batch-card">
+<div class="batch-header">कक्षा 12</div>
+<div class="batch-time">🕔 शाम 4:00 – 5:00</div>
+<span class="batch-badge">सीटें उपलब्ध</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Demo Video -->
+
+<div class="demo-section">
+
+<h3>🎥 डेमो क्लास देखें</h3>
+
+<video class="demo-video" autoplay muted loop controls>
+
+<source src="SSC.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<!-- Results -->
+
+<div class="results-section">
+
+<h3>📊 हमारे परिणाम</h3>
+
+<div class="why-grid">
+
+<div class="result-card">95% छात्रों ने 80%+ अंक प्राप्त किए</div>
+
+<div class="result-card">100+ छात्रों ने बोर्ड परीक्षा में सफलता पाई</div>
+
+<div class="result-card">हर वर्ष टॉप रैंकर्स</div>
+
+<div class="result-card">विज्ञान में 90%+ अंक</div>
+
+<div class="result-card">गणित में शत-प्रतिशत परिणाम</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+
+<p>© 2026 Solution Study Center Mansi | All Rights Reserved</p>
+
+<div class="social-icons">
+<a href="https://www.facebook.com/share/1B5dZQDXE5/" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/solution_study_center_mansi?igsh=MTdjZTAwZG9xbDR0NQ==" class="icon insta"><i class="fab fa-instagram"></i></a>
+<a href="#" class="icon yt"><i class="fab fa-youtube"></i></a>
+<a href="https://wa.me/917903912699" class="icon wa"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+
+<a href="https://wa.me/919341033221" class="whatsapp-float" target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script>
+
+function toggleMenu() {
+
+document.getElementById("menu").classList.toggle("active");
+
+}
+
+function previewImage(event){
+
+var reader = new FileReader();
+
+reader.onload = function(){
+
+var output = document.getElementById("photoPreview");
+
+output.src = reader.result;
+
+output.style.display = "block";
+
+};
+
+reader.readAsDataURL(event.target.files[0]);
+
+}
+
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("फॉर्म सफलतापूर्वक जमा हो गया है!");
+
+this.reset();
+
+document.getElementById("photoPreview").style.display="none";
+
+});
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbyidxQXMfr-XJC7ArCCVIVA4dbM-FG_DYZ485XmW9NlPuFMJTsIFgpkWewEG6d7QyfR/exec";
+
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+var file = document.getElementById("photo").files[0];
+
+var reader = new FileReader();
+
+reader.onloadend = function(){
+
+var base64 = reader.result.split(",")[1];
+
+var formData = new FormData(e.target);
+
+formData.append("photo",base64);
+
+fetch(scriptURL,{
+method:"POST",
+body:formData
+})
+.then(res=>alert("Form Submitted Successfully"))
+.catch(err=>alert("Error"));
+
+}
+
+reader.readAsDataURL(file);
+
+});
+
+
+</script>
+
+</body>
+</html>
+

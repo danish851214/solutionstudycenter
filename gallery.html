@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Solution Study Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container">
+        <div class="logo">SOLUTION STUDY <span>CENTER</span></div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- GALLERY PAGE -->
+<section class="gallery-page">
+    <h1>Solution Study Center Gallery</h1>
+    
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button data-category="all" class="active">✨ All Events</button>
+        <button data-category="annual">🎉 Annual Day</button>
+        <button data-category="republic">🇮🇳 Republic Day</button>
+        <button data-category="quiz">🧠 Quiz Competition</button>
+        <button data-category="tour">🚌 Tour</button>
+        <button data-category="result">🏆 Results</button>
+    </div>
+    
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<!-- Fullscreen Viewer -->
+<div class="fullscreen" id="fullscreen">
+    <span id="close">✖</span>
+    <span id="prev" class="nav-btn">❮</span>
+    <img id="fullImage" src="">
+    <span id="next" class="nav-btn">❯</span>
+</div>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+
+<p>© 2026 Solution Study Center Mansi | All Rights Reserved</p>
+
+<div class="social-icons">
+<a href="https://www.facebook.com/share/1B5dZQDXE5/" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/solution_study_center_mansi?igsh=MTdjZTAwZG9xbDR0NQ==" class="icon insta"><i class="fab fa-instagram"></i></a>
+<a href="#" class="icon yt"><i class="fab fa-youtube"></i></a>
+<a href="https://wa.me/917903912699" class="icon wa"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/919341033221" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+}
+
+// Gallery Images Data
+const images = [
+    // Annual Day Images
+    { src: "1.jpg", category: "annual" },
+    { src: "2.jpg", category: "annual" },
+    { src: "3.jpg", category: "annual" },
+    { src: "4.jpg", category: "annual" },
+    { src: "5.jpg", category: "annual" },
+    { src: "6.jpg", category: "annual" },
+    { src: "7.jpg", category: "annual" },
+    { src: "8.jpg", category: "annual" },
+    { src: "9.jpg", category: "annual" },
+    
+    // Republic Day Images
+    { src: "rep1.jpg", category: "republic" },
+    { src: "rep2.jpg", category: "republic" },
+    { src: "rep3.jpg", category: "republic" },
+    { src: "rep4.jpg", category: "republic" },
+    { src: "rep5.jpg", category: "republic" },
+    { src: "rep6.jpg", category: "republic" },
+    { src: "rep7.jpg", category: "republic" },
+    
+    // Quiz Competition Images
+    { src: "quiz1.jpg", category: "quiz" },
+    { src: "quiz2.jpg", category: "quiz" },
+    { src: "quiz3.jpg", category: "quiz" },
+    { src: "quiz4.jpg", category: "quiz" },
+    { src: "quiz5.jpg", category: "quiz" },
+    { src: "quiz6.jpg", category: "quiz" },
+    { src: "quiz7.jpg", category: "quiz" },
+    { src: "quiz8.jpg", category: "quiz" },
+    
+    // Tour Images
+    { src: "tour1.jpg", category: "tour" },
+    { src: "tour2.jpg", category: "tour" },
+    { src: "tour3.jpg", category: "tour" },
+    { src: "tour4.jpg", category: "tour" },
+    { src: "tour5.jpg", category: "tour" },
+    { src: "tour6.jpg", category: "tour" },
+    { src: "tour7.jpg", category: "tour" },
+    { src: "tour8.jpg", category: "tour" },
+    { src: "tour9.jpg", category: "tour" },
+    { src: "tour10.jpg", category: "tour" },
+    { src: "tour11.jpg", category: "tour" },
+    { src: "tour12.jpg", category: "tour" },
+    
+    // Result Images
+    { src: "res1.jpg", category: "result" },
+    { src: "res2.jpg", category: "result" },
+    { src: "res3.jpg", category: "result" },
+    { src: "res4.jpg", category: "result" },
+    { src: "res5.jpg", category: "result" },
+    { src: "res6.jpg", category: "result" },
+    { src: "res7.jpg", category: "result" },
+    { src: "res8.jpg", category: "result" },
+    { src: "res9.jpg", category: "result" },
+    { src: "res10.jpg", category: "result" },
+    { src: "res11.jpg", category: "result" },
+    { src: "res12.jpg", category: "result" },
+    { src: "res13.jpg", category: "result" },
+    { src: "res14.jpg", category: "result" },
+    { src: "res15.jpg", category: "result" },
+    { src: "res16.jpg", category: "result" },
+    { src: "res17.jpg", category: "result" },
+    { src: "res18.jpg", category: "result" },
+    { src: "res19.jpg", category: "result" }
+];
+
+const galleryGrid = document.getElementById('galleryGrid');
+const buttons = document.querySelectorAll('.filter-buttons button');
+const fullscreen = document.getElementById('fullscreen');
+const fullImage = document.getElementById('fullImage');
+const closeBtn = document.getElementById('close');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let currentIndex = 0;
+let filteredImages = [];
+
+function displayImages(category) {
+    galleryGrid.innerHTML = '';
+    
+    filteredImages = category === 'all' 
+        ? images 
+        : images.filter(img => img.category === category);
+    
+    filteredImages.forEach((img, index) => {
+        const div = document.createElement('div');
+        div.classList.add('gallery-item');
+        div.innerHTML = `<img src="${img.src}" alt="Gallery Image" data-index="${index}">`;
+        galleryGrid.appendChild(div);
+    });
+    
+    // Add click event to images
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            currentIndex = parseInt(this.dataset.index);
+            fullImage.src = filteredImages[currentIndex].src;
+            fullscreen.style.display = 'flex';
+        });
+    });
+}
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        displayImages(button.dataset.category);
+    });
+});
+
+closeBtn.onclick = () => {
+    fullscreen.style.display = 'none';
+};
+
+prevBtn.onclick = () => {
+    currentIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length;
+    fullImage.src = filteredImages[currentIndex].src;
+};
+
+nextBtn.onclick = () => {
+    currentIndex = (currentIndex + 1) % filteredImages.length;
+    fullImage.src = filteredImages[currentIndex].src;
+};
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (fullscreen.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') prevBtn.click();
+        if (e.key === 'ArrowRight') nextBtn.click();
+        if (e.key === 'Escape') closeBtn.click();
+    }
+});
+
+// Initial display
+displayImages('all');
+</script>
+
+</body>
+</html>

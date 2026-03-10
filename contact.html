@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Solution Study Center</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("4XxNYr-yh9U7_nuJm"); 
+})();
+</script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="container">
+<div class="logo">SOLUTION STUDY <span>CENTER</span></div>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<nav>
+<ul id="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="course.html">Courses</a></li>
+<li><a href="admission.html">Admissions</a></li>
+<li><a href="Gallery.html">Gallery</a></li>
+<li><a href="contact.html" class="active">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+<h1>Contact Us</h1>
+<p>हमसे जुड़ें और अपने भविष्य को बेहतर बनाएं</p>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<<section class="contact-section">
+
+<div class="contact-cards">
+
+<!-- Address -->
+<div class="card">
+<a href="https://maps.google.com/?q=Sunhill Public School Mansi Khagaria Bihar 851214" target="_blank">
+<div class="icon">📍</div>
+<h3>Address</h3>
+<h4>Sunhill Public School</h4>
+<p>Nagar Panchayat Mansi Chakhusaini Ward No 12 Khagaria, Bihar 851214</p>
+</a>
+</div>
+
+<!-- Call -->
+<div class="card">
+<a href="tel:+917903912699">
+<div class="icon">📞</div>
+<h3>Call Us</h3>
+<p>+91 7903912699</p>
+</a>
+</div>
+
+<!-- Email -->
+<div class="card">
+<a href="mailto:solutionstudycenterofficial@gmail.com">
+<div class="icon">📧</div>
+<h3>Email</h3>
+<p>solutionstudycenterofficial@gmail.com</p>
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT FORM -->
+<div class="contact-form-box">
+
+<h2>Send Us A Message</h2>
+
+<form id="form">
+
+<div class="input-row">
+
+<div class="input-group">
+<label>Your Name</label>
+<input type="text" name="user_name" placeholder="Enter your name" required>
+</div>
+
+<div class="input-group">
+<label>Your Email</label>
+<input type="email" name="user_email" placeholder="Enter your email" required>
+</div>
+
+</div>
+
+
+<div class="input-group full">
+<label>Subject</label>
+<input type="text" name="subject" placeholder="Message subject here...">
+</div>
+
+
+<div class="input-group full">
+<label>Your Message</label>
+<textarea rows="5" name="message" placeholder="Write your message..."></textarea>
+</div>
+
+<button type="submit" id="button" class="send-btn">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- MAP SECTION -->
+<section class="map-section">
+
+<iframe
+src="https://www.google.com/maps?q=Sunhill+Public+School+Mansi+Khagaria+Bihar&output=embed"
+width="100%"
+height="400"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="main-footer">
+
+<p>© 2026 Solution Study Center Mansi | All Rights Reserved</p>
+
+<div class="social-icons">
+<a href="https://www.facebook.com/share/1B5dZQDXE5/" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/solution_study_center_mansi?igsh=MTdjZTAwZG9xbDR0NQ==" class="icon insta"><i class="fab fa-instagram"></i></a>
+<a href="#" class="icon yt"><i class="fab fa-youtube"></i></a>
+<a href="https://wa.me/917903912699" class="icon wa"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/917903912699" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
+
+
+<!-- EMAIL JS -->
+<script>
+
+const btn = document.getElementById("button");
+
+document.getElementById("form")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+btn.innerHTML="Sending...";
+btn.disabled=true;
+
+emailjs.sendForm(
+"service_bzezbyg",
+"template_hlnu4bc",
+this
+)
+
+.then(function(){
+
+btn.innerHTML="Sent ✅";
+document.getElementById("form").reset();
+
+setTimeout(function(){
+
+btn.innerHTML="Send Message";
+btn.disabled=false;
+
+},2000);
+
+},
+
+function(error){
+
+alert("Error: "+error.text);
+
+btn.innerHTML="Send Message";
+btn.disabled=false;
+
+});
+
+});
+
+</script>
+
+
+<!-- SMS SCRIPT -->
+<script>
+
+function contactNow(){
+
+var mobileNumber="7903912699";
+
+var message=
+"Hello Admin,\n"+
+"I want admission details.\n\n"+
+"School: Sunhill Public School";
+
+window.location.href=
+"sms:"+mobileNumber+"?body="+encodeURIComponent(message);
+
+}
+
+</script>
+
+</body>
+</html>
