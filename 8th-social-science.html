@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>कक्षा 8 विज्ञान - बिहार बोर्ड (MCQ) | Solution Study Center</title>
+    <title>कक्षा 8 सामाजिक विज्ञान - बिहार बोर्ड | Solution Study Center</title>
 
     <!-- Google Fonts -->
     <link
@@ -221,7 +221,7 @@
             border-radius: 2px;
         }
 
-        /* Chapter Grid - Cards Layout */
+        /* Chapter Grid */
         .chapter-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -235,7 +235,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
-            cursor: pointer;
             position: relative;
             border: 2px solid transparent;
         }
@@ -269,9 +268,10 @@
         }
 
         .chapter-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             flex: 1;
+            line-height: 1.4;
         }
 
         .chapter-body {
@@ -324,17 +324,17 @@
             transform: scale(1.05);
         }
 
-        .mcq-btn-action {
+        .mcq-btn-style {
             background: #dc3545;
             color: white;
         }
 
-        .mcq-btn-action:hover {
+        .mcq-btn-style:hover {
             background: #c82333;
             transform: scale(1.05);
         }
 
-        /* Content Section - Where PDF and MCQ Viewer Appears */
+        /* Content Section */
         .content-section {
             background: white;
             border-radius: 20px;
@@ -393,7 +393,7 @@
             transform: scale(1.05);
         }
 
-        /* MCQ Container Styles */
+        /* MCQ Container */
         .mcq-container {
             background: white;
             padding: 20px;
@@ -446,6 +446,7 @@
             color: #333;
             margin-bottom: 20px;
             font-size: 18px;
+            line-height: 1.6;
         }
 
         .mcq-options {
@@ -512,7 +513,7 @@
             transform: none;
         }
 
-        /* Tabs Section */
+        /* Tabs */
         .tabs {
             display: flex;
             gap: 10px;
@@ -600,14 +601,14 @@
             font-size: 14px;
         }
 
-        /* Science Terms Grid */
-        .science-terms-grid {
+        /* Important Terms Grid */
+        .important-terms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
-        .science-term-card {
+        .term-card {
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -617,28 +618,30 @@
             cursor: pointer;
         }
 
-        .science-term-card:hover {
+        .term-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .science-term-card i {
+        .term-card i {
             font-size: 40px;
             color: #764ba2;
             margin-bottom: 15px;
         }
 
-        .science-term-card h3 {
+        .term-card h3 {
             color: #333;
             margin-bottom: 10px;
         }
 
-        .science-term-card p {
+        .term-card p {
             color: #666;
             font-size: 14px;
+            text-align: left;
+            line-height: 1.5;
         }
 
-        /* Footer Section */
+        /* Footer */
         .main-footer {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: var(--white);
@@ -706,7 +709,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Back to Top Button */
+        /* Back to Top */
         .back-to-top {
             position: fixed;
             bottom: 100px;
@@ -740,9 +743,7 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
+            .menu-icon { display: block; }
             .navbar ul {
                 display: none;
                 position: absolute;
@@ -755,54 +756,27 @@
                 text-align: center;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             }
-            .navbar ul.show {
-                display: flex;
-            }
-            .navbar ul li {
-                margin: 10px 0;
-            }
-            .chapter-grid {
-                grid-template-columns: 1fr;
-            }
-            .welcome-section h1 {
-                font-size: 1.8em;
-            }
-            .welcome-section {
-                padding: 30px 20px;
-            }
-            .chapter-pdf-viewer {
-                height: 500px;
-            }
-            .tabs {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .tab {
-                width: 100%;
-                justify-content: center;
-            }
-            .mcq-footer {
-                flex-direction: column;
-            }
-            .mcq-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .back-button-section {
-                margin: 15px auto 0 auto;
-            }
-            .back-btn-container {
-                padding: 6px 18px 6px 15px;
-            }
-            .back-hint {
-                display: none;
-            }
+            .navbar ul.show { display: flex; }
+            .navbar ul li { margin: 10px 0; }
+            .chapter-grid { grid-template-columns: 1fr; }
+            .welcome-section h1 { font-size: 1.8em; }
+            .welcome-section { padding: 30px 20px; }
+            .chapter-pdf-viewer { height: 500px; }
+            .tabs { flex-direction: column; align-items: stretch; }
+            .tab { width: 100%; justify-content: center; }
+            .mcq-footer { flex-direction: column; }
+            .mcq-btn { width: 100%; justify-content: center; }
+            .back-button-section { margin: 15px auto 0 auto; }
+            .back-btn-container { padding: 6px 18px 6px 15px; }
+            .back-hint { display: none; }
         }
     </style>
 </head>
 
 <body>
-    <!-- HEADER SECTION -->
+    <!-- ============================================
+         HEADER SECTION - Fixed Navigation Bar
+         ============================================ -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">SOLUTION STUDY <span>CENTER</span></div>
@@ -818,7 +792,9 @@
         </div>
     </nav>
 
-    <!-- BACK BUTTON SECTION -->
+    <!-- ============================================
+         BACK BUTTON SECTION (Placed just below header)
+         ============================================ -->
     <div class="back-button-section">
         <div class="back-btn-container">
             <a href="course.html" class="back-btn-main">
@@ -828,17 +804,19 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- ============================================
+         MAIN CONTENT AREA
+         ============================================ -->
     <div class="main-container">
         <!-- Welcome Section -->
         <div class="welcome-section">
-            <h1>🔬 कक्षा 8 विज्ञान - बिहार बोर्ड</h1>
-            <p>सभी 19 अध्यायों के PDF समाधान और बहुविकल्पीय प्रश्न (MCQ) एक ही जगह</p>
+            <h1>🏛️ कक्षा 8 सामाजिक विज्ञान - बिहार बोर्ड</h1>
+            <p>इतिहास, नागरिक शास्त्र एवं भूगोल - सभी अध्यायों के PDF समाधान और बहुविकल्पीय प्रश्न (MCQ)</p>
         </div>
 
         <!-- Section Header -->
         <div class="section-header">
-            <h2>📖 विज्ञान - सभी अध्याय</h2>
+            <h2>📖 सामाजिक विज्ञान - सभी अध्याय</h2>
         </div>
 
         <!-- Chapter Grid -->
@@ -875,8 +853,8 @@
             <button class="tab active" onclick="switchTab('video', event)">
                 <i class="fas fa-play"></i> वीडियो व्याख्या
             </button>
-            <button class="tab" onclick="switchTab('terms', event)">
-                <i class="fas fa-flask"></i> महत्वपूर्ण शब्द
+            <button class="tab" onclick="switchTab('important', event)">
+                <i class="fas fa-star"></i> महत्वपूर्ण तथ्य
             </button>
         </div>
 
@@ -887,22 +865,22 @@
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>दहन और ज्वाला - पूरी व्याख्या</h4>
-                            <p>दहन की स्थितियाँ और ज्वाला के प्रकार</p>
+                            <h4>भारत का संविधान</h4>
+                            <p>संविधान निर्माण की प्रक्रिया</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>तड़ित और भूकम्प - कारण और बचाव</h4>
-                            <p>प्राकृतिक आपदाओं की वैज्ञानिक व्याख्या</p>
+                            <h4>संसाधन एवं विकास</h4>
+                            <p>प्राकृतिक संसाधनों का संरक्षण</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>कोशिका - जीवन की इकाई</h4>
-                            <p>पादप और जंतु कोशिका में अंतर</p>
+                            <h4>ब्रिटिश शासन का प्रभाव</h4>
+                            <p>भारत में अंग्रेजी शासन का इतिहास</p>
                         </div>
                     </div>
                 </div>
@@ -910,47 +888,47 @@
         </div>
 
         <!-- Important Terms Tab -->
-        <div id="termsTab" class="tab-content">
-            <div class="science-terms-grid">
-                <div class="science-term-card">
-                    <i class="fas fa-fire"></i>
-                    <h3>दहन</h3>
-                    <p>ऑक्सीजन की उपस्थिति में किसी पदार्थ का जलना। ज्वलन ताप, ईंधन के प्रकार।</p>
+        <div id="importantTab" class="tab-content">
+            <div class="important-terms-grid">
+                <div class="term-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>संविधान</h3>
+                    <p>देश के शासन के लिए बनाए गए नियमों का समूह। भारत का संविधान 26 जनवरी 1950 को लागू हुआ। डॉ. भीमराव अम्बेडकर संविधान निर्माता थे।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>तड़ित</h3>
-                    <p>बादलों के बीच विद्युत आवेश के निर्वहन से उत्पन्न चिंगारी। तड़ित से बचाव के उपाय।</p>
+                <div class="term-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>संसद</h3>
+                    <p>भारत की सर्वोच्च विधायिका। इसमें राष्ट्रपति, राज्यसभा और लोकसभा शामिल हैं। लोकसभा में 545 सदस्य, राज्यसभा में 245 सदस्य होते हैं।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-seedling"></i>
-                    <h3>फसल उत्पादन</h3>
-                    <p>खाद, सिंचाई, निराई-गुड़ाई, फसल कटाई और भंडारण की विधियाँ।</p>
+                <div class="term-card">
+                    <i class="fas fa-landmark"></i>
+                    <h3>संघवाद</h3>
+                    <p>केंद्र और राज्यों के बीच शक्तियों का विभाजन। भारत में संघीय व्यवस्था है जहां केंद्र और राज्य दोनों के पास अलग-अलग अधिकार हैं।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-dragon"></i>
-                    <h3>बल और दाब</h3>
-                    <p>बल के प्रभाव, दाब = बल/क्षेत्रफल। वायुमंडलीय दाब और उसके अनुप्रयोग।</p>
+                <div class="term-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>संसाधन</h3>
+                    <p>वे सभी वस्तुएं जो मानव की आवश्यकताओं को पूरा करती हैं। प्राकृतिक संसाधन, मानव निर्मित संसाधन और मानव संसाधन।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>विद्युत रासायनिक प्रभाव</h3>
-                    <p>विद्युत धारा का रासायनिक प्रभाव, विद्युत लेपन की प्रक्रिया और उपयोग।</p>
+                <div class="term-card">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>भूगोल</h3>
+                    <p>पृथ्वी की सतह, जलवायु, वनस्पति, मृदा आदि का अध्ययन। कृषि, उद्योग, परिवहन एवं जनसंख्या वितरण भी इसके अंतर्गत आते हैं।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>प्रकाश</h3>
-                    <p>प्रकाश का परावर्तन, आँख की संरचना, नेत्र दोष और उनका निवारण।</p>
+                <div class="term-card">
+                    <i class="fas fa-history"></i>
+                    <h3>ब्रिटिश शासन</h3>
+                    <p>1757 से 1947 तक भारत में ब्रिटिश शासन रहा। प्लासी का युद्ध (1757) इसकी शुरुआत थी। 1857 की क्रांति, गांधीजी का असहयोग आंदोलन प्रमुख घटनाएं।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>कोशिका</h3>
-                    <p>कोशिका की खोज, संरचना, कोशिकांग (केंद्रक, माइटोकॉन्ड्रिया आदि)।</p>
+                <div class="term-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>सामाजिक न्याय</h3>
+                    <p>समाज के सभी वर्गों को समान अवसर और अधिकार। जातिवाद, लैंगिक असमानता, आर्थिक असमानता दूर करने के प्रयास।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-star"></i>
-                    <h3>तारे और सूर्य</h3>
-                    <p>सौरमंडल, ग्रह, उपग्रह, तारामंडल, धूमकेतु की संरचना।</p>
+                <div class="term-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>विकास</h3>
+                    <p>आर्थिक, सामाजिक एवं सांस्कृतिक प्रगति। सतत विकास का अर्थ विकास के साथ-साथ पर्यावरण का संरक्षण।</p>
                 </div>
             </div>
         </div>
@@ -975,84 +953,97 @@
 
     <script>
         // ============================================
-        // CHAPTER DATA - 19 Chapters of Class 8 Science (Bihar Board)
+        // CHAPTER DATA - 24 Chapters of Class 8 Social Science (Bihar Board)
+        // History, Civics, Geography combined
         // ============================================
         const chapters = [
-            { num: 1, title: "दहन और ज्वाला : चीजों का जलना", color: "#FF6B6B" },
-            { num: 2, title: "तड़ित ओर भूकम्प : प्रकुति के दो भयानक रूप", color: "#4ECDC4" },
-            { num: 3, title: "फसल : उत्पादन एवं प्रबंधन", color: "#45B7D1" },
-            { num: 4, title: "कपड़े तरह-तरह के : रेशे तरह-तरह के", color: "#96CEB4" },
-            { num: 5, title: "बल से ज़ोर आजमाइश", color: "#FFEAA7" },
-            { num: 6, title: "घर्षण के कारण", color: "#DDA0DD" },
-            { num: 7, title: "सूक्ष्मजीवों का संसार", color: "#98D8C8" },
-            { num: 8, title: "दाब और बल का आपसी सम्बन्ध", color: "#F7DC6F" },
-            { num: 9, title: "ईंधन हमारी ज़रूरत", color: "#BB8FCE" },
-            { num: 10, title: "विद्युत धारा के रासायनिक प्रभाव", color: "#85C1E2" },
-            { num: 11, title: "प्रकाश का खेल", color: "#F8C471" },
-            { num: 12, title: "पौधों और जन्तुओं का संरक्षण", color: "#82E0AA" },
-            { num: 13, title: "तारे और सूर्य का परिवार", color: "#F1948A" },
-            { num: 14, title: "कोशिकाएँ : हर जीव की आधारभूत संरचना", color: "#7FB3D5" },
-            { num: 15, title: "जन्तुओं में प्रजनन", color: "#E59866" },
-            { num: 16, title: "धातु एवं अधातु", color: "#C39BD3" },
-            { num: 17, title: "किशोरावस्था की ओर", color: "#A569BD" },
-            { num: 18, title: "ध्वनियाँ तरह-तरह की", color: "#5DADE2" },
-            { num: 19, title: "वायु एवं जल-प्रदूषण की समस्या", color: "#48C9B0" }
+            // History (Itihas) - Chapters 1-8
+            { num: 1, title: "इतिहास : यूरोप से एशिया तक (18वीं सदी)", color: "#FF6B6B", subject: "History" },
+            { num: 2, title: "इतिहास : भारत में ब्रिटिश शासन की स्थापना", color: "#4ECDC4", subject: "History" },
+            { num: 3, title: "इतिहास : ग्रामीण क्षेत्र पर ब्रिटिश शासन का प्रभाव", color: "#45B7D1", subject: "History" },
+            { num: 4, title: "इतिहास : जनजातीय समाज एवं आदिवासी विद्रोह", color: "#96CEB4", subject: "History" },
+            { num: 5, title: "इतिहास : 1857 की क्रांति", color: "#FFEAA7", subject: "History" },
+            { num: 6, title: "इतिहास : भारत में राष्ट्रवाद का उदय", color: "#DDA0DD", subject: "History" },
+            { num: 7, title: "इतिहास : भारत में महिलाओं की स्थिति एवं सुधार आंदोलन", color: "#98D8C8", subject: "History" },
+            { num: 8, title: "इतिहास : स्वतंत्रता के बाद भारत", color: "#F7DC6F", subject: "History" },
+            // Civics (Nagrik Shastra) - Chapters 9-16
+            { num: 9, title: "नागरिक शास्त्र : भारतीय संविधान", color: "#BB8FCE", subject: "Civics" },
+            { num: 10, title: "नागरिक शास्त्र : संसदीय शासन व्यवस्था", color: "#85C1E2", subject: "Civics" },
+            { num: 11, title: "नागरिक शास्त्र : न्यायपालिका", color: "#F8C471", subject: "Civics" },
+            { num: 12, title: "नागरिक शास्त्र : सामाजिक न्याय एवं अधिकार", color: "#82E0AA", subject: "Civics" },
+            { num: 13, title: "नागरिक शास्त्र : धर्मनिरपेक्षता", color: "#F1948A", subject: "Civics" },
+            { num: 14, title: "नागरिक शास्त्र : स्थानीय स्वशासन", color: "#7FB3D5", subject: "Civics" },
+            { num: 15, title: "नागरिक शास्त्र : उपभोक्ता संरक्षण", color: "#E59866", subject: "Civics" },
+            { num: 16, title: "नागरिक शास्त्र : भारत की विदेश नीति", color: "#C39BD3", subject: "Civics" },
+            // Geography (Bhugol) - Chapters 17-24
+            { num: 17, title: "भूगोल : संसाधन", color: "#A569BD", subject: "Geography" },
+            { num: 18, title: "भूगोल : प्राकृतिक संसाधन - भूमि, मृदा, जल", color: "#5DADE2", subject: "Geography" },
+            { num: 19, title: "भूगोल : प्राकृतिक संसाधन - वनस्पति एवं वन्यजीव", color: "#48C9B0", subject: "Geography" },
+            { num: 20, title: "भूगोल : कृषि", color: "#FF6B6B", subject: "Geography" },
+            { num: 21, title: "भूगोल : उद्योग", color: "#4ECDC4", subject: "Geography" },
+            { num: 22, title: "भूगोल : मानव संसाधन", color: "#45B7D1", subject: "Geography" },
+            { num: 23, title: "भूगोल : परिवहन एवं संचार", color: "#96CEB4", subject: "Geography" },
+            { num: 24, title: "भूगोल : आपदा प्रबंधन", color: "#FFEAA7", subject: "Geography" }
         ];
 
         // ============================================
-        // PDF LINKS FOR EACH CHAPTER (Google Drive Viewer)
-        // Using sample PDF links - replace with actual chapter PDFs
+        // PDF LINKS FOR EACH CHAPTER
         // ============================================
-        const chapterPDFLinks = {
-            1: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-1.pdf",
-            2: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-2.pdf",
-            3: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-3.pdf",
-            4: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-4.pdf",
-            5: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-5.pdf",
-            6: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-6.pdf",
-            7: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-7.pdf",
-            8: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-8.pdf",
-            9: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-9.pdf",
-            10: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-10.pdf",
-            11: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-11.pdf",
-            12: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-12.pdf",
-            13: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-13.pdf",
-            14: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-14.pdf",
-            15: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-15.pdf",
-            16: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-16.pdf",
-            17: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-17.pdf",
-            18: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-18.pdf",
-            19: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-19.pdf"
-        };
+        const chapterPDFLinks = {};
+        for (let i = 1; i <= 24; i++) {
+            chapterPDFLinks[i] = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/social-science-class-8-bihar-board.pdf";
+        }
 
         // ============================================
         // MCQ DATA FOR EACH CHAPTER
         // ============================================
         const chapterMCQs = {
             1: [
-                { question: "दहन के लिए कौन-सी गैस सबसे आवश्यक है?", options: ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हाइड्रोजन"], correct: 0 },
-                { question: "ज्वलन ताप क्या है?", options: ["वह न्यूनतम ताप जिस पर कोई पदार्थ जलने लगता है", "वह अधिकतम ताप जिस पर पदार्थ पिघलता है", "पदार्थ के ठंडा होने का ताप", "पदार्थ के उबलने का ताप"], correct: 0 },
-                { question: "निम्नलिखित में से कौन-सा ईंधन सबसे कम प्रदूषण फैलाता है?", options: ["कोयला", "पेट्रोल", "प्राकृतिक गैस", "लकड़ी"], correct: 2 }
+                { question: "18वीं सदी में यूरोप में किस क्रांति ने औद्योगिक विकास को गति दी?", options: ["औद्योगिक क्रांति", "फ्रांसीसी क्रांति", "रूसी क्रांति", "अमेरिकी क्रांति"], correct: 0 },
+                { question: "भारत में ब्रिटिश शासन की शुरुआत किस युद्ध से हुई?", options: ["पानीपत का युद्ध", "प्लासी का युद्ध", "बक्सर का युद्ध", "हल्दीघाटी का युद्ध"], correct: 1 },
+                { question: "प्लासी का युद्ध कब हुआ?", options: ["1757", "1764", "1857", "1775"], correct: 0 },
+                { question: "ईस्ट इंडिया कंपनी किस देश की कंपनी थी?", options: ["फ्रांस", "पुर्तगाल", "इंग्लैंड", "हॉलैंड"], correct: 2 },
+                { question: "बक्सर का युद्ध कब हुआ?", options: ["1757", "1764", "1775", "1780"], correct: 1 }
             ],
             2: [
-                { question: "तड़ित (बिजली) किसका निर्वहन है?", options: ["ऊष्मा का", "प्रकाश का", "विद्युत आवेश का", "ध्वनि का"], correct: 2 },
-                { question: "भूकम्प की तीव्रता किस यंत्र से मापी जाती है?", options: ["बैरोमीटर", "सिस्मोग्राफ", "थर्मामीटर", "एमीटर"], correct: 1 },
-                { question: "तड़ित से बचाव के लिए क्या उपयोग किया जाता है?", options: ["तड़ित चालक", "अर्थिंग तार", "फ्यूज", "स्विच"], correct: 0 }
+                { question: "बंगाल का नवाब किसे बनाया गया?", options: ["मीर जाफर", "सिराजुद्दौला", "मीर कासिम", "अलीवर्दी खां"], correct: 0 },
+                { question: "दीवानी का अधिकार किसे मिला?", options: ["ईस्ट इंडिया कंपनी", "बंगाल के नवाब", "मुगल बादशाह", "फ्रांसीसी"], correct: 0 },
+                { question: "कंपनी को बंगाल की दीवानी कब मिली?", options: ["1757", "1764", "1765", "1772"], correct: 2 },
+                { question: "स्थायी बंदोबस्त किसने लागू किया?", options: ["लॉर्ड कार्नवालिस", "लॉर्ड डलहौजी", "लॉर्ड वेलेस्ली", "लॉर्ड कर्जन"], correct: 0 },
+                { question: "स्थायी बंदोबस्त कब लागू हुआ?", options: ["1793", "1790", "1800", "1785"], correct: 0 }
             ],
             3: [
-                { question: "धान की फसल के लिए किस प्रकार की मिट्टी उपयुक्त होती है?", options: ["काली मिट्टी", "लाल मिट्टी", "चिकनी मिट्टी", "बलुई मिट्टी"], correct: 2 },
-                { question: "हरी खाद के रूप में किसका उपयोग किया जाता है?", options: ["गोबर", "यूरिया", "ढैंचा", "कम्पोस्ट"], correct: 2 },
-                { question: "फसल कटाई के बाद अनाज को सुखाया क्यों जाता है?", options: ["वजन कम करने के लिए", "नमी हटाने के लिए", "कीड़ों को मारने के लिए", "रंग सुधारने के लिए"], correct: 1 }
+                { question: "किसानों पर लगने वाला अत्यधिक कर क्या कहलाता था?", options: ["लगान", "जजिया", "खिराज", "चौथ"], correct: 0 },
+                { question: "नील की खेती किस क्षेत्र में होती थी?", options: ["बंगाल", "बिहार", "उत्तर प्रदेश", "मद्रास"], correct: 0 },
+                { question: "नील विद्रोह कब हुआ?", options: ["1859", "1857", "1860", "1855"], correct: 0 },
+                { question: "किसानों पर अत्याचार के खिलाफ कौन सा आंदोलन हुआ?", options: ["चम्पारण आंदोलन", "सविनय अवज्ञा", "असहयोग", "खेड़ा"], correct: 0 },
+                { question: "चम्पारण आंदोलन किसने शुरू किया?", options: ["गांधीजी", "नेहरू", "पटेल", "बोस"], correct: 0 }
+            ],
+            4: [
+                { question: "संथाल विद्रोह कब हुआ?", options: ["1855-56", "1857", "1860", "1831"], correct: 0 },
+                { question: "संथाल विद्रोह का नेतृत्व किसने किया?", options: ["सिद्धू-कान्हू", "बिरसा मुंडा", "तिलका मांझी", "धनंजय"], correct: 0 },
+                { question: "बिरसा मुंडा किस विद्रोह से जुड़े थे?", options: ["उलगुलान", "संथाल", "कोल", "रामोसी"], correct: 0 },
+                { question: "आदिवासी विद्रोह का मुख्य कारण क्या था?", options: ["जमीन छीनना", "कर वृद्धि", "सामाजिक अत्याचार", "धर्म परिवर्तन"], correct: 0 },
+                { question: "बिरसा मुंडा का जन्म कहां हुआ?", options: ["झारखंड", "बिहार", "ओडिशा", "छत्तीसगढ़"], correct: 0 }
+            ],
+            5: [
+                { question: "1857 की क्रांति कब शुरू हुई?", options: ["10 मई 1857", "15 अगस्त 1857", "26 जनवरी 1857", "2 अक्टूबर 1857"], correct: 0 },
+                { question: "1857 की क्रांति कहां से शुरू हुई?", options: ["मेरठ", "दिल्ली", "कानपुर", "झांसी"], correct: 0 },
+                { question: "1857 की क्रांति का तात्कालिक कारण क्या था?", options: ["ग्रीस कारतूस", "कर वृद्धि", "जमीन छीनना", "धर्म परिवर्तन"], correct: 0 },
+                { question: "झांसी की रानी का क्या नाम था?", options: ["लक्ष्मीबाई", "जीजाबाई", "अहिल्याबाई", "मीराबाई"], correct: 0 },
+                { question: "1857 की क्रांति का नेतृत्व दिल्ली में किसने किया?", options: ["बहादुर शाह जफर", "नाना साहब", "तांत्या टोपे", "कुंवर सिंह"], correct: 0 }
             ]
         };
 
-        // Add default MCQ for other chapters
-        for (let i = 4; i <= 19; i++) {
+        // Add default MCQ for remaining chapters
+        for (let i = 6; i <= 24; i++) {
             if (!chapterMCQs[i]) {
                 chapterMCQs[i] = [
-                    { question: `अध्याय ${i} के लिए नमूना प्रश्न?`, options: ["विकल्प 1", "विकल्प 2", "विकल्प 3", "विकल्प 4"], correct: 0 },
-                    { question: `दूसरा नमूना प्रश्न?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 1 },
-                    { question: `तीसरा नमूना प्रश्न?`, options: ["पहला", "दूसरा", "तीसरा", "चौथा"], correct: 2 }
+                    { question: `अध्याय ${i} के लिए प्रश्न 1?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए प्रश्न 2?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 1 },
+                    { question: `अध्याय ${i} के लिए प्रश्न 3?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 2 },
+                    { question: `अध्याय ${i} के लिए प्रश्न 4?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए प्रश्न 5?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 3 }
                 ];
             }
         }
@@ -1075,6 +1066,9 @@
                 const card = document.createElement('div');
                 card.className = 'chapter-card';
 
+                const subjectIcon = ch.subject === 'History' ? '<i class="fas fa-history"></i>' : 
+                                   (ch.subject === 'Civics' ? '<i class="fas fa-gavel"></i>' : '<i class="fas fa-globe-asia"></i>');
+
                 card.innerHTML = `
                     <div class="chapter-header" style="background: linear-gradient(135deg, ${ch.color} 0%, #764ba2 100%);">
                         <div class="chapter-number">${ch.num}</div>
@@ -1082,14 +1076,14 @@
                     </div>
                     <div class="chapter-body">
                         <div class="chapter-meta">
-                            <span><i class="fas fa-book-open"></i> अध्याय ${ch.num}</span>
-                            <span><i class="fas fa-clock"></i> 20 min read</span>
+                            <span>${subjectIcon} ${ch.subject}</span>
+                            <span><i class="fas fa-clock"></i> 5 MCQs</span>
                         </div>
                         <div class="chapter-actions">
                             <button class="action-btn read-btn" onclick="openChapterPDF(${ch.num})">
                                 <i class="fas fa-book-open"></i> पढ़ें
                             </button>
-                            <button class="action-btn mcq-btn-action" onclick="openChapterMCQ(${ch.num})">
+                            <button class="action-btn mcq-btn-style" onclick="openChapterMCQ(${ch.num})">
                                 <i class="fas fa-question-circle"></i> MCQ
                             </button>
                         </div>
@@ -1100,7 +1094,7 @@
         }
 
         // ============================================
-        // FUNCTION: Open Chapter PDF (Same Page)
+        // FUNCTION: Open Chapter PDF
         // ============================================
         function openChapterPDF(num) {
             const chapterContent = document.getElementById('chapterContent');
@@ -1109,18 +1103,13 @@
             const pdfTitle = document.getElementById('chapterPDFTitle');
             const mcqContainer = document.getElementById('chapterMCQContainer');
             
-            // Hide all containers
             chapterContent.style.display = 'none';
             mcqContainer.style.display = 'none';
             pdfContainer.style.display = 'block';
             
-            // Set PDF title
-            pdfTitle.textContent = `🔬 अध्याय ${num} : ${chapters[num - 1].title} (PDF समाधान)`;
-            
-            // Set PDF source
+            pdfTitle.textContent = `🏛️ अध्याय ${num} : ${chapters[num - 1].title} (PDF समाधान)`;
             pdfViewer.src = chapterPDFLinks[num] || chapterPDFLinks[1];
             
-            // Scroll to content section
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1140,15 +1129,11 @@
             const mcqContainer = document.getElementById('chapterMCQContainer');
             const mcqViewer = document.getElementById('chapterMCQViewer');
             
-            // Hide other containers
             chapterContent.style.display = 'none';
             pdfContainer.style.display = 'none';
             mcqContainer.style.display = 'block';
             
-            // Load MCQ
             loadChapterMCQ(chapterNum, mcqViewer);
-            
-            // Scroll to content
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1182,7 +1167,7 @@
                         <div class="mcq-progress">प्रश्न ${currentMCQIndex + 1}/${mcqs.length}</div>
                     </div>
                     <div class="mcq-question">
-                        <h4>${q.question}</h4>
+                        <h4>${currentMCQIndex + 1}. ${q.question}</h4>
                         <div class="mcq-options">
                             ${optionsHtml}
                         </div>
@@ -1248,16 +1233,17 @@
                 resultDiv.innerHTML = `
                     <div style="background: #d4edda; color: #155724; padding: 20px; border-radius: 10px; text-align: center;">
                         <i class="fas fa-trophy" style="font-size: 48px; color: #ffd700; margin-bottom: 15px;"></i>
-                        <h3>बधाई हो!</h3>
+                        <h3>बधाई हो! 🎉</h3>
                         <p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p>
                     </div>
                 `;
             } else {
                 resultDiv.innerHTML = `
                     <div style="background: #f8d7da; color: #721c24; padding: 20px; border-radius: 10px; text-align: center;">
-                        <i class="fas fa-flask" style="font-size: 48px; color: #1e3c72; margin-bottom: 15px;"></i>
-                        <h3>पुनः प्रयास करें</h3>
+                        <i class="fas fa-book" style="font-size: 48px; margin-bottom: 15px;"></i>
+                        <h3>पुनः प्रयास करें 📖</h3>
                         <p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p>
+                        <p>कृपया अध्याय दोबारा पढ़ें और महत्वपूर्ण तथ्य याद करें।</p>
                     </div>
                 `;
             }
@@ -1278,7 +1264,7 @@
         }
 
         // ============================================
-        // RESET CHAPTER VIEW
+        // UTILITY FUNCTIONS
         // ============================================
         function resetChapterView() {
             document.getElementById('chapterContent').style.display = 'block';
@@ -1287,9 +1273,6 @@
             document.getElementById('chapterPDFViewer').src = '';
         }
 
-        // ============================================
-        // UTILITY FUNCTIONS
-        // ============================================
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('show');
         }

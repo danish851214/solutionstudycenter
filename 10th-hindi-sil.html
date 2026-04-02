@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>कक्षा 8 गणित - बिहार बोर्ड | Solution Study Center</title>
+    <title>कक्षा 8 हिंदी (किसलय) - बिहार बोर्ड | Solution Study Center</title>
 
     <!-- Google Fonts -->
     <link
@@ -105,7 +105,7 @@
 
         /* ============================================
            BACK BUTTON SECTION (Below Header)
-           This button navigates to courses.html page
+           Navigates to courses.html page when clicked
            ============================================ */
         .back-button-section {
             width: 90%;
@@ -157,16 +157,7 @@
         .back-btn-container:hover .back-btn-main i {
             transform: translateX(-3px);
         }
-
-        .back-hint {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.8);
-            border-left: 1px solid rgba(255, 255, 255, 0.4);
-            padding-left: 12px;
-            margin-left: 5px;
-        }
-
-        /* ============================================
+ /* ============================================
            MAIN CONTENT STYLES
            ============================================ */
         .main-container {
@@ -378,7 +369,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Chapter PDF Viewer */
         .chapter-pdf-viewer {
             width: 100%;
             height: 700px;
@@ -587,14 +577,14 @@
             transform: none;
         }
 
-        /* Math Topics Grid (Formula Section) */
-        .math-topics-grid {
+        /* Grammar Grid */
+        .grammar-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
-        .math-topic-card {
+        .grammar-card {
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -604,23 +594,23 @@
             cursor: pointer;
         }
 
-        .math-topic-card:hover {
+        .grammar-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .math-topic-card i {
+        .grammar-card i {
             font-size: 40px;
             color: #764ba2;
             margin-bottom: 15px;
         }
 
-        .math-topic-card h3 {
+        .grammar-card h3 {
             color: #333;
             margin-bottom: 10px;
         }
 
-        .math-topic-card p {
+        .grammar-card p {
             color: #666;
             font-size: 14px;
         }
@@ -813,7 +803,7 @@
          ============================================ -->
     <div class="back-button-section">
         <div class="back-btn-container">
-            <!-- Back button as anchor tag that redirects to courses page -->
+            <!-- Back button as an anchor tag that redirects to courses page -->
             <a href="course.html" class="back-btn-main">
                 <i class="fas fa-arrow-left"></i>
                 <span>वापस जाएं</span>
@@ -823,17 +813,17 @@
 
     <!-- ============================================
          MAIN CONTENT AREA
-         ============================================ -->
+      ============================================ -->
     <div class="main-container">
         <!-- Welcome Section -->
         <div class="welcome-section">
-            <h1>📐 कक्षा 8 गणित - बिहार बोर्ड समाधान</h1>
-            <p>सभी 16 अध्यायों के समाधान, आकर्षक कार्ड व्यू में PDF के साथ</p>
+            <h1>📚 बिहार बोर्ड कक्षा 8 हिंदी (किसलय)</h1>
+            <p>सभी 23 अध्याय आकर्षक कार्ड व्यू में, PDF डाउनलोड के साथ</p>
         </div>
 
         <!-- Section Header -->
         <div class="section-header">
-            <h2>📖 गणित भाग 1 & 2 - सभी अध्याय (समाधान सहित)</h2>
+            <h2>📖 किसलय भाग 3 - सभी अध्याय</h2>
         </div>
 
         <!-- Chapter Grid - Dynamic Chapters Loaded Here -->
@@ -846,7 +836,6 @@
             <div id="chapterContent">
                 <h2>📖 अध्याय पढ़ने के लिए कार्ड पर क्लिक करें</h2>
                 <p>कृपया किसी अध्याय के कार्ड पर "पढ़ें" या "PDF" बटन पर क्लिक करें।</p>
-                <p>यहाँ आपको हर अध्याय के विस्तृत समाधान मिलेंगे।</p>
             </div>
             <!-- PDF Viewer for Chapter (Initially Hidden) -->
             <div id="chapterPDFContainer" style="display: none;">
@@ -858,16 +847,16 @@
         <!-- Tabs Section -->
         <div class="tabs">
             <button class="tab active" onclick="switchTab('video', event)">
-                <i class="fas fa-play"></i> वीडियो समाधान
+                <i class="fas fa-play"></i> वीडियो
             </button>
             <button class="tab" onclick="switchTab('pdf', event)">
                 <i class="fas fa-file-pdf"></i> पीडीएफ व्यूअर
             </button>
             <button class="tab" onclick="switchTab('quiz', event)">
-                <i class="fas fa-puzzle-piece"></i> प्रैक्टिस क्विज
+                <i class="fas fa-puzzle-piece"></i> क्विज टेस्ट
             </button>
-            <button class="tab" onclick="switchTab('formula', event)">
-                <i class="fas fa-calculator"></i> महत्वपूर्ण सूत्र
+            <button class="tab" onclick="switchTab('grammar', event)">
+                <i class="fas fa-language"></i> व्याकरण
             </button>
         </div>
 
@@ -878,22 +867,15 @@
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>परिमेय संख्याएँ - परिचय</h4>
-                            <p>परिमेय संख्याओं की आसान व्याख्या</p>
+                            <h4>तू जिन्दा है तो - व्याख्या</h4>
+                            <p>कविता का सरल भाषा में वर्णन</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>वर्ग और वर्गमूल - ट्रिक</h4>
-                            <p>वर्गमूल निकालने की शॉर्ट ट्रिक</p>
-                        </div>
-                    </div>
-                    <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
-                        <div class="video-info">
-                            <h4>क्षेत्रमिति - सूत्र और प्रश्न</h4>
-                            <p>सभी महत्वपूर्ण सूत्र एक ही वीडियो में</p>
+                            <h4>ईदगाह - प्रेमचंद</h4>
+                            <p>कहानी का रोचक वर्णन</p>
                         </div>
                     </div>
                 </div>
@@ -904,7 +886,7 @@
         <div id="pdfTab" class="tab-content">
             <div class="pdf-viewer">
                 <iframe
-                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-bihar-board-hindi-medium.pdf"
+                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.mohali.gov.in/sites/default/files/Hindi%20Digdarshika%20class%208.pdf"
                     id="pdfViewer"></iframe>
             </div>
         </div>
@@ -913,7 +895,7 @@
         <div id="quizTab" class="tab-content">
             <div class="quiz-container">
                 <div class="quiz-header">
-                    <h2><i class="fas fa-puzzle-piece"></i> गणित प्रैक्टिस क्विज</h2>
+                    <h2><i class="fas fa-puzzle-piece"></i> हिंदी क्विज</h2>
                     <div class="quiz-progress" id="quizProgress">प्रश्न 1/5</div>
                 </div>
                 <div id="quizArea"></div>
@@ -932,39 +914,15 @@
             </div>
         </div>
 
-        <!-- Formula Tab Content (Math Formulas) -->
-        <div id="formulaTab" class="tab-content">
-            <div class="math-topics-grid">
-                <div class="math-topic-card">
-                    <i class="fas fa-square-root-alt"></i>
-                    <h3>वर्ग और वर्गमूल</h3>
-                    <p>(a+b)² = a² + 2ab + b²<br>√x का मान</p>
-                </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-cube"></i>
-                    <h3>घन और घनमूल</h3>
-                    <p>(a+b)³ = a³+3a²b+3ab²+b³<br>³√x का मान</p>
-                </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>क्षेत्रमिति</h3>
-                    <p>वृत: πr²<br>आयत: लं x चौ<br>त्रिभुज: ½ x आ x ऊँ</p>
-                </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>राशियों की तुलना</h3>
-                    <p>लाभ% = (लाभ/क्रय मू) x 100<br>चक्रवृद्धि ब्याज सूत्र</p>
-                </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>आँकड़ों का प्रबंधन</h3>
-                    <p>माध्य, माध्यिका, बहुलक<br>आलेख खींचने की विधि</p>
-                </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-shapes"></i>
-                    <h3>ज्यामिति</h3>
-                    <p>चतुर्भुज के प्रकार<br>विकर्ण, कोणों के गुण</p>
-                </div>
+        <!-- Grammar Tab Content -->
+        <div id="grammarTab" class="tab-content">
+            <div class="grammar-grid">
+                <div class="grammar-card"><i class="fas fa-pencil-alt"></i><h3>संज्ञा</h3><p>नाम बताने वाले शब्द</p></div>
+                <div class="grammar-card"><i class="fas fa-running"></i><h3>क्रिया</h3><p>कार्य बताने वाले शब्द</p></div>
+                <div class="grammar-card"><i class="fas fa-star"></i><h3>विशेषण</h3><p>गुण बताने वाले शब्द</p></div>
+                <div class="grammar-card"><i class="fas fa-link"></i><h3>संधि</h3><p>शब्दों का मेल</p></div>
+                <div class="grammar-card"><i class="fas fa-random"></i><h3>समास</h3><p>संक्षिप्तीकरण</p></div>
+                <div class="grammar-card"><i class="fas fa-comment"></i><h3>मुहावरे</h3><p>लोकोक्तियाँ</p></div>
             </div>
         </div>
     </div>
@@ -993,81 +951,40 @@
          ============================================ -->
     <script>
         // ============================================
-        // CHAPTER DATA - 16 Chapters of Class 8 Maths (Bihar Board)
-        // Based on NCERT/Bihar Board curriculum
+        // CHAPTER DATA - 23 Chapters of Hindi Book
         // ============================================
         const chapters = [
-            { num: 1, title: "परिमेय संख्याएँ", color: "#FF6B6B" },
-            { num: 2, title: "एक चर वाले रैखिक समीकरण", color: "#4ECDC4" },
-            { num: 3, title: "ज्यामितीय आकृतियों की समझ", color: "#45B7D1" },
-            { num: 4, title: "आँकड़ों का प्रबंधन", color: "#96CEB4" },
-            { num: 5, title: "वर्ग और वर्गमूल", color: "#FFEAA7" },
-            { num: 6, title: "घन और घनमूल", color: "#DDA0DD" },
-            { num: 7, title: "ज्यामितीय आकृतियों की रचना", color: "#98D8C8" },
-            { num: 8, title: "राशियों की तुलना", color: "#F7DC6F" },
-            { num: 9, title: "बीजीय व्यंजक", color: "#BB8FCE" },
-            { num: 10, title: "घातांक और घात", color: "#85C1E2" },
-            { num: 11, title: "सीधा और प्रतिलोम समानुपात", color: "#F8C471" },
-            { num: 12, title: "ठोस आकारों का चित्रण", color: "#82E0AA" },
-            { num: 13, title: "क्षेत्रमिति", color: "#F1948A" },
-            { num: 14, title: "गुणनखंड", color: "#7FB3D5" },
-            { num: 15, title: "आलेखों से परिचय", color: "#E59866" },
-            { num: 16, title: "संख्याओं के साथ खेलना", color: "#C39BD3" }
+            { num: 1, title: "तू जिन्दा है तो", color: "#FF6B6B" }, { num: 2, title: "ईदगाह", color: "#4ECDC4" },
+            { num: 3, title: "कर्मवीर", color: "#45B7D1" }, { num: 4, title: "बालगोबिन भगत", color: "#96CEB4" },
+            { num: 5, title: "हुंडरू का जलप्रपात", color: "#FFEAA7" }, { num: 6, title: "बिहारी के दोहे", color: "#DDA0DD" },
+            { num: 7, title: "ठेस", color: "#98D8C8" }, { num: 8, title: "बच्चे की दुआ", color: "#F7DC6F" },
+            { num: 9, title: "अशोक का शस्त्र-त्याग", color: "#BB8FCE" }, { num: 10, title: "ईर्ष्या : तू न गई मेरे मन से", color: "#85C1E2" },
+            { num: 11, title: "कबीर के पद", color: "#F8C471" }, { num: 12, title: "विक्रमशिला", color: "#82E0AA" },
+            { num: 13, title: "दीदी की डायरी", color: "#F1948A" }, { num: 14, title: "पीपल", color: "#7FB3D5" },
+            { num: 15, title: "दीनबन्धु 'निराला'", color: "#E59866" }, { num: 16, title: "खेमा", color: "#C39BD3" },
+            { num: 17, title: "खुशबू रचते हैं हाथ", color: "#73C6B6" }, { num: 18, title: "हौसले की उड़ान", color: "#F0B27A" },
+            { num: 19, title: "जननायक कर्पुरी ठाकुर", color: "#A569BD" }, { num: 20, title: "झाँसी की रानी", color: "#5DADE2" },
+            { num: 21, title: "चिकित्सा का चक्कर", color: "#48C9B0" }, { num: 22, title: "सुदामा चरित", color: "#CD6155" },
+            { num: 23, title: "राह भटके हिरण के बच्चे", color: "#AEB6BF" }
         ];
 
         // ============================================
         // PDF LINKS FOR EACH CHAPTER (Google Drive Viewer)
-        // Using evidyarthi.in as reference source
-        // Replace these with actual chapter PDF links as needed
         // ============================================
-        const chapterPDFLinks = {
-            1: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-1.pdf",
-            2: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-2.pdf",
-            3: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-3.pdf",
-            4: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-4.pdf",
-            5: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-5.pdf",
-            6: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-6.pdf",
-            7: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-7.pdf",
-            8: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-8.pdf",
-            9: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-9.pdf",
-            10: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-10.pdf",
-            11: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-11.pdf",
-            12: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-12.pdf",
-            13: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-13.pdf",
-            14: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-14.pdf",
-            15: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-15.pdf",
-            16: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-16.pdf"
-        };
+        const chapterPDFLinks = {};
+        for(let i=1; i<=23; i++) {
+            chapterPDFLinks[i] = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.mohali.gov.in/sites/default/files/Hindi%20Digdarshika%20class%208.pdf";
+        }
 
         // ============================================
-        // QUIZ QUESTIONS DATA (Maths Practice Quiz)
+        // QUIZ QUESTIONS DATA
         // ============================================
         const questions = [
-            {
-                question: "1. (a+b)² का मान क्या होता है?",
-                options: ["a² + b²", "a² + 2ab + b²", "a² - 2ab + b²", "2a + 2b"],
-                correct: 1
-            },
-            {
-                question: "2. 144 का वर्गमूल क्या है?",
-                options: ["11", "12", "13", "14"],
-                correct: 1
-            },
-            {
-                question: "3. एक आयत का क्षेत्रफल कैसे निकालते हैं?",
-                options: ["लंबाई + चौड़ाई", "2 x (लंबाई + चौड़ाई)", "लंबाई x चौड़ाई", "लंबाई / चौड़ाई"],
-                correct: 2
-            },
-            {
-                question: "4. किसी संख्या का घनमूल निकालने का चिन्ह क्या है?",
-                options: ["√", "∛", "∑", "π"],
-                correct: 1
-            },
-            {
-                question: "5. 5² का मान क्या है?",
-                options: ["10", "15", "20", "25"],
-                correct: 3
-            }
+            { question: "1. 'ईदगाह' कहानी के लेखक कौन हैं?", options: ["प्रेमचंद", "रामवृक्ष बेनीपुरी", "जयशंकर प्रसाद", "मैथिलीशरण गुप्त"], correct: 0 },
+            { question: "2. हिन्दी किस लिपि में लिखी जाती है?", options: ["देवनागरी", "रोमन", "उर्दू", "गुरुमुखी"], correct: 0 },
+            { question: "3. संज्ञा किसे कहते हैं?", options: ["नाम बताने वाला शब्द", "कार्य बताने वाला शब्द", "गुण बताने वाला शब्द", "समय बताने वाला शब्द"], correct: 0 },
+            { question: "4. 'अ' क्या है?", options: ["व्यंजन", "स्वर", "संयुक्ताक्षर", "मात्रा"], correct: 1 },
+            { question: "5. 'पढ़ाई' शब्द में कौन सी ध्वनि है?", options: ["स्वर", "व्यंजन", "उभय", "मिश्रित"], correct: 1 }
         ];
 
         // Quiz State Variables
@@ -1080,32 +997,22 @@
         function loadChapters() {
             const grid = document.getElementById('chapterGrid');
             grid.innerHTML = '';
-
             chapters.forEach(ch => {
                 const card = document.createElement('div');
                 card.className = 'chapter-card';
-
                 card.innerHTML = `
                     <div class="chapter-header" style="background: linear-gradient(135deg, ${ch.color} 0%, #764ba2 100%);">
                         <div class="chapter-number">${ch.num}</div>
                         <div class="chapter-title">${ch.title}</div>
                     </div>
                     <div class="chapter-body">
-                        <div class="chapter-meta">
-                            <span><i class="fas fa-book-open"></i> अध्याय ${ch.num}</span>
-                            <span><i class="fas fa-clock"></i> 20 min read</span>
-                        </div>
+                        <div class="chapter-meta"><span><i class="fas fa-book-open"></i> अध्याय ${ch.num}</span><span><i class="fas fa-clock"></i> 15 min read</span></div>
                         <div class="chapter-actions">
-                            <button class="action-btn read-btn" onclick="openChapterPDF(${ch.num})">
-                                <i class="fas fa-book-open"></i> पढ़ें
-                            </button>
-                            <button class="action-btn pdf-btn" onclick="openChapterPDF(${ch.num})">
-                                <i class="fas fa-file-pdf"></i> PDF
-                            </button>
+                            <button class="action-btn read-btn" onclick="openChapterPDF(${ch.num})"><i class="fas fa-book-open"></i> पढ़ें</button>
+                            <button class="action-btn pdf-btn" onclick="openChapterPDF(${ch.num})"><i class="fas fa-file-pdf"></i> PDF</button>
                         </div>
                     </div>
                 `;
-
                 grid.appendChild(card);
             });
         }
@@ -1118,18 +1025,10 @@
             const pdfContainer = document.getElementById('chapterPDFContainer');
             const pdfViewer = document.getElementById('chapterPDFViewer');
             const pdfTitle = document.getElementById('chapterPDFTitle');
-            
-            // Hide text content and show PDF container
             chapterContent.style.display = 'none';
             pdfContainer.style.display = 'block';
-            
-            // Set PDF title with chapter info
-            pdfTitle.textContent = `📐 अध्याय ${num} : ${chapters[num - 1].title} (समाधान सहित)`;
-            
-            // Set PDF source (use default if chapter link missing)
-            pdfViewer.src = chapterPDFLinks[num] || chapterPDFLinks[1];
-            
-            // Smooth scroll to content section
+            pdfTitle.textContent = `📖 अध्याय ${num} : ${chapters[num-1].title}`;
+            pdfViewer.src = chapterPDFLinks[num];
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1139,14 +1038,14 @@
         function resetChapterView() {
             const chapterContent = document.getElementById('chapterContent');
             const pdfContainer = document.getElementById('chapterPDFContainer');
-            
             chapterContent.style.display = 'block';
             pdfContainer.style.display = 'none';
-            document.getElementById('chapterPDFViewer').src = '';
+            const pdfViewer = document.getElementById('chapterPDFViewer');
+            if(pdfViewer) pdfViewer.src = '';
         }
 
         // ============================================
-        // NOTE: Back button uses anchor tag to courses.html
+        // NOTE: Back button now uses anchor tag to courses.html
         // No separate goBack() function needed for navigation
         // The back button above is an <a href="courses.html"> tag
         // ============================================
@@ -1154,10 +1053,7 @@
         // ============================================
         // FUNCTION: Toggle Mobile Menu
         // ============================================
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
+        function toggleMenu() { document.getElementById('menu').classList.toggle('show'); }
 
         // ============================================
         // QUIZ FUNCTIONS
@@ -1165,82 +1061,33 @@
         function loadQuiz() {
             const quizArea = document.getElementById('quizArea');
             const q = questions[currentQuestion];
-
             let optionsHtml = '';
             q.options.forEach((opt, idx) => {
-                optionsHtml += `
-                    <label class="option">
-                        <input type="radio" name="q" value="${idx}" ${userAnswers[currentQuestion] === idx ? 'checked' : ''}>
-                        <span>${opt}</span>
-                    </label>
-                `;
+                optionsHtml += `<label class="option"><input type="radio" name="q" value="${idx}" ${userAnswers[currentQuestion] === idx ? 'checked' : ''}><span>${opt}</span></label>`;
             });
-
-            quizArea.innerHTML = `
-                <div class="question">
-                    <h3>${q.question}</h3>
-                    <div class="options">
-                        ${optionsHtml}
-                    </div>
-                </div>
-            `;
-
-            document.getElementById('quizProgress').textContent = `प्रश्न ${currentQuestion + 1}/${questions.length}`;
+            quizArea.innerHTML = `<div class="question"><h3>${q.question}</h3><div class="options">${optionsHtml}</div></div>`;
+            document.getElementById('quizProgress').textContent = `प्रश्न ${currentQuestion+1}/${questions.length}`;
             document.getElementById('prevBtn').disabled = currentQuestion === 0;
-            document.getElementById('nextBtn').style.display = currentQuestion === questions.length - 1 ? 'none' : 'inline-flex';
-            document.getElementById('submitBtn').style.display = currentQuestion === questions.length - 1 ? 'inline-flex' : 'none';
-
+            document.getElementById('nextBtn').style.display = currentQuestion === questions.length-1 ? 'none' : 'inline-flex';
+            document.getElementById('submitBtn').style.display = currentQuestion === questions.length-1 ? 'inline-flex' : 'none';
             document.querySelectorAll('input[name="q"]').forEach(radio => {
-                radio.addEventListener('change', function () {
-                    userAnswers[currentQuestion] = parseInt(this.value);
-                });
+                radio.addEventListener('change', function() { userAnswers[currentQuestion] = parseInt(this.value); });
             });
         }
 
-        function nextQuestion() {
-            if (currentQuestion < questions.length - 1) {
-                currentQuestion++;
-                loadQuiz();
-            }
-        }
-
-        function prevQuestion() {
-            if (currentQuestion > 0) {
-                currentQuestion--;
-                loadQuiz();
-            }
-        }
-
+        function nextQuestion() { if(currentQuestion < questions.length-1) { currentQuestion++; loadQuiz(); } }
+        function prevQuestion() { if(currentQuestion > 0) { currentQuestion--; loadQuiz(); } }
+        
         function checkQuiz() {
             let score = 0;
-            for (let i = 0; i < questions.length; i++) {
-                if (userAnswers[i] === questions[i].correct) {
-                    score++;
-                }
-            }
-
-            const percentage = (score / questions.length) * 100;
+            for(let i=0; i<questions.length; i++) if(userAnswers[i] === questions[i].correct) score++;
+            const percentage = (score/questions.length)*100;
             const resultDiv = document.getElementById('result');
             resultDiv.style.display = 'block';
-
-            if (percentage >= 60) {
-                resultDiv.innerHTML = `
-                    <div style="background: #d4edda; color: #155724; padding: 20px; border-radius: 10px; text-align: center;">
-                        <i class="fas fa-trophy" style="font-size: 48px; color: #ffd700; margin-bottom: 15px;"></i>
-                        <h3>बधाई हो!</h3>
-                        <p>आपने ${score}/${questions.length} सही उत्तर दिए (${percentage}%)</p>
-                        <p>आप गणित में अच्छे हैं! और अभ्यास करते रहें।</p>
-                    </div>
-                `;
+            if(percentage >= 60) {
+                resultDiv.innerHTML = `<div style="background:#d4edda; color:#155724; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-trophy" style="font-size:48px; color:#ffd700;"></i><h3>बधाई हो!</h3><p>आपने ${score}/${questions.length} सही उत्तर दिए (${percentage}%)</p></div>`;
             } else {
-                resultDiv.innerHTML = `
-                    <div style="background: #f8d7da; color: #721c24; padding: 20px; border-radius: 10px; text-align: center;">
-                        <i class="fas fa-calculator" style="font-size: 48px; color: #1e3c72; margin-bottom: 15px;"></i>
-                        <h3>पुनः प्रयास करें</h3>
-                        <p>आपने ${score}/${questions.length} सही उत्तर दिए (${percentage}%)</p>
-                        <p>कृपया अध्याय दोबारा पढ़ें और सूत्र याद करें।</p>
-                    </div>
-                `;
+                resultDiv.innerHTML = `<div style="background:#f8d7da; color:#721c24; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-book" style="font-size:48px;"></i><h3>पुनः प्रयास करें</h3><p>आपने ${score}/${questions.length} सही उत्तर दिए (${percentage}%)</p></div>`;
             }
         }
 
@@ -1248,37 +1095,22 @@
         // FUNCTION: Switch Between Tabs
         // ============================================
         function switchTab(tabName, event) {
-            const tabs = document.querySelectorAll('.tab');
-            const contents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach(t => t.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             event.target.classList.add('active');
-            document.getElementById(tabName + 'Tab').classList.add('active');
-            
-            // Reset chapter view when switching tabs
+            document.getElementById(tabName+'Tab').classList.add('active');
             resetChapterView();
         }
 
         // ============================================
         // BACK TO TOP FUNCTIONALITY
         // ============================================
-        window.onscroll = function () {
+        window.onscroll = function() {
             const backToTop = document.getElementById('backToTop');
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) backToTop.classList.add('show');
+            else backToTop.classList.remove('show');
         };
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
         // ============================================
         // INITIALIZE PAGE
@@ -1299,4 +1131,5 @@
         window.resetChapterView = resetChapterView;
     </script>
 </body>
+
 </html>

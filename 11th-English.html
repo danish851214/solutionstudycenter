@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 11 English (Rainbow Part 1) - बिहार बोर्ड | Solution Study Center</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ============================================
+           GLOBAL STYLES & CSS VARIABLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            --primary: #1e3c72;
+            --primary-dark: #0a2a4a;
+            --secondary: #ff9800;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background: var(--secondary);
+            color: var(--primary-dark);
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Back Button Section */
+        .back-button-section {
+            width: 90%;
+            max-width: 1400px;
+            margin: 20px auto 0 auto;
+            padding: 0 15px;
+        }
+
+        .back-btn-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 24px 8px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .back-btn-container:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-btn-main {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .back-btn-main i {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn-container:hover .back-btn-main i {
+            transform: translateX(-3px);
+        }
+
+        .back-hint {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            border-left: 1px solid rgba(255, 255, 255, 0.4);
+            padding-left: 12px;
+            margin-left: 5px;
+        }
+
+        /* Main Content */
+        .main-container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .welcome-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 40px 0 30px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: white;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* Chapter Grid */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--secondary);
+        }
+
+        .chapter-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chapter-number {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        .chapter-title {
+            font-size: 14px;
+            font-weight: 600;
+            flex: 1;
+            line-height: 1.3;
+        }
+
+        .chapter-body {
+            padding: 20px;
+        }
+
+        .chapter-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 13px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chapter-meta i {
+            margin-right: 5px;
+            color: #764ba2;
+        }
+
+        .chapter-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .book-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .book-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .solution-btn {
+            background: #fd7e14;
+            color: white;
+        }
+
+        .solution-btn:hover {
+            background: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .mcq-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .mcq-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        /* Content Section */
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #chapterContent {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        #chapterContent h2 {
+            color: #0b4d3b;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        #chapterContent p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* PDF Viewer */
+        .chapter-pdf-viewer {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-pdf-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-pdf-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        /* MCQ Container */
+        .mcq-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .chapter-mcq-viewer {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .mcq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .mcq-header h3 {
+            color: #333;
+            font-size: 22px;
+        }
+
+        .mcq-progress {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .mcq-question {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mcq-question h4 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .mcq-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mcq-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .mcq-option:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            border-color: #764ba2;
+        }
+
+        .mcq-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .mcq-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mcq-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .mcq-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .mcq-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab {
+            padding: 12px 25px;
+            background: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        /* Grammar Grid */
+        .grammar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .grammar-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .grammar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .grammar-card i {
+            font-size: 40px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .grammar-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .grammar-card p {
+            color: #666;
+            font-size: 14px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons .icon {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons .icon:hover {
+            transform: translateY(-5px) rotate(360deg);
+        }
+
+        .fb:hover { background: #1877f2; }
+        .insta:hover { background: #e1306c; }
+        .yt:hover { background: #ff0000; }
+        .wa:hover { background: #25d366; }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #20ba5c;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            font-size: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: #ffaa33;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon { display: block; }
+            .navbar ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            .navbar ul.show { display: flex; }
+            .navbar ul li { margin: 10px 0; }
+            .chapter-grid { grid-template-columns: 1fr; }
+            .welcome-section h1 { font-size: 1.8em; }
+            .welcome-section { padding: 30px 20px; }
+            .chapter-pdf-viewer { height: 500px; }
+            .tabs { flex-direction: column; align-items: stretch; }
+            .tab { width: 100%; justify-content: center; }
+            .mcq-footer { flex-direction: column; }
+            .mcq-btn { width: 100%; justify-content: center; }
+            .back-button-section { margin: 15px auto 0 auto; }
+            .back-btn-container { padding: 6px 18px 6px 15px; }
+            .back-hint { display: none; }
+            .chapter-actions { flex-direction: column; }
+            .action-btn { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">SOLUTION STUDY <span>CENTER</span></div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-button-section">
+        <div class="back-btn-container">
+            <a href="course.html" class="back-btn-main">
+                <i class="fas fa-arrow-left"></i>
+                <span>वापस जाएं</span>
+            </a>
+            <span class="back-hint">कोर्स पेज पर लौटें</span>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="welcome-section">
+            <h1>📚 कक्षा 11 English (Rainbow Part 1) - बिहार बोर्ड</h1>
+            <p>📘 Prose + Poetry + 📝 Solution PDF + ✅ MCQ + 📖 Complete English Grammar</p>
+        </div>
+
+        <div class="section-header">
+            <h2>📖 Rainbow Part 1 - सभी अध्याय (Prose & Poetry)</h2>
+        </div>
+
+        <div class="chapter-grid" id="chapterGrid"></div>
+
+        <div class="content-section" id="chapterContentSection">
+            <div id="chapterContent">
+                <h2>📖 अध्याय पढ़ने के लिए कार्ड पर क्लिक करें</h2>
+                <p>कृपया किसी अध्याय के कार्ड पर Book, Solution या MCQ बटन पर क्लिक करें।</p>
+                <p>यहाँ आपको हर अध्याय की पुस्तक PDF, हल PDF और ऑब्जेक्टिव प्रश्न (MCQ) मिलेंगे।</p>
+            </div>
+            <div id="chapterPDFContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closePDF()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
+                <h2 id="chapterPDFTitle" style="color: #0b4d3b; margin-bottom: 20px; text-align: center;"></h2>
+                <iframe class="chapter-pdf-viewer" id="chapterPDFViewer" src=""></iframe>
+            </div>
+            <div id="chapterMCQContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closeMCQ()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
+                <div id="chapterMCQViewer"></div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('video', event)">
+                <i class="fas fa-play"></i> वीडियो व्याख्या
+            </button>
+            <button class="tab" onclick="switchTab('grammar', event)">
+                <i class="fas fa-language"></i> English Grammar
+            </button>
+        </div>
+
+        <div id="videoTab" class="tab-content active">
+            <div class="video-section">
+                <div class="video-grid">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>Where the Mind is Without Fear</h4>
+                            <p>Rabindranath Tagore's famous poem explained</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>English Grammar - Complete Tenses</h4>
+                            <p>All tenses with examples and exercises</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>Nalanda: Ancient Seat of Learning</h4>
+                            <p>History and significance of Nalanda University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="grammarTab" class="tab-content">
+            <div class="grammar-grid">
+                <div class="grammar-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Tenses</h3>
+                    <p><strong>Present Tense:</strong> Simple (I eat), Continuous (I am eating), Perfect (I have eaten), Perfect Continuous (I have been eating)<br>
+                    <strong>Past Tense:</strong> Simple (I ate), Continuous (I was eating), Perfect (I had eaten), Perfect Continuous (I had been eating)<br>
+                    <strong>Future Tense:</strong> Simple (I will eat), Continuous (I will be eating), Perfect (I will have eaten), Perfect Continuous (I will have been eating)</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Active & Passive Voice</h3>
+                    <p><strong>Active:</strong> Subject + Verb + Object (Ram eats an apple)<br>
+                    <strong>Passive:</strong> Object + Helping Verb + V3 + by + Subject (An apple is eaten by Ram)<br>
+                    <strong>Rules:</strong> Object becomes subject, use appropriate form of 'be', main verb in V3.</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-quote-right"></i>
+                    <h3>Direct & Indirect Speech</h3>
+                    <p><strong>Direct:</strong> He said, "I am happy."<br>
+                    <strong>Indirect:</strong> He said that he was happy.<br>
+                    <strong>Changes:</strong> Tense change (Present→Past), Pronoun change, Time expressions change (now→then, today→that day).</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Parts of Speech</h3>
+                    <p><strong>Noun:</strong> Person, place, thing (Ram, Delhi, book)<br>
+                    <strong>Pronoun:</strong> I, you, he, she, they<br>
+                    <strong>Verb:</strong> Action word (eat, run, sleep)<br>
+                    <strong>Adjective:</strong> Describes noun (beautiful, tall)<br>
+                    <strong>Adverb:</strong> Describes verb (quickly, slowly)<br>
+                    <strong>Preposition:</strong> in, on, at, under<br>
+                    <strong>Conjunction:</strong> and, but, because<br>
+                    <strong>Interjection:</strong> Oh! Wow! Alas!</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Essay & Letter Writing</h3>
+                    <p><strong>Formal Letter:</strong> To Principal, Editor, Officials - Format: Sender's Address, Date, Receiver's Address, Subject, Salutation, Body, Complimentary Close.<br>
+                    <strong>Informal Letter:</strong> To friends, family - Friendly tone.<br>
+                    <strong>Essay Topics:</strong> Importance of Education, Pollution, Digital India, Women Empowerment, Climate Change, My School.</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-spell-check"></i>
+                    <h3>Synonyms & Antonyms</h3>
+                    <p><strong>Synonyms:</strong> Happy → Joyful, Glad, Cheerful, Delighted<br>
+                    <strong>Antonyms:</strong> Happy → Sad, Unhappy, Miserable, Sorrowful<br>
+                    <strong>Important:</strong> Beautiful → Lovely, Pretty, Attractive (Synonyms); Ugly (Antonym)<br>
+                    Big → Large, Huge, Enormous (Synonyms); Small (Antonym)</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-link"></i>
+                    <h3>Modals (Auxiliary Verbs)</h3>
+                    <p><strong>Can:</strong> Ability (I can swim), Permission (Can I go?)<br>
+                    <strong>Could:</strong> Past ability (I could run fast), Polite request (Could you help?)<br>
+                    <strong>May:</strong> Permission (May I come in?), Possibility (It may rain)<br>
+                    <strong>Might:</strong> Less possibility (She might come)<br>
+                    <strong>Should:</strong> Advice (You should study)<br>
+                    <strong>Must:</strong> Necessity (You must obey rules)<br>
+                    <strong>Would:</strong> Polite request, Habitual past</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Transformation of Sentences</h3>
+                    <p><strong>Affirmative to Negative:</strong> He is honest → He is not dishonest.<br>
+                    <strong>Assertive to Interrogative:</strong> She is beautiful → Isn't she beautiful?<br>
+                    <strong>Exclamatory to Assertive:</strong> How beautiful! → It is very beautiful.<br>
+                    <strong>Simple to Complex:</strong> He worked hard to pass → He worked hard so that he could pass.<br>
+                    <strong>Simple to Compound:</strong> He worked hard to pass → He worked hard and passed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>© 2026 Solution Study Center Mansi | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/1B5dZQDXE5/" class="icon fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/solution_study_center_mansi?igsh=MTdjZTAwZG9xbDR0NQ==" class="icon insta" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon yt" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917903912699" class="icon wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917903912699" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="back-to-top" onclick="scrollToTop()" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <script>
+        // ============================================
+        // CHAPTER DATA - Class 11 English Rainbow Part 1 (Bihar Board)
+        // Based on the reference link from evidyarthi.in
+        // ============================================
+        const chapters = [
+            // Prose Section (1-12)
+            { num: 1, title: "Animals in Prison", color: "#FF6B6B", type: "Prose" },
+            { num: 2, title: "Nalanda: Ancient Seat Of Learning", color: "#4ECDC4", type: "Prose" },
+            { num: 3, title: "A Snake in the Grass", color: "#45B7D1", type: "Prose" },
+            { num: 4, title: "The Rule of the Road", color: "#96CEB4", type: "Prose" },
+            { num: 5, title: "The Scientific Point of View", color: "#FFEAA7", type: "Prose" },
+            { num: 6, title: "I Pass The Delhi Test", color: "#DDA0DD", type: "Prose" },
+            { num: 7, title: "The Leader of Men", color: "#98D8C8", type: "Prose" },
+            { num: 8, title: "Mother India", color: "#F7DC6F", type: "Prose" },
+            { num: 9, title: "National Unity, Nation and Nationalism", color: "#BB8FCE", type: "Prose" },
+            { num: 10, title: "Dolly at the Dentist", color: "#85C1E2", type: "Prose" },
+            { num: 11, title: "The Three Vows", color: "#F8C471", type: "Prose" },
+            { num: 12, title: "Exceptional Role of Newspapers in Development", color: "#82E0AA", type: "Prose" },
+            // Poetry Section (13-22)
+            { num: 13, title: "Where The Mind Is Without Fear", color: "#F1948A", type: "Poetry" },
+            { num: 14, title: "The Marriage of True Minds", color: "#7FB3D5", type: "Poetry" },
+            { num: 15, title: "The Chimney Sweeper", color: "#E59866", type: "Poetry" },
+            { num: 16, title: "Stopping by Woods on a Snowy Evening", color: "#A569BD", type: "Poetry" },
+            { num: 17, title: "The Lamentation of The Old Pensioner", color: "#5DADE2", type: "Poetry" },
+            { num: 18, title: "Three Years She Grew", color: "#48C9B0", type: "Poetry" },
+            { num: 19, title: "Village Song", color: "#FF6B6B", type: "Poetry" },
+            { num: 20, title: "Followers", color: "#4ECDC4", type: "Poetry" },
+            { num: 21, title: "Voice of The Unwanted Girl", color: "#45B7D1", type: "Poetry" },
+            { num: 22, title: "South Delhi Murder", color: "#96CEB4", type: "Poetry" }
+        ];
+
+        // ============================================
+        // PDF LINKS - Book PDF + Solution PDF
+        // Using evidyarthi.in reference
+        // ============================================
+        const chapterBookLinks = {};
+        const chapterSolutionLinks = {};
+
+        for (let i = 1; i <= 22; i++) {
+            chapterBookLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/english-class-11-chapter-${i}.pdf`;
+            chapterSolutionLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/english-class-11-solution-chapter-${i}.pdf`;
+        }
+
+        // ============================================
+        // MCQ DATA FOR EACH CHAPTER
+        // ============================================
+        const chapterMCQs = {
+            1: [
+                { question: "Who is the author of 'Animals in Prison'?", options: ["Jawaharlal Nehru", "Mahatma Gandhi", "Rabindranath Tagore", "Sarojini Naidu"], correct: 0 },
+                { question: "What does the author describe in this essay?", options: ["Animals in zoo", "Prison life", "Nature", "Forest animals"], correct: 0 },
+                { question: "Where did the author see the animals?", options: ["In a zoo", "In a forest", "In a circus", "In a sanctuary"], correct: 0 },
+                { question: "What is the main theme of this essay?", options: ["Animal behavior", "Human behavior", "Freedom", "Prison"], correct: 2 },
+                { question: "The author compares animals to ________.", options: ["Prisoners", "Children", "Kings", "Soldiers"], correct: 0 }
+            ],
+            2: [
+                { question: "Where was Nalanda University located?", options: ["Bihar", "Uttar Pradesh", "Bengal", "Madhya Pradesh"], correct: 0 },
+                { question: "When was Nalanda University established?", options: ["5th century AD", "3rd century BC", "7th century AD", "1st century AD"], correct: 0 },
+                { question: "Who destroyed Nalanda University?", options: ["Bakhtiyar Khilji", "Mahmud Ghaznavi", "Timur", "Muhammad Ghori"], correct: 0 },
+                { question: "What subjects were taught at Nalanda?", options: ["Buddhism", "Medicine", "Astronomy", "All of these"], correct: 3 },
+                { question: "The essay highlights ________ of Nalanda.", options: ["Educational glory", "Religious importance", "Political power", "Military strength"], correct: 0 }
+            ],
+            3: [
+                { question: "Who wrote 'A Snake in the Grass'?", options: ["R.K. Narayan", "Ruskin Bond", "Mulk Raj Anand", "Premchand"], correct: 0 },
+                { question: "What is the setting of the story?", options: ["South Indian village", "North Indian city", "Bengal", "Punjab"], correct: 0 },
+                { question: "What did the family think about the snake?", options: ["It was poisonous", "It was harmless", "It was lucky", "It was a pet"], correct: 0 },
+                { question: "The story is written in a ________ tone.", options: ["Humorous", "Serious", "Tragic", "Dramatic"], correct: 0 },
+                { question: "What is the main theme of the story?", options: ["Fear and superstition", "Love", "Friendship", "Family values"], correct: 0 }
+            ],
+            4: [
+                { question: "Who wrote 'The Rule of the Road'?", options: ["A.G. Gardiner", "R.K. Narayan", "Jawaharlal Nehru", "Rabindranath Tagore"], correct: 0 },
+                { question: "What is the central idea of the essay?", options: ["Individual liberty vs public good", "Road safety", "Traffic rules", "Freedom"], correct: 0 },
+                { question: "What does the author discuss about liberty?", options: ["It has limits", "It is absolute", "It is unnecessary", "It is harmful"], correct: 0 },
+                { question: "The essay emphasizes ________.", options: ["Social responsibility", "Personal freedom", "Individual rights", "Government control"], correct: 0 },
+                { question: "What is the main theme?", options: ["Freedom with responsibility", "Absolute freedom", "Anarchy", "Dictatorship"], correct: 0 }
+            ],
+            5: [
+                { question: "Who wrote 'The Scientific Point of View'?", options: ["J.B.S. Haldane", "A.G. Gardiner", "R.K. Narayan", "Nehru"], correct: 0 },
+                { question: "What is the scientific point of view?", options: ["Rational thinking", "Superstition", "Blind faith", "Tradition"], correct: 0 },
+                { question: "The essay advocates ________.", options: ["Scientific temper", "Religious dogma", "Superstition", "Blind belief"], correct: 0 },
+                { question: "What should be the basis of decisions?", options: ["Logic and reason", "Tradition", "Religion", "Authority"], correct: 0 },
+                { question: "The author emphasizes ________.", options: ["Critical thinking", "Blind faith", "Superstition", "Rituals"], correct: 0 }
+            ],
+            13: [
+                { question: "Who wrote the poem 'Where the Mind is Without Fear'?", options: ["Rabindranath Tagore", "William Wordsworth", "John Keats", "Robert Frost"], correct: 0 },
+                { question: "What does the poet pray for?", options: ["Freedom of mind", "Wealth", "Power", "Fame"], correct: 0 },
+                { question: "The poem is from which collection?", options: ["Gitanjali", "The Golden Threshold", "The Gift of India", "My Experiments with Truth"], correct: 0 },
+                { question: "What kind of country does the poet want?", options: ["Free", "Rich", "Powerful", "Large"], correct: 0 },
+                { question: "The poet wants knowledge to be ________.", options: ["Free", "Controlled", "Limited", "Hidden"], correct: 0 }
+            ],
+            14: [
+                { question: "Who wrote 'The Marriage of True Minds'?", options: ["William Shakespeare", "John Donne", "John Milton", "Robert Browning"], correct: 0 },
+                { question: "What is the main theme of the sonnet?", options: ["True love", "War", "Nature", "Time"], correct: 0 },
+                { question: "True love is ________.", options: ["Unchanging", "Temporary", "Selfish", "Fickle"], correct: 0 },
+                { question: "What does the poet say about true love?", options: ["It never alters", "It changes with time", "It is physical", "It fades away"], correct: 0 },
+                { question: "The poem celebrates ________.", options: ["Eternal love", "Physical beauty", "Wealth", "Power"], correct: 0 }
+            ],
+            16: [
+                { question: "Who wrote 'Stopping by Woods on a Snowy Evening'?", options: ["Robert Frost", "William Wordsworth", "John Keats", "PB Shelley"], correct: 0 },
+                { question: "What season is described in the poem?", options: ["Winter", "Spring", "Summer", "Autumn"], correct: 0 },
+                { question: "The speaker stops in the woods because ________.", options: ["To enjoy the beauty", "He is lost", "He is tired", "His horse stopped"], correct: 0 },
+                { question: "What does the speaker have to do before he sleeps?", options: ["Keep promises", "Travel", "Work", "Rest"], correct: 0 },
+                { question: "The poem reflects on ________.", options: ["Life and responsibilities", "Nature's beauty", "Winter", "Travel"], correct: 0 }
+            ]
+        };
+
+        // Add default MCQ for remaining chapters
+        for (let i = 6; i <= 22; i++) {
+            if (!chapterMCQs[i] && i !== 13 && i !== 14 && i !== 16 && i !== 1 && i !== 2 && i !== 3 && i !== 4 && i !== 5) {
+                chapterMCQs[i] = [
+                    { question: `Chapter ${i} - Sample Question 1?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 0 },
+                    { question: `Chapter ${i} - Sample Question 2?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 1 },
+                    { question: `Chapter ${i} - Sample Question 3?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 2 },
+                    { question: `Chapter ${i} - Sample Question 4?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 0 },
+                    { question: `Chapter ${i} - Sample Question 5?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 3 }
+                ];
+            }
+        }
+
+        let currentChapter = 1;
+        let currentMCQIndex = 0;
+        let chapterUserAnswers = {};
+
+        function loadChapters() {
+            const grid = document.getElementById('chapterGrid');
+            grid.innerHTML = '';
+            chapters.forEach(ch => {
+                const card = document.createElement('div');
+                card.className = 'chapter-card';
+                const typeIcon = ch.type === 'Prose' ? '<i class="fas fa-book-open"></i>' : '<i class="fas fa-feather-alt"></i>';
+                card.innerHTML = `
+                    <div class="chapter-header" style="background: linear-gradient(135deg, ${ch.color} 0%, #764ba2 100%);">
+                        <div class="chapter-number">${ch.num}</div>
+                        <div class="chapter-title">${ch.title}</div>
+                    </div>
+                    <div class="chapter-body">
+                        <div class="chapter-meta">
+                            <span>${typeIcon} ${ch.type}</span>
+                            <span><i class="fas fa-check-circle"></i> 5 MCQs</span>
+                        </div>
+                        <div class="chapter-actions">
+                            <button class="action-btn book-btn" onclick="openBookPDF(${ch.num})"><i class="fas fa-book"></i> Book PDF</button>
+                            <button class="action-btn solution-btn" onclick="openSolutionPDF(${ch.num})"><i class="fas fa-file-alt"></i> Solution PDF</button>
+                            <button class="action-btn mcq-btn" onclick="openChapterMCQ(${ch.num})"><i class="fas fa-question-circle"></i> MCQ</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function openBookPDF(num) { openPDFViewer(num, chapterBookLinks[num], `${chapters[num-1].title} (Book PDF)`); }
+        function openSolutionPDF(num) { openPDFViewer(num, chapterSolutionLinks[num], `${chapters[num-1].title} (Solution PDF)`); }
+
+        function openPDFViewer(num, pdfUrl, title) {
+            document.getElementById('chapterContent').style.display = 'none';
+            document.getElementById('chapterMCQContainer').style.display = 'none';
+            document.getElementById('chapterPDFContainer').style.display = 'block';
+            document.getElementById('chapterPDFTitle').textContent = `📚 ${title}`;
+            document.getElementById('chapterPDFViewer').src = pdfUrl;
+            document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openChapterMCQ(chapterNum) {
+            currentChapter = chapterNum;
+            currentMCQIndex = 0;
+            if (!chapterUserAnswers[chapterNum]) chapterUserAnswers[chapterNum] = new Array(chapterMCQs[chapterNum].length).fill(-1);
+            document.getElementById('chapterContent').style.display = 'none';
+            document.getElementById('chapterPDFContainer').style.display = 'none';
+            document.getElementById('chapterMCQContainer').style.display = 'block';
+            loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer'));
+            document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function loadChapterMCQ(chapterNum, container) {
+            const mcqs = chapterMCQs[chapterNum];
+            if (!mcqs || mcqs.length === 0) { container.innerHTML = '<p style="text-align: center; padding: 30px;">MCQs not available.</p>'; return; }
+            const q = mcqs[currentMCQIndex];
+            const userAns = chapterUserAnswers[chapterNum][currentMCQIndex];
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                optionsHtml += `<label class="mcq-option"><input type="radio" name="chapterQ" value="${idx}" ${userAns === idx ? 'checked' : ''}><span>${opt}</span></label>`;
+            });
+            container.innerHTML = `
+                <div class="mcq-container">
+                    <div class="mcq-header"><h3><i class="fas fa-question-circle"></i> Chapter ${chapterNum} - MCQ Practice</h3><div class="mcq-progress">Question ${currentMCQIndex+1}/${mcqs.length}</div></div>
+                    <div class="mcq-question"><h4>${currentMCQIndex+1}. ${q.question}</h4><div class="mcq-options">${optionsHtml}</div></div>
+                    <div class="mcq-footer">
+                        <button class="mcq-btn" onclick="prevChapterMCQ(${chapterNum})" ${currentMCQIndex===0?'disabled':''}><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button class="mcq-btn" onclick="nextChapterMCQ(${chapterNum})" ${currentMCQIndex===mcqs.length-1?'disabled':''}>Next <i class="fas fa-arrow-right"></i></button>
+                        <button class="mcq-btn" onclick="checkChapterMCQ(${chapterNum})" id="chapterSubmitBtn" style="${currentMCQIndex===mcqs.length-1?'inline-flex':'none'}"><i class="fas fa-check"></i> Submit</button>
+                    </div>
+                    <div id="chapterResult" style="margin-top:20px; display:none;"></div>
+                </div>
+            `;
+            document.querySelectorAll('input[name="chapterQ"]').forEach(radio => {
+                radio.addEventListener('change', function() { chapterUserAnswers[chapterNum][currentMCQIndex] = parseInt(this.value); });
+            });
+        }
+
+        function prevChapterMCQ(chapterNum) { if(currentMCQIndex>0){ currentMCQIndex--; loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer')); } }
+        function nextChapterMCQ(chapterNum) { const mcqs=chapterMCQs[chapterNum]; if(currentMCQIndex<mcqs.length-1){ currentMCQIndex++; loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer')); } }
+        function checkChapterMCQ(chapterNum) {
+            const mcqs=chapterMCQs[chapterNum], answers=chapterUserAnswers[chapterNum];
+            let score=0; for(let i=0;i<mcqs.length;i++) if(answers[i]===mcqs[i].correct) score++;
+            const percentage=(score/mcqs.length)*100;
+            const resultDiv=document.getElementById('chapterResult');
+            resultDiv.style.display='block';
+            if(percentage>=60){
+                resultDiv.innerHTML=`<div style="background:#d4edda; color:#155724; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-trophy" style="font-size:48px; color:#ffd700;"></i><h3>Congratulations! 🎉</h3><p>You got ${score}/${mcqs.length} correct (${percentage}%)</p></div>`;
+            } else {
+                resultDiv.innerHTML=`<div style="background:#f8d7da; color:#721c24; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-book" style="font-size:48px;"></i><h3>Try Again! 📖</h3><p>You got ${score}/${mcqs.length} correct (${percentage}%)</p><p>Please read the chapter again carefully.</p></div>`;
+            }
+        }
+
+        function closePDF() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterPDFContainer').style.display='none'; document.getElementById('chapterPDFViewer').src=''; }
+        function closeMCQ() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterMCQContainer').style.display='none'; }
+        function resetChapterView() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterPDFContainer').style.display='none'; document.getElementById('chapterMCQContainer').style.display='none'; document.getElementById('chapterPDFViewer').src=''; }
+        function toggleMenu() { document.getElementById('menu').classList.toggle('show'); }
+        function switchTab(tabName, event) {
+            document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabName+'Tab').classList.add('active');
+            resetChapterView();
+        }
+        window.onscroll = function() { document.getElementById('backToTop').classList.toggle('show', document.body.scrollTop>200 || document.documentElement.scrollTop>200); };
+        function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
+
+        loadChapters();
+
+        window.openBookPDF = openBookPDF;
+        window.openSolutionPDF = openSolutionPDF;
+        window.openChapterMCQ = openChapterMCQ;
+        window.closePDF = closePDF;
+        window.closeMCQ = closeMCQ;
+        window.toggleMenu = toggleMenu;
+        window.switchTab = switchTab;
+        window.scrollToTop = scrollToTop;
+        window.prevChapterMCQ = prevChapterMCQ;
+        window.nextChapterMCQ = nextChapterMCQ;
+        window.checkChapterMCQ = checkChapterMCQ;
+    </script>
+</body>
+
+</html>

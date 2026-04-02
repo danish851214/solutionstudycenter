@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>कक्षा 8 विज्ञान - बिहार बोर्ड (MCQ) | Solution Study Center</title>
+    <title>कक्षा 9 विज्ञान - बिहार बोर्ड (NCERT) | Solution Study Center</title>
 
     <!-- Google Fonts -->
     <link
@@ -221,7 +221,7 @@
             border-radius: 2px;
         }
 
-        /* Chapter Grid - Cards Layout */
+        /* Chapter Grid */
         .chapter-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -235,7 +235,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
-            cursor: pointer;
             position: relative;
             border: 2px solid transparent;
         }
@@ -324,17 +323,17 @@
             transform: scale(1.05);
         }
 
-        .mcq-btn-action {
+        .mcq-btn-style {
             background: #dc3545;
             color: white;
         }
 
-        .mcq-btn-action:hover {
+        .mcq-btn-style:hover {
             background: #c82333;
             transform: scale(1.05);
         }
 
-        /* Content Section - Where PDF and MCQ Viewer Appears */
+        /* Content Section */
         .content-section {
             background: white;
             border-radius: 20px;
@@ -393,7 +392,7 @@
             transform: scale(1.05);
         }
 
-        /* MCQ Container Styles */
+        /* MCQ Container */
         .mcq-container {
             background: white;
             padding: 20px;
@@ -446,6 +445,7 @@
             color: #333;
             margin-bottom: 20px;
             font-size: 18px;
+            line-height: 1.6;
         }
 
         .mcq-options {
@@ -512,7 +512,7 @@
             transform: none;
         }
 
-        /* Tabs Section */
+        /* Tabs */
         .tabs {
             display: flex;
             gap: 10px;
@@ -600,14 +600,14 @@
             font-size: 14px;
         }
 
-        /* Science Terms Grid */
-        .science-terms-grid {
+        /* Important Terms Grid */
+        .important-terms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .science-term-card {
+        .term-card {
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -617,28 +617,30 @@
             cursor: pointer;
         }
 
-        .science-term-card:hover {
+        .term-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .science-term-card i {
+        .term-card i {
             font-size: 40px;
             color: #764ba2;
             margin-bottom: 15px;
         }
 
-        .science-term-card h3 {
+        .term-card h3 {
             color: #333;
             margin-bottom: 10px;
         }
 
-        .science-term-card p {
+        .term-card p {
             color: #666;
             font-size: 14px;
+            text-align: left;
+            line-height: 1.5;
         }
 
-        /* Footer Section */
+        /* Footer */
         .main-footer {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: var(--white);
@@ -706,7 +708,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Back to Top Button */
+        /* Back to Top */
         .back-to-top {
             position: fixed;
             bottom: 100px;
@@ -740,9 +742,7 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
+            .menu-icon { display: block; }
             .navbar ul {
                 display: none;
                 position: absolute;
@@ -755,54 +755,27 @@
                 text-align: center;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             }
-            .navbar ul.show {
-                display: flex;
-            }
-            .navbar ul li {
-                margin: 10px 0;
-            }
-            .chapter-grid {
-                grid-template-columns: 1fr;
-            }
-            .welcome-section h1 {
-                font-size: 1.8em;
-            }
-            .welcome-section {
-                padding: 30px 20px;
-            }
-            .chapter-pdf-viewer {
-                height: 500px;
-            }
-            .tabs {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .tab {
-                width: 100%;
-                justify-content: center;
-            }
-            .mcq-footer {
-                flex-direction: column;
-            }
-            .mcq-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .back-button-section {
-                margin: 15px auto 0 auto;
-            }
-            .back-btn-container {
-                padding: 6px 18px 6px 15px;
-            }
-            .back-hint {
-                display: none;
-            }
+            .navbar ul.show { display: flex; }
+            .navbar ul li { margin: 10px 0; }
+            .chapter-grid { grid-template-columns: 1fr; }
+            .welcome-section h1 { font-size: 1.8em; }
+            .welcome-section { padding: 30px 20px; }
+            .chapter-pdf-viewer { height: 500px; }
+            .tabs { flex-direction: column; align-items: stretch; }
+            .tab { width: 100%; justify-content: center; }
+            .mcq-footer { flex-direction: column; }
+            .mcq-btn { width: 100%; justify-content: center; }
+            .back-button-section { margin: 15px auto 0 auto; }
+            .back-btn-container { padding: 6px 18px 6px 15px; }
+            .back-hint { display: none; }
         }
     </style>
 </head>
 
 <body>
-    <!-- HEADER SECTION -->
+    <!-- ============================================
+         HEADER SECTION - Fixed Navigation Bar
+         ============================================ -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">SOLUTION STUDY <span>CENTER</span></div>
@@ -818,7 +791,9 @@
         </div>
     </nav>
 
-    <!-- BACK BUTTON SECTION -->
+    <!-- ============================================
+         BACK BUTTON SECTION (Placed just below header)
+         ============================================ -->
     <div class="back-button-section">
         <div class="back-btn-container">
             <a href="course.html" class="back-btn-main">
@@ -828,17 +803,19 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- ============================================
+         MAIN CONTENT AREA
+         ============================================ -->
     <div class="main-container">
         <!-- Welcome Section -->
         <div class="welcome-section">
-            <h1>🔬 कक्षा 8 विज्ञान - बिहार बोर्ड</h1>
-            <p>सभी 19 अध्यायों के PDF समाधान और बहुविकल्पीय प्रश्न (MCQ) एक ही जगह</p>
+            <h1>🔬 कक्षा 9 विज्ञान - बिहार बोर्ड (NCERT)</h1>
+            <p>भौतिकी, रसायन विज्ञान एवं जीव विज्ञान - सभी 15 अध्यायों के PDF समाधान और MCQ</p>
         </div>
 
         <!-- Section Header -->
         <div class="section-header">
-            <h2>📖 विज्ञान - सभी अध्याय</h2>
+            <h2>📖 विज्ञान - सभी अध्याय (समाधान सहित)</h2>
         </div>
 
         <!-- Chapter Grid -->
@@ -875,8 +852,8 @@
             <button class="tab active" onclick="switchTab('video', event)">
                 <i class="fas fa-play"></i> वीडियो व्याख्या
             </button>
-            <button class="tab" onclick="switchTab('terms', event)">
-                <i class="fas fa-flask"></i> महत्वपूर्ण शब्द
+            <button class="tab" onclick="switchTab('important', event)">
+                <i class="fas fa-flask"></i> महत्वपूर्ण तथ्य
             </button>
         </div>
 
@@ -887,22 +864,22 @@
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>दहन और ज्वाला - पूरी व्याख्या</h4>
-                            <p>दहन की स्थितियाँ और ज्वाला के प्रकार</p>
+                            <h4>पदार्थ की अवस्थाएँ</h4>
+                            <p>ठोस, द्रव, गैस - गुण और अंतर</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>तड़ित और भूकम्प - कारण और बचाव</h4>
-                            <p>प्राकृतिक आपदाओं की वैज्ञानिक व्याख्या</p>
+                            <h4>गति के नियम</h4>
+                            <p>न्यूटन के तीन नियम - आसान व्याख्या</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
                         <div class="video-info">
                             <h4>कोशिका - जीवन की इकाई</h4>
-                            <p>पादप और जंतु कोशिका में अंतर</p>
+                            <p>पादप एवं जंतु कोशिका की संरचना</p>
                         </div>
                     </div>
                 </div>
@@ -910,47 +887,48 @@
         </div>
 
         <!-- Important Terms Tab -->
-        <div id="termsTab" class="tab-content">
-            <div class="science-terms-grid">
-                <div class="science-term-card">
-                    <i class="fas fa-fire"></i>
-                    <h3>दहन</h3>
-                    <p>ऑक्सीजन की उपस्थिति में किसी पदार्थ का जलना। ज्वलन ताप, ईंधन के प्रकार।</p>
+        <div id="importantTab" class="tab-content">
+            <div class="important-terms-grid">
+                <div class="term-card">
+                    <i class="fas fa-atom"></i>
+                    <h3>परमाणु एवं अणु</h3>
+                    <p>परमाणु द्रव्यमान = प्रोटॉन + न्यूट्रॉन<br>
+                    अणु द्रव्यमान = सभी परमाणुओं के द्रव्यमान का योग<br>
+                    मोल = 6.022 × 10²³ कण</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>तड़ित</h3>
-                    <p>बादलों के बीच विद्युत आवेश के निर्वहन से उत्पन्न चिंगारी। तड़ित से बचाव के उपाय।</p>
+                <div class="term-card">
+                    <i class="fas fa-car"></i>
+                    <h3>गति के नियम</h3>
+                    <p>प्रथम नियम: जड़त्व का नियम<br>
+                    द्वितीय नियम: F = m × a<br>
+                    तृतीय नियम: क्रिया-प्रतिक्रिया</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-seedling"></i>
-                    <h3>फसल उत्पादन</h3>
-                    <p>खाद, सिंचाई, निराई-गुड़ाई, फसल कटाई और भंडारण की विधियाँ।</p>
+                <div class="term-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>जीवन की मौलिक इकाई</h3>
+                    <p>कोशिका की खोज: रॉबर्ट हुक (1665)<br>
+                    कोशिकांग: केन्द्रक, माइटोकॉन्ड्रिया, राइबोसोम, गॉल्जीकाय<br>
+                    पादप कोशिका में कोशिका भित्ति एवं हरितलवक पाये जाते हैं।</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-dragon"></i>
-                    <h3>बल और दाब</h3>
-                    <p>बल के प्रभाव, दाब = बल/क्षेत्रफल। वायुमंडलीय दाब और उसके अनुप्रयोग।</p>
+                <div class="term-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>ऊतक</h3>
+                    <p>पादप ऊतक: सरल ऊतक (पैरेन्काइमा, कोलेन्काइमा, स्क्लेरेन्काइमा), संवहन ऊतक (जाइलम, फ्लोएम)<br>
+                    जंतु ऊतक: उपकला, संयोजी, पेशीय, तंत्रिका</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>विद्युत रासायनिक प्रभाव</h3>
-                    <p>विद्युत धारा का रासायनिक प्रभाव, विद्युत लेपन की प्रक्रिया और उपयोग।</p>
+                <div class="term-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>रोग एवं स्वास्थ्य</h3>
+                    <p>संक्रामक रोग: जीवाणु, विषाणु, कवक, प्रोटोजोआ से फैलते हैं<br>
+                    प्रतिरक्षा प्रणाली: रोगों से लड़ने की क्षमता<br>
+                    स्वास्थ्य: शारीरिक, मानसिक एवं सामाजिक रूप से पूर्ण स्वस्थता</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>प्रकाश</h3>
-                    <p>प्रकाश का परावर्तन, आँख की संरचना, नेत्र दोष और उनका निवारण।</p>
-                </div>
-                <div class="science-term-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>कोशिका</h3>
-                    <p>कोशिका की खोज, संरचना, कोशिकांग (केंद्रक, माइटोकॉन्ड्रिया आदि)।</p>
-                </div>
-                <div class="science-term-card">
-                    <i class="fas fa-star"></i>
-                    <h3>तारे और सूर्य</h3>
-                    <p>सौरमंडल, ग्रह, उपग्रह, तारामंडल, धूमकेतु की संरचना।</p>
+                <div class="term-card">
+                    <i class="fas fa-water"></i>
+                    <h3>प्राकृतिक संसाधन</h3>
+                    <p>जल संरक्षण: वर्षा जल संचयन<br>
+                    वायु प्रदूषण: CO₂, SO₂, NO₂ जैसी गैसों का उत्सर्जन<br>
+                    जैव विविधता: पौधों एवं जंतुओं की विविधता</p>
                 </div>
             </div>
         </div>
@@ -975,84 +953,86 @@
 
     <script>
         // ============================================
-        // CHAPTER DATA - 19 Chapters of Class 8 Science (Bihar Board)
+        // CHAPTER DATA - Class 9 Science (NCERT/Bihar Board)
+        // Based on the reference link from evidyarthi.in
         // ============================================
         const chapters = [
-            { num: 1, title: "दहन और ज्वाला : चीजों का जलना", color: "#FF6B6B" },
-            { num: 2, title: "तड़ित ओर भूकम्प : प्रकुति के दो भयानक रूप", color: "#4ECDC4" },
-            { num: 3, title: "फसल : उत्पादन एवं प्रबंधन", color: "#45B7D1" },
-            { num: 4, title: "कपड़े तरह-तरह के : रेशे तरह-तरह के", color: "#96CEB4" },
-            { num: 5, title: "बल से ज़ोर आजमाइश", color: "#FFEAA7" },
-            { num: 6, title: "घर्षण के कारण", color: "#DDA0DD" },
-            { num: 7, title: "सूक्ष्मजीवों का संसार", color: "#98D8C8" },
-            { num: 8, title: "दाब और बल का आपसी सम्बन्ध", color: "#F7DC6F" },
-            { num: 9, title: "ईंधन हमारी ज़रूरत", color: "#BB8FCE" },
-            { num: 10, title: "विद्युत धारा के रासायनिक प्रभाव", color: "#85C1E2" },
-            { num: 11, title: "प्रकाश का खेल", color: "#F8C471" },
-            { num: 12, title: "पौधों और जन्तुओं का संरक्षण", color: "#82E0AA" },
-            { num: 13, title: "तारे और सूर्य का परिवार", color: "#F1948A" },
-            { num: 14, title: "कोशिकाएँ : हर जीव की आधारभूत संरचना", color: "#7FB3D5" },
-            { num: 15, title: "जन्तुओं में प्रजनन", color: "#E59866" },
-            { num: 16, title: "धातु एवं अधातु", color: "#C39BD3" },
-            { num: 17, title: "किशोरावस्था की ओर", color: "#A569BD" },
-            { num: 18, title: "ध्वनियाँ तरह-तरह की", color: "#5DADE2" },
-            { num: 19, title: "वायु एवं जल-प्रदूषण की समस्या", color: "#48C9B0" }
+            { num: 1, title: "हमारे आस-पास के पदार्थ", color: "#FF6B6B", subject: "Chemistry" },
+            { num: 2, title: "क्या हमारे आस-पास के पदार्थ शुद्ध हैं", color: "#4ECDC4", subject: "Chemistry" },
+            { num: 3, title: "परमाणु एवं अणु", color: "#45B7D1", subject: "Chemistry" },
+            { num: 4, title: "परमाणु की संरचना", color: "#96CEB4", subject: "Chemistry" },
+            { num: 5, title: "जीवन की मौलिक इकाई", color: "#FFEAA7", subject: "Biology" },
+            { num: 6, title: "ऊतक", color: "#DDA0DD", subject: "Biology" },
+            { num: 7, title: "जीवों में विविधता", color: "#98D8C8", subject: "Biology" },
+            { num: 8, title: "गति", color: "#F7DC6F", subject: "Physics" },
+            { num: 9, title: "बल एवं गति के नियम", color: "#BB8FCE", subject: "Physics" },
+            { num: 10, title: "गुरुत्वाकर्षण", color: "#85C1E2", subject: "Physics" },
+            { num: 11, title: "कार्य एवं ऊर्जा", color: "#F8C471", subject: "Physics" },
+            { num: 12, title: "ध्वनि", color: "#82E0AA", subject: "Physics" },
+            { num: 13, title: "हम बीमार क्यों होते हैं", color: "#F1948A", subject: "Biology" },
+            { num: 14, title: "प्राकृतिक संपदा", color: "#7FB3D5", subject: "Environmental" },
+            { num: 15, title: "खाद्य संसाधनों में सुधार", color: "#E59866", subject: "Biology" }
         ];
 
         // ============================================
-        // PDF LINKS FOR EACH CHAPTER (Google Drive Viewer)
-        // Using sample PDF links - replace with actual chapter PDFs
+        // PDF LINKS FOR EACH CHAPTER
+        // Using the reference link from evidyarthi.in
         // ============================================
-        const chapterPDFLinks = {
-            1: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-1.pdf",
-            2: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-2.pdf",
-            3: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-3.pdf",
-            4: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-4.pdf",
-            5: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-5.pdf",
-            6: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-6.pdf",
-            7: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-7.pdf",
-            8: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-8.pdf",
-            9: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-9.pdf",
-            10: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-10.pdf",
-            11: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-11.pdf",
-            12: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-12.pdf",
-            13: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-13.pdf",
-            14: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-14.pdf",
-            15: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-15.pdf",
-            16: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-16.pdf",
-            17: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-17.pdf",
-            18: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-18.pdf",
-            19: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-19.pdf"
-        };
+        const chapterPDFLinks = {};
+        for (let i = 1; i <= 15; i++) {
+            chapterPDFLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-9-chapter-${i}.pdf`;
+        }
 
         // ============================================
         // MCQ DATA FOR EACH CHAPTER
         // ============================================
         const chapterMCQs = {
             1: [
-                { question: "दहन के लिए कौन-सी गैस सबसे आवश्यक है?", options: ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हाइड्रोजन"], correct: 0 },
-                { question: "ज्वलन ताप क्या है?", options: ["वह न्यूनतम ताप जिस पर कोई पदार्थ जलने लगता है", "वह अधिकतम ताप जिस पर पदार्थ पिघलता है", "पदार्थ के ठंडा होने का ताप", "पदार्थ के उबलने का ताप"], correct: 0 },
-                { question: "निम्नलिखित में से कौन-सा ईंधन सबसे कम प्रदूषण फैलाता है?", options: ["कोयला", "पेट्रोल", "प्राकृतिक गैस", "लकड़ी"], correct: 2 }
+                { question: "पदार्थ की कौन-सी अवस्था में निश्चित आयतन होता है किन्तु निश्चित आकार नहीं होता?", options: ["ठोस", "द्रव", "गैस", "प्लाज्मा"], correct: 1 },
+                { question: "वाष्पीकरण किस तापमान पर होता है?", options: ["क्वथनांक पर", "हिमांक पर", "किसी भी तापमान पर", "केवल 100°C पर"], correct: 2 },
+                { question: "गैसों में कणों के बीच की दूरी कैसी होती है?", options: ["बहुत कम", "बहुत अधिक", "मध्यम", "शून्य"], correct: 1 },
+                { question: "निम्न में से कौन-सा पदार्थ ठोस है?", options: ["पानी", "हवा", "लकड़ी", "तेल"], correct: 2 },
+                { question: "विभिन्न अवस्थाओं में पदार्थ के कणों की व्यवस्था कैसी होती है?", options: ["समान", "भिन्न", "सदैव एक जैसी", "कभी नहीं बदलती"], correct: 1 }
             ],
             2: [
-                { question: "तड़ित (बिजली) किसका निर्वहन है?", options: ["ऊष्मा का", "प्रकाश का", "विद्युत आवेश का", "ध्वनि का"], correct: 2 },
-                { question: "भूकम्प की तीव्रता किस यंत्र से मापी जाती है?", options: ["बैरोमीटर", "सिस्मोग्राफ", "थर्मामीटर", "एमीटर"], correct: 1 },
-                { question: "तड़ित से बचाव के लिए क्या उपयोग किया जाता है?", options: ["तड़ित चालक", "अर्थिंग तार", "फ्यूज", "स्विच"], correct: 0 }
+                { question: "शुद्ध पदार्थ क्या है?", options: ["जिसमें एक ही प्रकार के कण हों", "जिसमें दो या अधिक पदार्थ हों", "जो मिश्रण हो", "जो विषमांगी हो"], correct: 0 },
+                { question: "निम्न में से कौन-सा मिश्रण का उदाहरण है?", options: ["नमक", "चीनी", "हवा", "ताँबा"], correct: 2 },
+                { question: "कोलाइडल विलयन में कणों का आकार कितना होता है?", options: ["1 nm से कम", "1-1000 nm", "1000 nm से अधिक", "1 mm से अधिक"], correct: 1 },
+                { question: "निलंबन किसे कहते हैं?", options: ["समांगी मिश्रण", "विषमांगी मिश्रण जिसमें कण दिखाई देते हैं", "शुद्ध पदार्थ", "तत्व"], correct: 1 },
+                { question: "टिंडल प्रभाव किसमें देखा जाता है?", options: ["विलयन में", "कोलाइड में", "निलंबन में", "शुद्ध पदार्थ में"], correct: 1 }
             ],
             3: [
-                { question: "धान की फसल के लिए किस प्रकार की मिट्टी उपयुक्त होती है?", options: ["काली मिट्टी", "लाल मिट्टी", "चिकनी मिट्टी", "बलुई मिट्टी"], correct: 2 },
-                { question: "हरी खाद के रूप में किसका उपयोग किया जाता है?", options: ["गोबर", "यूरिया", "ढैंचा", "कम्पोस्ट"], correct: 2 },
-                { question: "फसल कटाई के बाद अनाज को सुखाया क्यों जाता है?", options: ["वजन कम करने के लिए", "नमी हटाने के लिए", "कीड़ों को मारने के लिए", "रंग सुधारने के लिए"], correct: 1 }
+                { question: "परमाणु सिद्धांत किसने दिया?", options: ["न्यूटन", "डाल्टन", "आइंस्टीन", "बोर"], correct: 1 },
+                { question: "परमाणु द्रव्यमान इकाई किसके बराबर होती है?", options: ["हाइड्रोजन के एक परमाणु का द्रव्यमान", "कार्बन-12 के एक परमाणु के द्रव्यमान का 1/12 भाग", "ऑक्सीजन के एक परमाणु का द्रव्यमान", "नाइट्रोजन के एक परमाणु का द्रव्यमान"], correct: 1 },
+                { question: "एक मोल में कितने कण होते हैं?", options: ["6.022 × 10²³", "6.022 × 10²²", "6.022 × 10²⁴", "6.022 × 10²¹"], correct: 0 },
+                { question: "H₂O का अणु द्रव्यमान क्या है?", options: ["16 u", "18 u", "20 u", "22 u"], correct: 1 },
+                { question: "परमाणु द्रव्यमान का मात्रक क्या है?", options: ["ग्राम", "किलोग्राम", "u या amu", "मोल"], correct: 2 }
+            ],
+            4: [
+                { question: "परमाणु के नाभिक में क्या होता है?", options: ["इलेक्ट्रॉन", "प्रोटॉन और न्यूट्रॉन", "केवल प्रोटॉन", "केवल न्यूट्रॉन"], correct: 1 },
+                { question: "इलेक्ट्रॉन पर किस प्रकार का आवेश होता है?", options: ["धनात्मक", "ऋणात्मक", "उदासीन", "कोई आवेश नहीं"], correct: 1 },
+                { question: "रदरफोर्ड के प्रयोग से क्या पता चला?", options: ["परमाणु का आकार", "परमाणु में नाभिक की उपस्थिति", "इलेक्ट्रॉनों की संख्या", "प्रोटॉनों की संख्या"], correct: 1 },
+                { question: "परमाणु की त्रिज्या किस कोटि की होती है?", options: ["10⁻⁸ m", "10⁻¹⁰ m", "10⁻¹² m", "10⁻⁶ m"], correct: 1 },
+                { question: "आइसोटोप क्या होते हैं?", options: ["समान परमाणु क्रमांक भिन्न द्रव्यमान क्रमांक", "भिन्न परमाणु क्रमांक समान द्रव्यमान क्रमांक", "समान इलेक्ट्रॉन", "समान न्यूट्रॉन"], correct: 0 }
+            ],
+            5: [
+                { question: "कोशिका की खोज किसने की?", options: ["रॉबर्ट हुक", "ल्यूवेनहॉक", "डार्विन", "मेंडल"], correct: 0 },
+                { question: "कोशिका का पावर हाउस किसे कहते हैं?", options: ["केन्द्रक", "माइटोकॉन्ड्रिया", "राइबोसोम", "गॉल्जीकाय"], correct: 1 },
+                { question: "पादप कोशिका में कौन-सा अंगक नहीं पाया जाता?", options: ["केन्द्रक", "कोशिका भित्ति", "हरितलवक", "तारककाय"], correct: 3 },
+                { question: "कोशिका की आनुवंशिक सामग्री कहाँ होती है?", options: ["केन्द्रक में", "माइटोकॉन्ड्रिया में", "राइबोसोम में", "गॉल्जीकाय में"], correct: 0 },
+                { question: "जीवाणु किस प्रकार की कोशिका होती है?", options: ["प्रोकैरियोटिक", "यूकैरियोटिक", "बहुकोशिकीय", "जटिल"], correct: 0 }
             ]
         };
 
-        // Add default MCQ for other chapters
-        for (let i = 4; i <= 19; i++) {
+        // Add default MCQ for remaining chapters (6-15)
+        for (let i = 6; i <= 15; i++) {
             if (!chapterMCQs[i]) {
                 chapterMCQs[i] = [
-                    { question: `अध्याय ${i} के लिए नमूना प्रश्न?`, options: ["विकल्प 1", "विकल्प 2", "विकल्प 3", "विकल्प 4"], correct: 0 },
-                    { question: `दूसरा नमूना प्रश्न?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 1 },
-                    { question: `तीसरा नमूना प्रश्न?`, options: ["पहला", "दूसरा", "तीसरा", "चौथा"], correct: 2 }
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 1?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 2?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 1 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 3?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 2 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 4?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 5?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 3 }
                 ];
             }
         }
@@ -1075,6 +1055,10 @@
                 const card = document.createElement('div');
                 card.className = 'chapter-card';
 
+                const subjectIcon = ch.subject === 'Physics' ? '<i class="fas fa-car"></i>' : 
+                                   (ch.subject === 'Chemistry' ? '<i class="fas fa-flask"></i>' : 
+                                   (ch.subject === 'Biology' ? '<i class="fas fa-leaf"></i>' : '<i class="fas fa-globe-asia"></i>'));
+
                 card.innerHTML = `
                     <div class="chapter-header" style="background: linear-gradient(135deg, ${ch.color} 0%, #764ba2 100%);">
                         <div class="chapter-number">${ch.num}</div>
@@ -1082,14 +1066,14 @@
                     </div>
                     <div class="chapter-body">
                         <div class="chapter-meta">
-                            <span><i class="fas fa-book-open"></i> अध्याय ${ch.num}</span>
-                            <span><i class="fas fa-clock"></i> 20 min read</span>
+                            <span>${subjectIcon} ${ch.subject}</span>
+                            <span><i class="fas fa-clock"></i> 5 MCQs</span>
                         </div>
                         <div class="chapter-actions">
                             <button class="action-btn read-btn" onclick="openChapterPDF(${ch.num})">
                                 <i class="fas fa-book-open"></i> पढ़ें
                             </button>
-                            <button class="action-btn mcq-btn-action" onclick="openChapterMCQ(${ch.num})">
+                            <button class="action-btn mcq-btn-style" onclick="openChapterMCQ(${ch.num})">
                                 <i class="fas fa-question-circle"></i> MCQ
                             </button>
                         </div>
@@ -1100,7 +1084,7 @@
         }
 
         // ============================================
-        // FUNCTION: Open Chapter PDF (Same Page)
+        // FUNCTION: Open Chapter PDF
         // ============================================
         function openChapterPDF(num) {
             const chapterContent = document.getElementById('chapterContent');
@@ -1109,18 +1093,13 @@
             const pdfTitle = document.getElementById('chapterPDFTitle');
             const mcqContainer = document.getElementById('chapterMCQContainer');
             
-            // Hide all containers
             chapterContent.style.display = 'none';
             mcqContainer.style.display = 'none';
             pdfContainer.style.display = 'block';
             
-            // Set PDF title
             pdfTitle.textContent = `🔬 अध्याय ${num} : ${chapters[num - 1].title} (PDF समाधान)`;
-            
-            // Set PDF source
             pdfViewer.src = chapterPDFLinks[num] || chapterPDFLinks[1];
             
-            // Scroll to content section
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1140,15 +1119,11 @@
             const mcqContainer = document.getElementById('chapterMCQContainer');
             const mcqViewer = document.getElementById('chapterMCQViewer');
             
-            // Hide other containers
             chapterContent.style.display = 'none';
             pdfContainer.style.display = 'none';
             mcqContainer.style.display = 'block';
             
-            // Load MCQ
             loadChapterMCQ(chapterNum, mcqViewer);
-            
-            // Scroll to content
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1182,7 +1157,7 @@
                         <div class="mcq-progress">प्रश्न ${currentMCQIndex + 1}/${mcqs.length}</div>
                     </div>
                     <div class="mcq-question">
-                        <h4>${q.question}</h4>
+                        <h4>${currentMCQIndex + 1}. ${q.question}</h4>
                         <div class="mcq-options">
                             ${optionsHtml}
                         </div>
@@ -1248,16 +1223,17 @@
                 resultDiv.innerHTML = `
                     <div style="background: #d4edda; color: #155724; padding: 20px; border-radius: 10px; text-align: center;">
                         <i class="fas fa-trophy" style="font-size: 48px; color: #ffd700; margin-bottom: 15px;"></i>
-                        <h3>बधाई हो!</h3>
+                        <h3>बधाई हो! 🎉</h3>
                         <p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p>
                     </div>
                 `;
             } else {
                 resultDiv.innerHTML = `
                     <div style="background: #f8d7da; color: #721c24; padding: 20px; border-radius: 10px; text-align: center;">
-                        <i class="fas fa-flask" style="font-size: 48px; color: #1e3c72; margin-bottom: 15px;"></i>
-                        <h3>पुनः प्रयास करें</h3>
+                        <i class="fas fa-flask" style="font-size: 48px; margin-bottom: 15px;"></i>
+                        <h3>पुनः प्रयास करें 📖</h3>
                         <p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p>
+                        <p>कृपया अध्याय दोबारा पढ़ें और महत्वपूर्ण तथ्य याद करें।</p>
                     </div>
                 `;
             }
@@ -1278,7 +1254,7 @@
         }
 
         // ============================================
-        // RESET CHAPTER VIEW
+        // UTILITY FUNCTIONS
         // ============================================
         function resetChapterView() {
             document.getElementById('chapterContent').style.display = 'block';
@@ -1287,9 +1263,6 @@
             document.getElementById('chapterPDFViewer').src = '';
         }
 
-        // ============================================
-        // UTILITY FUNCTIONS
-        // ============================================
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('show');
         }

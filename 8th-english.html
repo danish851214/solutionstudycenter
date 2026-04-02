@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>कक्षा 8 गणित - बिहार बोर्ड | Solution Study Center</title>
+    <title>कक्षा 8 English - बिहार बोर्ड | Solution Study Center</title>
 
     <!-- Google Fonts -->
     <link
@@ -105,7 +105,6 @@
 
         /* ============================================
            BACK BUTTON SECTION (Below Header)
-           This button navigates to courses.html page
            ============================================ */
         .back-button-section {
             width: 90%;
@@ -133,7 +132,6 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* Back button link styling - navigates to courses page */
         .back-btn-main {
             background: none;
             border: none;
@@ -223,7 +221,7 @@
             border-radius: 2px;
         }
 
-        /* Chapter Grid - Cards Layout */
+        /* Chapter Grid */
         .chapter-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -237,7 +235,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
-            cursor: pointer;
             position: relative;
             border: 2px solid transparent;
         }
@@ -271,7 +268,7 @@
         }
 
         .chapter-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             flex: 1;
         }
@@ -326,17 +323,17 @@
             transform: scale(1.05);
         }
 
-        .pdf-btn {
+        .mcq-btn-style {
             background: #dc3545;
             color: white;
         }
 
-        .pdf-btn:hover {
+        .mcq-btn-style:hover {
             background: #c82333;
             transform: scale(1.05);
         }
 
-        /* Content Section - Where PDF Viewer Appears */
+        /* Content Section */
         .content-section {
             background: white;
             border-radius: 20px;
@@ -364,21 +361,6 @@
         }
 
         /* PDF Viewer Styles */
-        .pdf-viewer {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-        }
-
-        .pdf-viewer iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Chapter PDF Viewer */
         .chapter-pdf-viewer {
             width: 100%;
             height: 700px;
@@ -388,7 +370,149 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Tabs Section */
+        /* Close Button for PDF */
+        .close-pdf-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-pdf-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        /* MCQ Container */
+        .mcq-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .chapter-mcq-viewer {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .mcq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .mcq-header h3 {
+            color: #333;
+            font-size: 22px;
+        }
+
+        .mcq-header h3 i {
+            color: #764ba2;
+            margin-right: 10px;
+        }
+
+        .mcq-progress {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .mcq-question {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mcq-question h4 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .mcq-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mcq-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .mcq-option:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            border-color: #764ba2;
+        }
+
+        .mcq-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .mcq-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mcq-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .mcq-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .mcq-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Tabs */
         .tabs {
             display: flex;
             gap: 10px;
@@ -466,135 +590,14 @@
             padding: 15px;
         }
 
-        .video-info h4 {
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .video-info p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* Quiz Section */
-        .quiz-container {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-        }
-
-        .quiz-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .quiz-header h2 {
-            color: #333;
-            font-size: 24px;
-        }
-
-        .quiz-header h2 i {
-            color: #764ba2;
-            margin-right: 10px;
-        }
-
-        .quiz-progress {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-        }
-
-        .question {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
-
-        .question h3 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 20px;
-            background: white;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 1px solid #e0e0e0;
-        }
-
-        .option:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
-            border-color: #764ba2;
-        }
-
-        .option input[type="radio"] {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-
-        .quiz-footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 25px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .quiz-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 16px;
-        }
-
-        .quiz-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .quiz-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        /* Math Topics Grid (Formula Section) */
-        .math-topics-grid {
+        /* Grammar Grid */
+        .grammar-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
-        .math-topic-card {
+        .grammar-card {
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -604,28 +607,30 @@
             cursor: pointer;
         }
 
-        .math-topic-card:hover {
+        .grammar-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .math-topic-card i {
+        .grammar-card i {
             font-size: 40px;
             color: #764ba2;
             margin-bottom: 15px;
         }
 
-        .math-topic-card h3 {
+        .grammar-card h3 {
             color: #333;
             margin-bottom: 10px;
         }
 
-        .math-topic-card p {
+        .grammar-card p {
             color: #666;
             font-size: 14px;
+            text-align: left;
+            line-height: 1.5;
         }
 
-        /* Footer Section */
+        /* Footer */
         .main-footer {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: var(--white);
@@ -693,7 +698,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Back to Top Button */
+        /* Back to Top */
         .back-to-top {
             position: fixed;
             bottom: 100px;
@@ -725,11 +730,9 @@
             background: #ffaa33;
         }
 
-        /* Mobile Responsive Styles */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
+            .menu-icon { display: block; }
             .navbar ul {
                 display: none;
                 position: absolute;
@@ -742,48 +745,19 @@
                 text-align: center;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             }
-            .navbar ul.show {
-                display: flex;
-            }
-            .navbar ul li {
-                margin: 10px 0;
-            }
-            .chapter-grid {
-                grid-template-columns: 1fr;
-            }
-            .welcome-section h1 {
-                font-size: 1.8em;
-            }
-            .welcome-section {
-                padding: 30px 20px;
-            }
-            .chapter-pdf-viewer {
-                height: 500px;
-            }
-            .tabs {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .tab {
-                width: 100%;
-                justify-content: center;
-            }
-            .quiz-footer {
-                flex-direction: column;
-            }
-            .quiz-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .back-button-section {
-                margin: 15px auto 0 auto;
-            }
-            .back-btn-container {
-                padding: 6px 18px 6px 15px;
-            }
-            .back-hint {
-                display: none;
-            }
+            .navbar ul.show { display: flex; }
+            .navbar ul li { margin: 10px 0; }
+            .chapter-grid { grid-template-columns: 1fr; }
+            .welcome-section h1 { font-size: 1.8em; }
+            .welcome-section { padding: 30px 20px; }
+            .chapter-pdf-viewer { height: 500px; }
+            .tabs { flex-direction: column; align-items: stretch; }
+            .tab { width: 100%; justify-content: center; }
+            .mcq-footer { flex-direction: column; }
+            .mcq-btn { width: 100%; justify-content: center; }
+            .back-button-section { margin: 15px auto 0 auto; }
+            .back-btn-container { padding: 6px 18px 6px 15px; }
+            .back-hint { display: none; }
         }
     </style>
 </head>
@@ -809,11 +783,9 @@
 
     <!-- ============================================
          BACK BUTTON SECTION (Placed just below header)
-         This button navigates to courses.html page
          ============================================ -->
     <div class="back-button-section">
         <div class="back-btn-container">
-            <!-- Back button as anchor tag that redirects to courses page -->
             <a href="course.html" class="back-btn-main">
                 <i class="fas fa-arrow-left"></i>
                 <span>वापस जाएं</span>
@@ -827,151 +799,121 @@
     <div class="main-container">
         <!-- Welcome Section -->
         <div class="welcome-section">
-            <h1>📐 कक्षा 8 गणित - बिहार बोर्ड समाधान</h1>
-            <p>सभी 16 अध्यायों के समाधान, आकर्षक कार्ड व्यू में PDF के साथ</p>
+            <h1>📚 कक्षा 8 English - बिहार बोर्ड (Radiance)</h1>
+            <p>सभी अध्यायों के PDF समाधान और बहुविकल्पीय प्रश्न (MCQ) एक ही जगह</p>
         </div>
 
         <!-- Section Header -->
         <div class="section-header">
-            <h2>📖 गणित भाग 1 & 2 - सभी अध्याय (समाधान सहित)</h2>
+            <h2>📖 English (Radiance) - सभी अध्याय</h2>
         </div>
 
-        <!-- Chapter Grid - Dynamic Chapters Loaded Here -->
+        <!-- Chapter Grid -->
         <div class="chapter-grid" id="chapterGrid">
             <!-- Chapters will be loaded by JavaScript -->
         </div>
 
-        <!-- Content Section with PDF Viewer -->
+        <!-- Content Section with PDF Viewer and MCQ Viewer -->
         <div class="content-section" id="chapterContentSection">
             <div id="chapterContent">
                 <h2>📖 अध्याय पढ़ने के लिए कार्ड पर क्लिक करें</h2>
-                <p>कृपया किसी अध्याय के कार्ड पर "पढ़ें" या "PDF" बटन पर क्लिक करें।</p>
-                <p>यहाँ आपको हर अध्याय के विस्तृत समाधान मिलेंगे।</p>
+                <p>कृपया किसी अध्याय के कार्ड पर "पढ़ें" बटन पर क्लिक करें।</p>
+                <p>यहाँ आपको हर अध्याय के PDF समाधान मिलेंगे।</p>
             </div>
-            <!-- PDF Viewer for Chapter (Initially Hidden) -->
+            <!-- PDF Viewer for Chapter -->
             <div id="chapterPDFContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closePDF()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
                 <h2 id="chapterPDFTitle" style="color: #0b4d3b; margin-bottom: 20px; text-align: center;"></h2>
                 <iframe class="chapter-pdf-viewer" id="chapterPDFViewer" src=""></iframe>
             </div>
+            <!-- MCQ Viewer for Chapter -->
+            <div id="chapterMCQContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closeMCQ()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
+                <div id="chapterMCQViewer"></div>
+            </div>
         </div>
 
-        <!-- Tabs Section -->
+        <!-- Tabs -->
         <div class="tabs">
             <button class="tab active" onclick="switchTab('video', event)">
-                <i class="fas fa-play"></i> वीडियो समाधान
+                <i class="fas fa-play"></i> वीडियो व्याख्या
             </button>
-            <button class="tab" onclick="switchTab('pdf', event)">
-                <i class="fas fa-file-pdf"></i> पीडीएफ व्यूअर
-            </button>
-            <button class="tab" onclick="switchTab('quiz', event)">
-                <i class="fas fa-puzzle-piece"></i> प्रैक्टिस क्विज
-            </button>
-            <button class="tab" onclick="switchTab('formula', event)">
-                <i class="fas fa-calculator"></i> महत्वपूर्ण सूत्र
+            <button class="tab" onclick="switchTab('grammar', event)">
+                <i class="fas fa-language"></i> English Grammar
             </button>
         </div>
 
-        <!-- Video Tab Content -->
+        <!-- Video Tab -->
         <div id="videoTab" class="tab-content active">
             <div class="video-section">
                 <div class="video-grid">
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>परिमेय संख्याएँ - परिचय</h4>
-                            <p>परिमेय संख्याओं की आसान व्याख्या</p>
+                            <h4>English Grammar - Tenses</h4>
+                            <p>सभी Tenses की आसान व्याख्या</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>वर्ग और वर्गमूल - ट्रिक</h4>
-                            <p>वर्गमूल निकालने की शॉर्ट ट्रिक</p>
+                            <h4>Active & Passive Voice</h4>
+                            <p>वाच्य परिवर्तन की ट्रिक्स</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>क्षेत्रमिति - सूत्र और प्रश्न</h4>
-                            <p>सभी महत्वपूर्ण सूत्र एक ही वीडियो में</p>
+                            <h4>Story Explanation</h4>
+                            <p>पाठ की सरल व्याख्या</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- PDF Tab Content - General PDF Viewer -->
-        <div id="pdfTab" class="tab-content">
-            <div class="pdf-viewer">
-                <iframe
-                    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-bihar-board-hindi-medium.pdf"
-                    id="pdfViewer"></iframe>
-            </div>
-        </div>
-
-        <!-- Quiz Tab Content -->
-        <div id="quizTab" class="tab-content">
-            <div class="quiz-container">
-                <div class="quiz-header">
-                    <h2><i class="fas fa-puzzle-piece"></i> गणित प्रैक्टिस क्विज</h2>
-                    <div class="quiz-progress" id="quizProgress">प्रश्न 1/5</div>
+        <!-- Grammar Tab -->
+        <div id="grammarTab" class="tab-content">
+            <div class="grammar-grid">
+                <div class="grammar-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Tenses</h3>
+                    <p>Present, Past, Future - Simple, Continuous, Perfect, Perfect Continuous. Example: I eat (Present), I ate (Past), I will eat (Future).</p>
                 </div>
-                <div id="quizArea"></div>
-                <div class="quiz-footer">
-                    <button class="quiz-btn" onclick="prevQuestion()" id="prevBtn" disabled>
-                        <i class="fas fa-arrow-left"></i> पिछला
-                    </button>
-                    <button class="quiz-btn" onclick="nextQuestion()" id="nextBtn">
-                        अगला <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="quiz-btn" onclick="checkQuiz()" id="submitBtn" style="display: none;">
-                        <i class="fas fa-check"></i> जमा करें
-                    </button>
+                <div class="grammar-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Active & Passive Voice</h3>
+                    <p>Active: Subject + Verb + Object (Ram eats an apple)<br>Passive: Object + Helping Verb + V3 + by + Subject (An apple is eaten by Ram)</p>
                 </div>
-                <div id="result" style="display: none;"></div>
-            </div>
-        </div>
-
-        <!-- Formula Tab Content (Math Formulas) -->
-        <div id="formulaTab" class="tab-content">
-            <div class="math-topics-grid">
-                <div class="math-topic-card">
-                    <i class="fas fa-square-root-alt"></i>
-                    <h3>वर्ग और वर्गमूल</h3>
-                    <p>(a+b)² = a² + 2ab + b²<br>√x का मान</p>
+                <div class="grammar-card">
+                    <i class="fas fa-quote-right"></i>
+                    <h3>Direct & Indirect Speech</h3>
+                    <p>Direct: He said, "I am happy."<br>Indirect: He said that he was happy. (Reporting verb, tense, pronouns change)</p>
                 </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-cube"></i>
-                    <h3>घन और घनमूल</h3>
-                    <p>(a+b)³ = a³+3a²b+3ab²+b³<br>³√x का मान</p>
+                <div class="grammar-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Parts of Speech</h3>
+                    <p>Noun (नाम), Pronoun (सर्वनाम), Verb (क्रिया), Adjective (विशेषण), Adverb (क्रियाविशेषण), Preposition (संबंधसूचक), Conjunction (समुच्चयबोधक), Interjection (विस्मयादिबोधक)</p>
                 </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>क्षेत्रमिति</h3>
-                    <p>वृत: πr²<br>आयत: लं x चौ<br>त्रिभुज: ½ x आ x ऊँ</p>
+                <div class="grammar-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Essay & Letter Writing</h3>
+                    <p>Formal Letter: To officials, Principal; Informal Letter: To friends, family; Essay on important topics like Pollution, My School, Importance of Education</p>
                 </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>राशियों की तुलना</h3>
-                    <p>लाभ% = (लाभ/क्रय मू) x 100<br>चक्रवृद्धि ब्याज सूत्र</p>
-                </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>आँकड़ों का प्रबंधन</h3>
-                    <p>माध्य, माध्यिका, बहुलक<br>आलेख खींचने की विधि</p>
-                </div>
-                <div class="math-topic-card">
-                    <i class="fas fa-shapes"></i>
-                    <h3>ज्यामिति</h3>
-                    <p>चतुर्भुज के प्रकार<br>विकर्ण, कोणों के गुण</p>
+                <div class="grammar-card">
+                    <i class="fas fa-spell-check"></i>
+                    <h3>Synonyms & Antonyms</h3>
+                    <p>Synonyms (समानार्थी): Happy → Joyful, Glad, Cheerful<br>Antonyms (विलोम): Happy → Sad, Unhappy, Miserable</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ============================================
-         FOOTER SECTION
-         ============================================ -->
+    <!-- FOOTER -->
     <footer class="main-footer">
         <p>© 2026 Solution Study Center Mansi | All Rights Reserved</p>
         <div class="social-icons">
@@ -982,97 +924,88 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
+    <!-- WhatsApp Button -->
     <a href="https://wa.me/917903912699" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- Back to Top Button -->
+    <!-- Back to Top -->
     <div class="back-to-top" onclick="scrollToTop()" id="backToTop"><i class="fas fa-arrow-up"></i></div>
 
-    <!-- ============================================
-         JAVASCRIPT CODE
-         ============================================ -->
     <script>
         // ============================================
-        // CHAPTER DATA - 16 Chapters of Class 8 Maths (Bihar Board)
-        // Based on NCERT/Bihar Board curriculum
+        // CHAPTER DATA - 15 Chapters of Class 8 English (Radiance)
         // ============================================
         const chapters = [
-            { num: 1, title: "परिमेय संख्याएँ", color: "#FF6B6B" },
-            { num: 2, title: "एक चर वाले रैखिक समीकरण", color: "#4ECDC4" },
-            { num: 3, title: "ज्यामितीय आकृतियों की समझ", color: "#45B7D1" },
-            { num: 4, title: "आँकड़ों का प्रबंधन", color: "#96CEB4" },
-            { num: 5, title: "वर्ग और वर्गमूल", color: "#FFEAA7" },
-            { num: 6, title: "घन और घनमूल", color: "#DDA0DD" },
-            { num: 7, title: "ज्यामितीय आकृतियों की रचना", color: "#98D8C8" },
-            { num: 8, title: "राशियों की तुलना", color: "#F7DC6F" },
-            { num: 9, title: "बीजीय व्यंजक", color: "#BB8FCE" },
-            { num: 10, title: "घातांक और घात", color: "#85C1E2" },
-            { num: 11, title: "सीधा और प्रतिलोम समानुपात", color: "#F8C471" },
-            { num: 12, title: "ठोस आकारों का चित्रण", color: "#82E0AA" },
-            { num: 13, title: "क्षेत्रमिति", color: "#F1948A" },
-            { num: 14, title: "गुणनखंड", color: "#7FB3D5" },
-            { num: 15, title: "आलेखों से परिचय", color: "#E59866" },
-            { num: 16, title: "संख्याओं के साथ खेलना", color: "#C39BD3" }
+            { num: 1, title: "I Love My Country", color: "#FF6B6B" },
+            { num: 2, title: "Sleep", color: "#4ECDC4" },
+            { num: 3, title: "The Raja's Dream", color: "#45B7D1" },
+            { num: 4, title: "Ice-cream Man", color: "#96CEB4" },
+            { num: 5, title: "One Two Three", color: "#FFEAA7" },
+            { num: 6, title: "The Incredible Orphan", color: "#DDA0DD" },
+            { num: 7, title: "The Mountain and the Squirrel", color: "#98D8C8" },
+            { num: 8, title: "The Boy Who Asked for More", color: "#F7DC6F" },
+            { num: 9, title: "I Didn't Do My Homework", color: "#BB8FCE" },
+            { num: 10, title: "The Naive Friends", color: "#85C1E2" },
+            { num: 11, title: "Where the Mind is Without Fear", color: "#F8C471" },
+            { num: 12, title: "The Thank You Lord", color: "#82E0AA" },
+            { num: 13, title: "The King's Choice", color: "#F1948A" },
+            { num: 14, title: "The Story of Tea", color: "#7FB3D5" },
+            { num: 15, title: "A Cry for Freedom", color: "#E59866" }
         ];
 
         // ============================================
-        // PDF LINKS FOR EACH CHAPTER (Google Drive Viewer)
-        // Using evidyarthi.in as reference source
-        // Replace these with actual chapter PDF links as needed
+        // PDF LINKS FOR EACH CHAPTER
         // ============================================
-        const chapterPDFLinks = {
-            1: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-1.pdf",
-            2: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-2.pdf",
-            3: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-3.pdf",
-            4: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-4.pdf",
-            5: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-5.pdf",
-            6: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-6.pdf",
-            7: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-7.pdf",
-            8: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-8.pdf",
-            9: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-9.pdf",
-            10: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-10.pdf",
-            11: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-11.pdf",
-            12: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-12.pdf",
-            13: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-13.pdf",
-            14: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-14.pdf",
-            15: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-15.pdf",
-            16: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-8-chapter-16.pdf"
+        const chapterPDFLinks = {};
+        for (let i = 1; i <= 15; i++) {
+            chapterPDFLinks[i] = "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/english-class-8-bihar-board.pdf";
+        }
+
+        // ============================================
+        // MCQ DATA FOR EACH CHAPTER
+        // ============================================
+        const chapterMCQs = {
+            1: [
+                { question: "What is the title of Chapter 1?", options: ["I Love My India", "I Love My Country", "My Beloved Country", "Our Nation"], correct: 1 },
+                { question: "What does the poet love about his country?", options: ["Rivers and mountains", "Cities and towns", "Forests and deserts", "All of these"], correct: 3 },
+                { question: "What is the main theme of this poem?", options: ["Patriotism", "Nature", "Family", "Education"], correct: 0 },
+                { question: "The poet describes his country as ________.", options: ["Beautiful", "Heaven on earth", "Wonderful", "All of these"], correct: 3 },
+                { question: "The poem inspires us to ________.", options: ["Love our country", "Travel abroad", "Make money", "Study hard"], correct: 0 }
+            ],
+            2: [
+                { question: "The poem 'Sleep' is about ________.", options: ["The importance of sleep", "The beauty of night", "Dreams", "Stars"], correct: 0 },
+                { question: "What does sleep provide to a tired person?", options: ["Energy", "Rest", "Peace", "All of these"], correct: 3 },
+                { question: "According to the poem, sleep is compared to ________.", options: ["Death", "Peace", "Rest", "A blessing"], correct: 3 },
+                { question: "The poet says sleep comes to everyone ________.", options: ["At night", "In the morning", "At noon", "In the evening"], correct: 0 },
+                { question: "What is the message of this poem?", options: ["Sleep is essential", "Stay awake", "Dreams are important", "Night is scary"], correct: 0 }
+            ],
+            3: [
+                { question: "Who had a dream in 'The Raja's Dream'?", options: ["The King", "The Minister", "The Queen", "The Prince"], correct: 0 },
+                { question: "What did the Raja see in his dream?", options: ["A golden palace", "A wise man", "His kingdom in trouble", "A beautiful garden"], correct: 2 },
+                { question: "Who interpreted the Raja's dream?", options: ["The court priest", "A wise sage", "The minister", "The queen"], correct: 1 },
+                { question: "What lesson does this story teach?", options: ["Never trust dreams", "Work hard to protect your kingdom", "Dreams come true", "Kings should be careful"], correct: 1 },
+                { question: "The Raja was worried because ________.", options: ["He lost his kingdom", "His dream was frightening", "His people were unhappy", "There was a war"], correct: 1 }
+            ]
         };
 
-        // ============================================
-        // QUIZ QUESTIONS DATA (Maths Practice Quiz)
-        // ============================================
-        const questions = [
-            {
-                question: "1. (a+b)² का मान क्या होता है?",
-                options: ["a² + b²", "a² + 2ab + b²", "a² - 2ab + b²", "2a + 2b"],
-                correct: 1
-            },
-            {
-                question: "2. 144 का वर्गमूल क्या है?",
-                options: ["11", "12", "13", "14"],
-                correct: 1
-            },
-            {
-                question: "3. एक आयत का क्षेत्रफल कैसे निकालते हैं?",
-                options: ["लंबाई + चौड़ाई", "2 x (लंबाई + चौड़ाई)", "लंबाई x चौड़ाई", "लंबाई / चौड़ाई"],
-                correct: 2
-            },
-            {
-                question: "4. किसी संख्या का घनमूल निकालने का चिन्ह क्या है?",
-                options: ["√", "∛", "∑", "π"],
-                correct: 1
-            },
-            {
-                question: "5. 5² का मान क्या है?",
-                options: ["10", "15", "20", "25"],
-                correct: 3
+        // Add default MCQ for other chapters
+        for (let i = 4; i <= 15; i++) {
+            if (!chapterMCQs[i]) {
+                chapterMCQs[i] = [
+                    { question: `Question 1 for Chapter ${i}?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 0 },
+                    { question: `Question 2 for Chapter ${i}?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 1 },
+                    { question: `Question 3 for Chapter ${i}?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 2 },
+                    { question: `Question 4 for Chapter ${i}?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 0 },
+                    { question: `Question 5 for Chapter ${i}?`, options: ["Option A", "Option B", "Option C", "Option D"], correct: 3 }
+                ];
             }
-        ];
+        }
 
-        // Quiz State Variables
-        let currentQuestion = 0;
-        let userAnswers = new Array(questions.length).fill(-1);
+        // ============================================
+        // STATE VARIABLES
+        // ============================================
+        let currentChapter = 1;
+        let currentMCQIndex = 0;
+        let chapterUserAnswers = {};
 
         // ============================================
         // FUNCTION: Load All Chapter Cards
@@ -1092,179 +1025,216 @@
                     </div>
                     <div class="chapter-body">
                         <div class="chapter-meta">
-                            <span><i class="fas fa-book-open"></i> अध्याय ${ch.num}</span>
-                            <span><i class="fas fa-clock"></i> 20 min read</span>
+                            <span><i class="fas fa-book-open"></i> Chapter ${ch.num}</span>
+                            <span><i class="fas fa-clock"></i> 5 MCQs</span>
                         </div>
                         <div class="chapter-actions">
                             <button class="action-btn read-btn" onclick="openChapterPDF(${ch.num})">
                                 <i class="fas fa-book-open"></i> पढ़ें
                             </button>
-                            <button class="action-btn pdf-btn" onclick="openChapterPDF(${ch.num})">
-                                <i class="fas fa-file-pdf"></i> PDF
+                            <button class="action-btn mcq-btn-style" onclick="openChapterMCQ(${ch.num})">
+                                <i class="fas fa-question-circle"></i> MCQ
                             </button>
                         </div>
                     </div>
                 `;
-
                 grid.appendChild(card);
             });
         }
 
         // ============================================
-        // FUNCTION: Open Chapter PDF Viewer
+        // FUNCTION: Open Chapter PDF
         // ============================================
         function openChapterPDF(num) {
             const chapterContent = document.getElementById('chapterContent');
             const pdfContainer = document.getElementById('chapterPDFContainer');
             const pdfViewer = document.getElementById('chapterPDFViewer');
             const pdfTitle = document.getElementById('chapterPDFTitle');
+            const mcqContainer = document.getElementById('chapterMCQContainer');
             
-            // Hide text content and show PDF container
             chapterContent.style.display = 'none';
+            mcqContainer.style.display = 'none';
             pdfContainer.style.display = 'block';
             
-            // Set PDF title with chapter info
-            pdfTitle.textContent = `📐 अध्याय ${num} : ${chapters[num - 1].title} (समाधान सहित)`;
-            
-            // Set PDF source (use default if chapter link missing)
+            pdfTitle.textContent = `📚 Chapter ${num} : ${chapters[num - 1].title} (PDF Solution)`;
             pdfViewer.src = chapterPDFLinks[num] || chapterPDFLinks[1];
             
-            // Smooth scroll to content section
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
         // ============================================
-        // FUNCTION: Reset Chapter View (Hide PDF, Show Text)
+        // FUNCTION: Open Chapter MCQ
         // ============================================
-        function resetChapterView() {
+        function openChapterMCQ(chapterNum) {
+            currentChapter = chapterNum;
+            currentMCQIndex = 0;
+            
+            if (!chapterUserAnswers[chapterNum]) {
+                chapterUserAnswers[chapterNum] = new Array(chapterMCQs[chapterNum].length).fill(-1);
+            }
+
             const chapterContent = document.getElementById('chapterContent');
             const pdfContainer = document.getElementById('chapterPDFContainer');
+            const mcqContainer = document.getElementById('chapterMCQContainer');
+            const mcqViewer = document.getElementById('chapterMCQViewer');
             
-            chapterContent.style.display = 'block';
+            chapterContent.style.display = 'none';
             pdfContainer.style.display = 'none';
-            document.getElementById('chapterPDFViewer').src = '';
+            mcqContainer.style.display = 'block';
+            
+            loadChapterMCQ(chapterNum, mcqViewer);
+            document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
         // ============================================
-        // NOTE: Back button uses anchor tag to courses.html
-        // No separate goBack() function needed for navigation
-        // The back button above is an <a href="courses.html"> tag
+        // FUNCTION: Load MCQ for Specific Chapter
         // ============================================
+        function loadChapterMCQ(chapterNum, container) {
+            const mcqs = chapterMCQs[chapterNum];
+            if (!mcqs || mcqs.length === 0) {
+                container.innerHTML = '<p style="text-align: center; padding: 30px;">MCQs not available for this chapter.</p>';
+                return;
+            }
 
-        // ============================================
-        // FUNCTION: Toggle Mobile Menu
-        // ============================================
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
-
-        // ============================================
-        // QUIZ FUNCTIONS
-        // ============================================
-        function loadQuiz() {
-            const quizArea = document.getElementById('quizArea');
-            const q = questions[currentQuestion];
+            const q = mcqs[currentMCQIndex];
+            const userAns = chapterUserAnswers[chapterNum][currentMCQIndex];
 
             let optionsHtml = '';
             q.options.forEach((opt, idx) => {
                 optionsHtml += `
-                    <label class="option">
-                        <input type="radio" name="q" value="${idx}" ${userAnswers[currentQuestion] === idx ? 'checked' : ''}>
+                    <label class="mcq-option">
+                        <input type="radio" name="chapterQ" value="${idx}" ${userAns === idx ? 'checked' : ''}>
                         <span>${opt}</span>
                     </label>
                 `;
             });
 
-            quizArea.innerHTML = `
-                <div class="question">
-                    <h3>${q.question}</h3>
-                    <div class="options">
-                        ${optionsHtml}
+            container.innerHTML = `
+                <div class="mcq-container">
+                    <div class="mcq-header">
+                        <h3><i class="fas fa-question-circle"></i> Chapter ${chapterNum} - MCQ Practice</h3>
+                        <div class="mcq-progress">Question ${currentMCQIndex + 1}/${mcqs.length}</div>
                     </div>
+                    <div class="mcq-question">
+                        <h4>${currentMCQIndex + 1}. ${q.question}</h4>
+                        <div class="mcq-options">
+                            ${optionsHtml}
+                        </div>
+                    </div>
+                    <div class="mcq-footer">
+                        <button class="mcq-btn" onclick="prevChapterMCQ(${chapterNum})" ${currentMCQIndex === 0 ? 'disabled' : ''}>
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button class="mcq-btn" onclick="nextChapterMCQ(${chapterNum})" ${currentMCQIndex === mcqs.length - 1 ? 'disabled' : ''}>
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="mcq-btn" onclick="checkChapterMCQ(${chapterNum})" id="chapterSubmitBtn" style="${currentMCQIndex === mcqs.length - 1 ? 'inline-flex' : 'none'}">
+                            <i class="fas fa-check"></i> Submit
+                        </button>
+                    </div>
+                    <div id="chapterResult" style="margin-top: 20px; display: none;"></div>
                 </div>
             `;
 
-            document.getElementById('quizProgress').textContent = `प्रश्न ${currentQuestion + 1}/${questions.length}`;
-            document.getElementById('prevBtn').disabled = currentQuestion === 0;
-            document.getElementById('nextBtn').style.display = currentQuestion === questions.length - 1 ? 'none' : 'inline-flex';
-            document.getElementById('submitBtn').style.display = currentQuestion === questions.length - 1 ? 'inline-flex' : 'none';
-
-            document.querySelectorAll('input[name="q"]').forEach(radio => {
+            document.querySelectorAll('input[name="chapterQ"]').forEach(radio => {
                 radio.addEventListener('change', function () {
-                    userAnswers[currentQuestion] = parseInt(this.value);
+                    chapterUserAnswers[chapterNum][currentMCQIndex] = parseInt(this.value);
                 });
             });
         }
 
-        function nextQuestion() {
-            if (currentQuestion < questions.length - 1) {
-                currentQuestion++;
-                loadQuiz();
+        // ============================================
+        // MCQ NAVIGATION FUNCTIONS
+        // ============================================
+        function prevChapterMCQ(chapterNum) {
+            if (currentMCQIndex > 0) {
+                currentMCQIndex--;
+                const mcqViewer = document.getElementById('chapterMCQViewer');
+                loadChapterMCQ(chapterNum, mcqViewer);
             }
         }
 
-        function prevQuestion() {
-            if (currentQuestion > 0) {
-                currentQuestion--;
-                loadQuiz();
+        function nextChapterMCQ(chapterNum) {
+            const mcqs = chapterMCQs[chapterNum];
+            if (currentMCQIndex < mcqs.length - 1) {
+                currentMCQIndex++;
+                const mcqViewer = document.getElementById('chapterMCQViewer');
+                loadChapterMCQ(chapterNum, mcqViewer);
             }
         }
 
-        function checkQuiz() {
+        function checkChapterMCQ(chapterNum) {
+            const mcqs = chapterMCQs[chapterNum];
+            const answers = chapterUserAnswers[chapterNum];
+            
             let score = 0;
-            for (let i = 0; i < questions.length; i++) {
-                if (userAnswers[i] === questions[i].correct) {
+            for (let i = 0; i < mcqs.length; i++) {
+                if (answers[i] === mcqs[i].correct) {
                     score++;
                 }
             }
 
-            const percentage = (score / questions.length) * 100;
-            const resultDiv = document.getElementById('result');
+            const percentage = (score / mcqs.length) * 100;
+            const resultDiv = document.getElementById('chapterResult');
             resultDiv.style.display = 'block';
 
             if (percentage >= 60) {
                 resultDiv.innerHTML = `
                     <div style="background: #d4edda; color: #155724; padding: 20px; border-radius: 10px; text-align: center;">
                         <i class="fas fa-trophy" style="font-size: 48px; color: #ffd700; margin-bottom: 15px;"></i>
-                        <h3>बधाई हो!</h3>
-                        <p>आपने ${score}/${questions.length} सही उत्तर दिए (${percentage}%)</p>
-                        <p>आप गणित में अच्छे हैं! और अभ्यास करते रहें।</p>
+                        <h3>Congratulations! 🎉</h3>
+                        <p>You got ${score}/${mcqs.length} correct (${percentage}%)</p>
                     </div>
                 `;
             } else {
                 resultDiv.innerHTML = `
                     <div style="background: #f8d7da; color: #721c24; padding: 20px; border-radius: 10px; text-align: center;">
-                        <i class="fas fa-calculator" style="font-size: 48px; color: #1e3c72; margin-bottom: 15px;"></i>
-                        <h3>पुनः प्रयास करें</h3>
-                        <p>आपने ${score}/${questions.length} सही उत्तर दिए (${percentage}%)</p>
-                        <p>कृपया अध्याय दोबारा पढ़ें और सूत्र याद करें।</p>
+                        <i class="fas fa-book" style="font-size: 48px; margin-bottom: 15px;"></i>
+                        <h3>Try Again! 📖</h3>
+                        <p>You got ${score}/${mcqs.length} correct (${percentage}%)</p>
+                        <p>Please read the chapter again.</p>
                     </div>
                 `;
             }
         }
 
         // ============================================
-        // FUNCTION: Switch Between Tabs
+        // CLOSE FUNCTIONS
         // ============================================
-        function switchTab(tabName, event) {
-            const tabs = document.querySelectorAll('.tab');
-            const contents = document.querySelectorAll('.tab-content');
+        function closePDF() {
+            document.getElementById('chapterContent').style.display = 'block';
+            document.getElementById('chapterPDFContainer').style.display = 'none';
+            document.getElementById('chapterPDFViewer').src = '';
+        }
 
-            tabs.forEach(t => t.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
-            event.target.classList.add('active');
-            document.getElementById(tabName + 'Tab').classList.add('active');
-            
-            // Reset chapter view when switching tabs
-            resetChapterView();
+        function closeMCQ() {
+            document.getElementById('chapterContent').style.display = 'block';
+            document.getElementById('chapterMCQContainer').style.display = 'none';
         }
 
         // ============================================
-        // BACK TO TOP FUNCTIONALITY
+        // UTILITY FUNCTIONS
         // ============================================
-        window.onscroll = function () {
+        function resetChapterView() {
+            document.getElementById('chapterContent').style.display = 'block';
+            document.getElementById('chapterPDFContainer').style.display = 'none';
+            document.getElementById('chapterMCQContainer').style.display = 'none';
+            document.getElementById('chapterPDFViewer').src = '';
+        }
+
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+
+        function switchTab(tabName, event) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabName + 'Tab').classList.add('active');
+            resetChapterView();
+        }
+
+        window.onscroll = function() {
             const backToTop = document.getElementById('backToTop');
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 backToTop.classList.add('show');
@@ -1274,29 +1244,29 @@
         };
 
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // ============================================
         // INITIALIZE PAGE
         // ============================================
         loadChapters();
-        loadQuiz();
 
         // ============================================
-        // EXPOSE FUNCTIONS TO GLOBAL SCOPE
+        // EXPOSE FUNCTIONS GLOBALLY
         // ============================================
         window.openChapterPDF = openChapterPDF;
+        window.openChapterMCQ = openChapterMCQ;
+        window.closePDF = closePDF;
+        window.closeMCQ = closeMCQ;
         window.toggleMenu = toggleMenu;
         window.switchTab = switchTab;
-        window.nextQuestion = nextQuestion;
-        window.prevQuestion = prevQuestion;
-        window.checkQuiz = checkQuiz;
         window.scrollToTop = scrollToTop;
+        window.prevChapterMCQ = prevChapterMCQ;
+        window.nextChapterMCQ = nextChapterMCQ;
+        window.checkChapterMCQ = checkChapterMCQ;
         window.resetChapterView = resetChapterView;
     </script>
 </body>
+
 </html>

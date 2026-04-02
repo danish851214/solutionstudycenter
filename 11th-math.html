@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 11 गणित - बिहार बोर्ड (NCERT) | Solution Study Center</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ============================================
+           GLOBAL STYLES & CSS VARIABLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            --primary: #1e3c72;
+            --primary-dark: #0a2a4a;
+            --secondary: #ff9800;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: var(--white);
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: var(--secondary);
+            font-weight: 800;
+        }
+        .navbar ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+        .navbar ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background: var(--secondary);
+            color: var(--primary-dark);
+        }
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            color: var(--white);
+            cursor: pointer;
+        }
+        /* Back Button Section */
+        .back-button-section {
+            width: 90%;
+            max-width: 1400px;
+            margin: 20px auto 0 auto;
+            padding: 0 15px;
+        }
+        .back-btn-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 24px 8px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .back-btn-container:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .back-btn-main {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .back-btn-main i {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn-container:hover .back-btn-main i {
+            transform: translateX(-3px);
+        }
+        /* Main Content */
+        .main-container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .welcome-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 40px 0 30px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: white;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* Chapter Grid */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--secondary);
+        }
+
+        .chapter-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chapter-number {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        .chapter-title {
+            font-size: 15px;
+            font-weight: 600;
+            flex: 1;
+            line-height: 1.3;
+        }
+
+        .chapter-body {
+            padding: 20px;
+        }
+
+        .chapter-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 13px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chapter-meta i {
+            margin-right: 5px;
+            color: #764ba2;
+        }
+
+        .chapter-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .book-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .book-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .solution-btn {
+            background: #fd7e14;
+            color: white;
+        }
+
+        .solution-btn:hover {
+            background: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .mcq-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .mcq-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        /* Content Section */
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #chapterContent {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        #chapterContent h2 {
+            color: #0b4d3b;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        #chapterContent p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* PDF Viewer */
+        .chapter-pdf-viewer {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-pdf-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-pdf-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        /* MCQ Container */
+        .mcq-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .chapter-mcq-viewer {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .mcq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .mcq-header h3 {
+            color: #333;
+            font-size: 22px;
+        }
+
+        .mcq-progress {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .mcq-question {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mcq-question h4 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .mcq-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mcq-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .mcq-option:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            border-color: #764ba2;
+        }
+
+        .mcq-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .mcq-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mcq-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .mcq-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .mcq-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab {
+            padding: 12px 25px;
+            background: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .formula-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .formula-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .formula-card i {
+            font-size: 40px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .formula-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .formula-card p {
+            color: #666;
+            font-size: 14px;
+            text-align: left;
+            line-height: 1.6;
+            font-family: monospace;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons .icon {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons .icon:hover {
+            transform: translateY(-5px) rotate(360deg);
+        }
+
+        .fb:hover { background: #1877f2; }
+        .insta:hover { background: #e1306c; }
+        .yt:hover { background: #ff0000; }
+        .wa:hover { background: #25d366; }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #20ba5c;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            font-size: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: #ffaa33;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon { display: block; }
+            .navbar ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            .navbar ul.show { display: flex; }
+            .navbar ul li { margin: 10px 0; }
+            .chapter-grid { grid-template-columns: 1fr; }
+            .welcome-section h1 { font-size: 1.8em; }
+            .welcome-section { padding: 30px 20px; }
+            .chapter-pdf-viewer { height: 500px; }
+            .tabs { flex-direction: column; align-items: stretch; }
+            .tab { width: 100%; justify-content: center; }
+            .mcq-footer { flex-direction: column; }
+            .mcq-btn { width: 100%; justify-content: center; }
+            .back-button-section { margin: 15px auto 0 auto; }
+            .back-btn-container { padding: 6px 18px 6px 15px; }
+            .back-hint { display: none; }
+            .chapter-actions { flex-direction: column; }
+            .action-btn { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">SOLUTION STUDY <span>CENTER</span></div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-button-section">
+        <div class="back-btn-container">
+            <a href="course.html" class="back-btn-main">
+                <i class="fas fa-arrow-left"></i>
+                <span>वापस जाएं</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="welcome-section">
+            <h1>📐 कक्षा 11 गणित - बिहार बोर्ड (NCERT)</h1>
+            <p>📘 पुस्तक PDF + 📝 समाधान PDF + ✅ ऑब्जेक्टिव MCQ + 📚 महत्वपूर्ण सूत्र</p>
+        </div>
+
+        <div class="section-header">
+            <h2>📖 गणित - सभी अध्याय</h2>
+        </div>
+
+        <div class="chapter-grid" id="chapterGrid"></div>
+
+        <div class="content-section" id="chapterContentSection">
+            <div id="chapterContent">
+                <h2>📖 अध्याय पढ़ने के लिए कार्ड पर क्लिक करें</h2>
+                <p>कृपया किसी अध्याय के कार्ड पर Book, Solution या MCQ बटन पर क्लिक करें।</p>
+                <p>यहाँ आपको हर अध्याय की पुस्तक PDF, हल PDF और ऑब्जेक्टिव प्रश्न (MCQ) मिलेंगे।</p>
+            </div>
+            <div id="chapterPDFContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closePDF()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
+                <h2 id="chapterPDFTitle" style="color: #0b4d3b; margin-bottom: 20px; text-align: center;"></h2>
+                <iframe class="chapter-pdf-viewer" id="chapterPDFViewer" src=""></iframe>
+            </div>
+            <div id="chapterMCQContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closeMCQ()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
+                <div id="chapterMCQViewer"></div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('video', event)">
+                <i class="fas fa-play"></i> वीडियो व्याख्या
+            </button>
+            <button class="tab" onclick="switchTab('formula', event)">
+                <i class="fas fa-calculator"></i> महत्वपूर्ण सूत्र
+            </button>
+        </div>
+
+        <div id="videoTab" class="tab-content active">
+            <div class="video-section">
+                <div class="video-grid">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>समुच्चय (Sets) - पूर्ण व्याख्या</h4>
+                            <p>समुच्चय के प्रकार, संचालन, वेन आरेख</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>त्रिकोणमितीय फलन</h4>
+                            <p>sin, cos, tan के सूत्र और मान</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>सीमा और अवकलज</h4>
+                            <p>सीमा की अवधारणा, अवकलज के सूत्र</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="formulaTab" class="tab-content">
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <i class="fas fa-shapes"></i>
+                    <h3>समुच्चय (Sets)</h3>
+                    <p>n(A ∪ B) = n(A) + n(B) - n(A ∩ B)<br>
+                    n(A ∪ B ∪ C) = n(A) + n(B) + n(C) - n(A∩B) - n(B∩C) - n(C∩A) + n(A∩B∩C)<br>
+                    A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)<br>
+                    A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-sine"></i>
+                    <h3>त्रिकोणमितीय सूत्र</h3>
+                    <p>sin²θ + cos²θ = 1<br>
+                    1 + tan²θ = sec²θ<br>
+                    1 + cot²θ = cosec²θ<br>
+                    sin(2θ) = 2 sinθ cosθ<br>
+                    cos(2θ) = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ<br>
+                    tan(2θ) = 2tanθ / (1 - tan²θ)</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>सीमा (Limits)</h3>
+                    <p>lim (x→0) sin x / x = 1<br>
+                    lim (x→0) (1 - cos x) / x = 0<br>
+                    lim (x→a) (xⁿ - aⁿ)/(x - a) = n·aⁿ⁻¹<br>
+                    lim (x→∞) (1 + 1/x)ˣ = e</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>अवकलज (Derivatives)</h3>
+                    <p>d/dx (xⁿ) = n·xⁿ⁻¹<br>
+                    d/dx (sin x) = cos x<br>
+                    d/dx (cos x) = -sin x<br>
+                    d/dx (tan x) = sec²x<br>
+                    d/dx (eˣ) = eˣ<br>
+                    d/dx (log x) = 1/x</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-percent"></i>
+                    <h3>क्रमचय और संचय</h3>
+                    <p>nPr = n! / (n-r)!<br>
+                    nCr = n! / [r!(n-r)!]<br>
+                    nCr = nC(n-r)<br>
+                    nCr + nC(r-1) = (n+1)Cr<br>
+                    n! = n × (n-1)!</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>द्विपद प्रमेय</h3>
+                    <p>(x + a)ⁿ = Σ(nCr) xⁿ⁻ʳ aʳ<br>
+                    Tr+1 = nCr xⁿ⁻ʳ aʳ<br>
+                    (1 + x)ⁿ = 1 + nx + n(n-1)/2! x² + ...</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-shapes"></i>
+                    <h3>शंकु परिच्छेद</h3>
+                    <p>वृत्त: x² + y² = r²<br>
+                    परवलय: y² = 4ax, x² = 4ay<br>
+                    दीर्घवृत्त: x²/a² + y²/b² = 1 (a>b)<br>
+                    अतिपरवलय: x²/a² - y²/b² = 1</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>सरल रेखा</h3>
+                    <p>दो बिंदुओं के बीच दूरी = √[(x₂-x₁)² + (y₂-y₁)²]<br>
+                    ढाल m = (y₂ - y₁)/(x₂ - x₁)<br>
+                    y = mx + c<br>
+                    बिंदु-ढाल रूप: y - y₁ = m(x - x₁)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>© 2026 Solution Study Center Mansi | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/1B5dZQDXE5/" class="icon fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/solution_study_center_mansi?igsh=MTdjZTAwZG9xbDR0NQ==" class="icon insta" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon yt" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917903912699" class="icon wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917903912699" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="back-to-top" onclick="scrollToTop()" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <script>
+        // ============================================
+        // CHAPTER DATA - Class 11 Maths (NCERT/Bihar Board)
+        // Based on NCERT textbook for Class 11
+        // ============================================
+        const chapters = [
+            { num: 1, title: "समुच्चय (Sets)", color: "#FF6B6B" },
+            { num: 2, title: "संबंध एवं फलन (Relations and Functions)", color: "#4ECDC4" },
+            { num: 3, title: "त्रिकोणमितीय फलन (Trigonometric Functions)", color: "#45B7D1" },
+            { num: 4, title: "गणितीय आगमन का सिद्धांत (Principle of Mathematical Induction)", color: "#96CEB4" },
+            { num: 5, title: "सम्मिश्र संख्याएँ और द्विघात समीकरण (Complex Numbers)", color: "#FFEAA7" },
+            { num: 6, title: "रैखिक असमिकाएँ (Linear Inequalities)", color: "#DDA0DD" },
+            { num: 7, title: "क्रमचय और संचय (Permutations and Combinations)", color: "#98D8C8" },
+            { num: 8, title: "द्विपद प्रमेय (Binomial Theorem)", color: "#F7DC6F" },
+            { num: 9, title: "अनुक्रम तथा श्रेणी (Sequences and Series)", color: "#BB8FCE" },
+            { num: 10, title: "सरल रेखाएँ (Straight Lines)", color: "#85C1E2" },
+            { num: 11, title: "शंकु परिच्छेद (Conic Sections)", color: "#F8C471" },
+            { num: 12, title: "त्रिविमीय ज्यामिति का परिचय (3D Geometry)", color: "#82E0AA" },
+            { num: 13, title: "सीमा और अवकलज (Limits and Derivatives)", color: "#F1948A" },
+            { num: 14, title: "सांख्यिकी (Statistics)", color: "#7FB3D5" },
+            { num: 15, title: "प्रायिकता (Probability)", color: "#E59866" }
+        ];
+
+        // ============================================
+        // PDF LINKS - Book PDF + Solution PDF
+        // Using evidyarthi.in reference
+        // ============================================
+        const chapterBookLinks = {};
+        const chapterSolutionLinks = {};
+
+        for (let i = 1; i <= 15; i++) {
+            chapterBookLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-11-chapter-${i}.pdf`;
+            chapterSolutionLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/maths-class-11-solution-chapter-${i}.pdf`;
+        }
+
+        // ============================================
+        // MCQ DATA FOR EACH CHAPTER
+        // ============================================
+        const chapterMCQs = {
+            1: [
+                { question: "यदि A = {1,2,3}, B = {2,3,4}, तो A ∪ B क्या होगा?", options: ["{1,2,3,4}", "{1,2,3}", "{2,3,4}", "{1,4}"], correct: 0 },
+                { question: "रिक्त समुच्चय को किस प्रकार दर्शाया जाता है?", options: ["φ", "∅", "{}", "उपरोक्त सभी"], correct: 3 },
+                { question: "यदि A ⊂ B और B ⊂ A, तो क्या होगा?", options: ["A = B", "A ≠ B", "A ∪ B = φ", "A ∩ B = φ"], correct: 0 },
+                { question: "n(A ∪ B) का सूत्र क्या है?", options: ["n(A) + n(B)", "n(A) + n(B) - n(A∩B)", "n(A) - n(B)", "n(A) × n(B)"], correct: 1 },
+                { question: "समुच्चय A = {x : x एक अभाज्य संख्या, x < 10} के अवयव क्या हैं?", options: ["{2,3,5,7}", "{2,3,5,7,9}", "{1,2,3,5,7}", "{2,3,5,7,11}"], correct: 0 }
+            ],
+            2: [
+                { question: "फलन f(x) = x² के लिए f(2) का मान क्या है?", options: ["2", "4", "6", "8"], correct: 1 },
+                { question: "यदि f(x) = 3x + 2, तो f(0) क्या होगा?", options: ["0", "2", "3", "5"], correct: 1 },
+                { question: "डोमेन किसे कहते हैं?", options: ["स्वतंत्र चर के मानों का समुच्चय", "आश्रित चर के मानों का समुच्चय", "फलन के मान", "अवकलज"], correct: 0 },
+                { question: "संबंध R = {(1,2), (2,3), (3,4)} का डोमेन क्या है?", options: ["{1,2,3}", "{2,3,4}", "{1,2,3,4}", "{1,4}"], correct: 0 },
+                { question: "यदि f(x) = x + 1, तो f(3) का मान क्या है?", options: ["3", "4", "5", "6"], correct: 1 }
+            ],
+            3: [
+                { question: "sin 90° का मान क्या है?", options: ["0", "1", "-1", "1/2"], correct: 1 },
+                { question: "cos 0° का मान क्या है?", options: ["0", "1", "-1", "1/2"], correct: 1 },
+                { question: "tan 45° का मान क्या है?", options: ["0", "1", "√3", "1/√3"], correct: 1 },
+                { question: "sin²θ + cos²θ का मान क्या है?", options: ["0", "1", "2", "-1"], correct: 1 },
+                { question: "sec θ किसके बराबर होता है?", options: ["1/sin θ", "1/cos θ", "1/tan θ", "sin θ/cos θ"], correct: 1 }
+            ],
+            4: [
+                { question: "गणितीय आगमन के सिद्धांत में पहला चरण क्या है?", options: ["P(1) सत्य है", "P(k) सत्य मानना", "P(k+1) सत्य सिद्ध करना", "P(n) सत्य है"], correct: 0 },
+                { question: "गणितीय आगमन का उपयोग किसे सिद्ध करने के लिए किया जाता है?", options: ["कथन", "समीकरण", "असमिका", "उपरोक्त सभी"], correct: 3 },
+                { question: "आगमन विधि में दूसरा चरण क्या है?", options: ["P(1) सत्य है", "P(k) सत्य मानना", "P(k+1) सत्य सिद्ध करना", "P(n) सत्य है"], correct: 1 },
+                { question: "यदि P(k) सत्य है तो P(k+1) सत्य है, यह क्या कहलाता है?", options: ["आगमन चरण", "आधार चरण", "निष्कर्ष", "प्रमाण"], correct: 0 },
+                { question: "गणितीय आगमन किस प्रकार की विधि है?", options: ["प्रत्यक्ष प्रमाण", "अप्रत्यक्ष प्रमाण", "प्रेक्षण", "प्रयोग"], correct: 0 }
+            ]
+        };
+
+        // Add default MCQ for remaining chapters
+        for (let i = 5; i <= 15; i++) {
+            if (!chapterMCQs[i]) {
+                chapterMCQs[i] = [
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 1?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 2?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 1 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 3?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 2 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 4?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 5?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 3 }
+                ];
+            }
+        }
+
+        let currentChapter = 1;
+        let currentMCQIndex = 0;
+        let chapterUserAnswers = {};
+
+        function loadChapters() {
+            const grid = document.getElementById('chapterGrid');
+            grid.innerHTML = '';
+            chapters.forEach(ch => {
+                const card = document.createElement('div');
+                card.className = 'chapter-card';
+                card.innerHTML = `
+                    <div class="chapter-header" style="background: linear-gradient(135deg, ${ch.color} 0%, #764ba2 100%);">
+                        <div class="chapter-number">${ch.num}</div>
+                        <div class="chapter-title">${ch.title}</div>
+                    </div>
+                    <div class="chapter-body">
+                        <div class="chapter-meta">
+                            <span><i class="fas fa-book"></i> अध्याय ${ch.num}</span>
+                            <span><i class="fas fa-check-circle"></i> 5 MCQs</span>
+                        </div>
+                        <div class="chapter-actions">
+                            <button class="action-btn book-btn" onclick="openBookPDF(${ch.num})"><i class="fas fa-book"></i> Book PDF</button>
+                            <button class="action-btn solution-btn" onclick="openSolutionPDF(${ch.num})"><i class="fas fa-file-alt"></i> Solution PDF</button>
+                            <button class="action-btn mcq-btn" onclick="openChapterMCQ(${ch.num})"><i class="fas fa-question-circle"></i> MCQ</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function openBookPDF(num) { openPDFViewer(num, chapterBookLinks[num], `${chapters[num-1].title} (पुस्तक PDF)`); }
+        function openSolutionPDF(num) { openPDFViewer(num, chapterSolutionLinks[num], `${chapters[num-1].title} (हल PDF)`); }
+
+        function openPDFViewer(num, pdfUrl, title) {
+            document.getElementById('chapterContent').style.display = 'none';
+            document.getElementById('chapterMCQContainer').style.display = 'none';
+            document.getElementById('chapterPDFContainer').style.display = 'block';
+            document.getElementById('chapterPDFTitle').textContent = `📐 ${title}`;
+            document.getElementById('chapterPDFViewer').src = pdfUrl;
+            document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openChapterMCQ(chapterNum) {
+            currentChapter = chapterNum;
+            currentMCQIndex = 0;
+            if (!chapterUserAnswers[chapterNum]) chapterUserAnswers[chapterNum] = new Array(chapterMCQs[chapterNum].length).fill(-1);
+            document.getElementById('chapterContent').style.display = 'none';
+            document.getElementById('chapterPDFContainer').style.display = 'none';
+            document.getElementById('chapterMCQContainer').style.display = 'block';
+            loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer'));
+            document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function loadChapterMCQ(chapterNum, container) {
+            const mcqs = chapterMCQs[chapterNum];
+            if (!mcqs || mcqs.length === 0) { container.innerHTML = '<p style="text-align: center; padding: 30px;">MCQs not available.</p>'; return; }
+            const q = mcqs[currentMCQIndex];
+            const userAns = chapterUserAnswers[chapterNum][currentMCQIndex];
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                optionsHtml += `<label class="mcq-option"><input type="radio" name="chapterQ" value="${idx}" ${userAns === idx ? 'checked' : ''}><span>${opt}</span></label>`;
+            });
+            container.innerHTML = `
+                <div class="mcq-container">
+                    <div class="mcq-header"><h3><i class="fas fa-question-circle"></i> अध्याय ${chapterNum} - MCQ प्रैक्टिस</h3><div class="mcq-progress">प्रश्न ${currentMCQIndex+1}/${mcqs.length}</div></div>
+                    <div class="mcq-question"><h4>${currentMCQIndex+1}. ${q.question}</h4><div class="mcq-options">${optionsHtml}</div></div>
+                    <div class="mcq-footer">
+                        <button class="mcq-btn" onclick="prevChapterMCQ(${chapterNum})" ${currentMCQIndex===0?'disabled':''}><i class="fas fa-arrow-left"></i> पिछला</button>
+                        <button class="mcq-btn" onclick="nextChapterMCQ(${chapterNum})" ${currentMCQIndex===mcqs.length-1?'disabled':''}>अगला <i class="fas fa-arrow-right"></i></button>
+                        <button class="mcq-btn" onclick="checkChapterMCQ(${chapterNum})" id="chapterSubmitBtn" style="${currentMCQIndex===mcqs.length-1?'inline-flex':'none'}"><i class="fas fa-check"></i> जमा करें</button>
+                    </div>
+                    <div id="chapterResult" style="margin-top:20px; display:none;"></div>
+                </div>
+            `;
+            document.querySelectorAll('input[name="chapterQ"]').forEach(radio => {
+                radio.addEventListener('change', function() { chapterUserAnswers[chapterNum][currentMCQIndex] = parseInt(this.value); });
+            });
+        }
+
+        function prevChapterMCQ(chapterNum) { if(currentMCQIndex>0){ currentMCQIndex--; loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer')); } }
+        function nextChapterMCQ(chapterNum) { const mcqs=chapterMCQs[chapterNum]; if(currentMCQIndex<mcqs.length-1){ currentMCQIndex++; loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer')); } }
+        function checkChapterMCQ(chapterNum) {
+            const mcqs=chapterMCQs[chapterNum], answers=chapterUserAnswers[chapterNum];
+            let score=0; for(let i=0;i<mcqs.length;i++) if(answers[i]===mcqs[i].correct) score++;
+            const percentage=(score/mcqs.length)*100;
+            const resultDiv=document.getElementById('chapterResult');
+            resultDiv.style.display='block';
+            if(percentage>=60){
+                resultDiv.innerHTML=`<div style="background:#d4edda; color:#155724; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-trophy" style="font-size:48px; color:#ffd700;"></i><h3>बधाई हो! 🎉</h3><p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p></div>`;
+            } else {
+                resultDiv.innerHTML=`<div style="background:#f8d7da; color:#721c24; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-calculator" style="font-size:48px;"></i><h3>पुनः प्रयास करें 📖</h3><p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p><p>कृपया अध्याय दोबारा पढ़ें और सूत्र याद करें।</p></div>`;
+            }
+        }
+
+        function closePDF() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterPDFContainer').style.display='none'; document.getElementById('chapterPDFViewer').src=''; }
+        function closeMCQ() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterMCQContainer').style.display='none'; }
+        function resetChapterView() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterPDFContainer').style.display='none'; document.getElementById('chapterMCQContainer').style.display='none'; document.getElementById('chapterPDFViewer').src=''; }
+        function toggleMenu() { document.getElementById('menu').classList.toggle('show'); }
+        function switchTab(tabName, event) {
+            document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabName+'Tab').classList.add('active');
+            resetChapterView();
+        }
+        window.onscroll = function() { document.getElementById('backToTop').classList.toggle('show', document.body.scrollTop>200 || document.documentElement.scrollTop>200); };
+        function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
+
+        loadChapters();
+
+        window.openBookPDF = openBookPDF;
+        window.openSolutionPDF = openSolutionPDF;
+        window.openChapterMCQ = openChapterMCQ;
+        window.closePDF = closePDF;
+        window.closeMCQ = closeMCQ;
+        window.toggleMenu = toggleMenu;
+        window.switchTab = switchTab;
+        window.scrollToTop = scrollToTop;
+        window.prevChapterMCQ = prevChapterMCQ;
+        window.nextChapterMCQ = nextChapterMCQ;
+        window.checkChapterMCQ = checkChapterMCQ;
+    </script>
+</body>
+
+</html>

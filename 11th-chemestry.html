@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 11 रसायन विज्ञान - बिहार बोर्ड | Solution Study Center</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ============================================
+           GLOBAL STYLES & CSS VARIABLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            --primary: #1e3c72;
+            --primary-dark: #0a2a4a;
+            --secondary: #ff9800;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            background: var(--secondary);
+            color: var(--primary-dark);
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Back Button Section */
+        .back-button-section {
+            width: 90%;
+            max-width: 1400px;
+            margin: 20px auto 0 auto;
+            padding: 0 15px;
+        }
+
+        .back-btn-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 24px 8px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .back-btn-container:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-btn-main {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .back-btn-main i {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn-container:hover .back-btn-main i {
+            transform: translateX(-3px);
+        }
+
+        /* Main Content */
+        .main-container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .welcome-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 40px 0 30px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: white;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* Chapter Grid */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--secondary);
+        }
+
+        .chapter-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chapter-number {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        .chapter-title {
+            font-size: 15px;
+            font-weight: 600;
+            flex: 1;
+            line-height: 1.3;
+        }
+
+        .chapter-body {
+            padding: 20px;
+        }
+
+        .chapter-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 13px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chapter-meta i {
+            margin-right: 5px;
+            color: #764ba2;
+        }
+
+        .chapter-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .book-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .book-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .solution-btn {
+            background: #fd7e14;
+            color: white;
+        }
+
+        .solution-btn:hover {
+            background: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .mcq-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .mcq-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        /* Content Section */
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #chapterContent {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        #chapterContent h2 {
+            color: #0b4d3b;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        #chapterContent p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* PDF Viewer */
+        .chapter-pdf-viewer {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-pdf-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-pdf-btn:hover {
+            background: #c82333;
+            transform: scale(1.05);
+        }
+
+        /* MCQ Container */
+        .mcq-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .chapter-mcq-viewer {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .mcq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .mcq-header h3 {
+            color: #333;
+            font-size: 22px;
+        }
+
+        .mcq-progress {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .mcq-question {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mcq-question h4 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .mcq-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mcq-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .mcq-option:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            border-color: #764ba2;
+        }
+
+        .mcq-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .mcq-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mcq-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .mcq-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .mcq-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab {
+            padding: 12px 25px;
+            background: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        /* Formula Grid */
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .formula-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .formula-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .formula-card i {
+            font-size: 40px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .formula-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .formula-card p {
+            color: #666;
+            font-size: 14px;
+            text-align: left;
+            line-height: 1.6;
+            font-family: monospace;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons .icon {
+            display: inline-flex;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons .icon:hover {
+            transform: translateY(-5px) rotate(360deg);
+        }
+
+        .fb:hover { background: #1877f2; }
+        .insta:hover { background: #e1306c; }
+        .yt:hover { background: #ff0000; }
+        .wa:hover { background: #25d366; }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #20ba5c;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            font-size: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: #ffaa33;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon { display: block; }
+            .navbar ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+            .navbar ul.show { display: flex; }
+            .navbar ul li { margin: 10px 0; }
+            .chapter-grid { grid-template-columns: 1fr; }
+            .welcome-section h1 { font-size: 1.8em; }
+            .welcome-section { padding: 30px 20px; }
+            .chapter-pdf-viewer { height: 500px; }
+            .tabs { flex-direction: column; align-items: stretch; }
+            .tab { width: 100%; justify-content: center; }
+            .mcq-footer { flex-direction: column; }
+            .mcq-btn { width: 100%; justify-content: center; }
+            .back-button-section { margin: 15px auto 0 auto; }
+            .back-btn-container { padding: 6px 18px 6px 15px; }
+            .back-hint { display: none; }
+            .chapter-actions { flex-direction: column; }
+            .action-btn { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">SOLUTION STUDY <span>CENTER</span></div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="back-button-section">
+        <div class="back-btn-container">
+            <a href="course.html" class="back-btn-main">
+                <i class="fas fa-arrow-left"></i>
+                <span>वापस जाएं</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="welcome-section">
+            <h1>🧪 कक्षा 11 रसायन विज्ञान - बिहार बोर्ड</h1>
+            <p>📘 पुस्तक PDF + 📝 समाधान PDF + ✅ ऑब्जेक्टिव MCQ + 📚 महत्वपूर्ण सूत्र</p>
+        </div>
+
+        <div class="section-header">
+            <h2>📖 रसायन विज्ञान - सभी अध्याय</h2>
+        </div>
+
+        <div class="chapter-grid" id="chapterGrid"></div>
+
+        <div class="content-section" id="chapterContentSection">
+            <div id="chapterContent">
+                <h2>📖 अध्याय पढ़ने के लिए कार्ड पर क्लिक करें</h2>
+                <p>कृपया किसी अध्याय के कार्ड पर Book, Solution या MCQ बटन पर क्लिक करें।</p>
+                <p>यहाँ आपको हर अध्याय की पुस्तक PDF, हल PDF और ऑब्जेक्टिव प्रश्न (MCQ) मिलेंगे।</p>
+            </div>
+            <div id="chapterPDFContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closePDF()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
+                <h2 id="chapterPDFTitle" style="color: #0b4d3b; margin-bottom: 20px; text-align: center;"></h2>
+                <iframe class="chapter-pdf-viewer" id="chapterPDFViewer" src=""></iframe>
+            </div>
+            <div id="chapterMCQContainer" style="display: none;">
+                <button class="close-pdf-btn" onclick="closeMCQ()">
+                    <i class="fas fa-times"></i> बंद करें
+                </button>
+                <div id="chapterMCQViewer"></div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('video', event)">
+                <i class="fas fa-play"></i> वीडियो व्याख्या
+            </button>
+            <button class="tab" onclick="switchTab('formula', event)">
+                <i class="fas fa-calculator"></i> महत्वपूर्ण सूत्र
+            </button>
+        </div>
+
+        <div id="videoTab" class="tab-content active">
+            <div class="video-section">
+                <div class="video-grid">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>रसायन विज्ञान की मूल अवधारणाएँ</h4>
+                            <p>मोल संकल्पना, मोलर द्रव्यमान, स्टॉइकियोमेट्री</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>परमाणु संरचना</h4>
+                            <p>बोर मॉडल, क्वांटम संख्याएँ, इलेक्ट्रॉनिक विन्यास</p>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h4>रासायनिक आबंधन</h4>
+                            <p>आयनिक बंध, सहसंयोजक बंध, VSEPR सिद्धांत</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="formulaTab" class="tab-content">
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>मोल संकल्पना</h3>
+                    <p>1 मोल = 6.022 × 10²³ कण<br>
+                    मोल = द्रव्यमान / मोलर द्रव्यमान<br>
+                    मोल = कणों की संख्या / Nₐ<br>
+                    गैस के लिए (STP): 1 मोल = 22.4 L</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-atom"></i>
+                    <h3>परमाणु संरचना</h3>
+                    <p>E = hν = hc/λ<br>
+                    λ = h/mv (डी-ब्रॉग्ली)<br>
+                    Δx·Δp ≥ h/4π (अनिश्चितता सिद्धांत)<br>
+                    ऊर्जा स्तर: Eₙ = -13.6/n² eV</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-link"></i>
+                    <h3>रासायनिक आबंधन</h3>
+                    <p>आयनिक बंध: धातु + अधातु<br>
+                    सहसंयोजक बंध: अधातु + अधातु<br>
+                    बंध क्रम = (N_b - N_a)/2<br>
+                    आण्विक कक्षक सिद्धांत: B.O. = ½ (B.M.O. - A.B.M.O.)</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>उष्मागतिकी</h3>
+                    <p>ΔU = q + w<br>
+                    ΔH = ΔU + PΔV<br>
+                    ΔG = ΔH - TΔS<br>
+                    ΔG° = -RT ln K<br>
+                    q = m·c·ΔT</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>साम्यावस्था</h3>
+                    <p>K_c = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ<br>
+                    K_p = K_c (RT)^Δn<br>
+                    pH = -log[H⁺]<br>
+                    pOH = -log[OH⁻]<br>
+                    pH + pOH = 14</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>अपचयोपचय</h3>
+                    <p>ऑक्सीकरण संख्या: नियम<br>
+                    ऑक्सीकरण: e⁻ का ह्रास<br>
+                    अपचयन: e⁻ का ग्रहण<br>
+                    फैराडे का नियम: w = ZIt<br>
+                    Z = E/96500</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-cube"></i>
+                    <h3>कार्बनिक रसायन</h3>
+                    <p>कार्बनिक यौगिक: C, H, O, N, S, X<br>
+                    क्रियात्मक समूह: -OH (एल्कोहॉल), -CHO (एल्डिहाइड), -COOH (कार्बोक्सिलिक)<br>
+                    आईयूपीएसी नामकरण: प्राथमिकता क्रम</p>
+                </div>
+                <div class="formula-card">
+                    <i class="fas fa-gas-pump"></i>
+                    <h3>हाइड्रोकार्बन</h3>
+                    <p>एल्केन: CₙH₂ₙ₊₂<br>
+                    एल्कीन: CₙH₂ₙ<br>
+                    एल्काइन: CₙH₂ₙ₋₂<br>
+                    बेन्जीन: C₆H₆ (चक्रीय, सुगन्धित)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>© 2026 Solution Study Center Mansi | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/1B5dZQDXE5/" class="icon fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/solution_study_center_mansi?igsh=MTdjZTAwZG9xbDR0NQ==" class="icon insta" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon yt" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917903912699" class="icon wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917903912699" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="back-to-top" onclick="scrollToTop()" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <script>
+        // ============================================
+        // CHAPTER DATA - Class 11 Chemistry (Bihar Board)
+        // Based on the reference link from evidyarthi.in
+        // ============================================
+        const chapters = [
+            { num: 1, title: "रसायन विज्ञान की कुछ मूल अवधारणाएँ", color: "#FF6B6B" },
+            { num: 2, title: "परमाणु की संरचना", color: "#4ECDC4" },
+            { num: 3, title: "तत्वों का वर्गीकरण एवं गुणधर्मों में आवर्तिता", color: "#45B7D1" },
+            { num: 4, title: "रासायनिक आबंधन तथा आण्विक संरचना", color: "#96CEB4" },
+            { num: 5, title: "उष्मागतिकी (Thermodynamics)", color: "#FFEAA7" },
+            { num: 6, title: "साम्यावस्था (Equilibrium)", color: "#DDA0DD" },
+            { num: 7, title: "अपचयोपचय अभिक्रियाएँ (Redox Reactions)", color: "#98D8C8" },
+            { num: 8, title: "कार्बनिक रसायन : कुछ आधारभूत सिद्धांत तथा तकनीकें", color: "#F7DC6F" },
+            { num: 9, title: "हाइड्रोकार्बन (Hydrocarbons)", color: "#BB8FCE" }
+        ];
+
+        // ============================================
+        // PDF LINKS - Book PDF + Solution PDF
+        // Using evidyarthi.in reference
+        // ============================================
+        const chapterBookLinks = {};
+        const chapterSolutionLinks = {};
+
+        for (let i = 1; i <= 9; i++) {
+            chapterBookLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/chemistry-class-11-chapter-${i}.pdf`;
+            chapterSolutionLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/chemistry-class-11-solution-chapter-${i}.pdf`;
+        }
+
+        // ============================================
+        // MCQ DATA FOR EACH CHAPTER
+        // ============================================
+        const chapterMCQs = {
+            1: [
+                { question: "1 मोल में कितने कण होते हैं?", options: ["6.022 × 10²³", "6.022 × 10²²", "6.022 × 10²⁴", "6.022 × 10²¹"], correct: 0 },
+                { question: "मोलर द्रव्यमान की इकाई क्या है?", options: ["g/mol", "g", "kg", "amu"], correct: 0 },
+                { question: "STP पर किसी गैस के 1 मोल का आयतन कितना होता है?", options: ["22.4 L", "22.4 mL", "2.24 L", "224 L"], correct: 0 },
+                { question: "निम्न में से कौन सा SI मूल मात्रक है?", options: ["मोल", "न्यूटन", "जूल", "वाट"], correct: 0 },
+                { question: "स्टॉइकियोमेट्री किसका अध्ययन है?", options: ["अभिक्रिया में मात्रात्मक संबंध", "ऊर्जा परिवर्तन", "अभिक्रिया की दर", "साम्यावस्था"], correct: 0 }
+            ],
+            2: [
+                { question: "इलेक्ट्रॉन की खोज किसने की?", options: ["जे.जे. थॉमसन", "रदरफोर्ड", "बोर", "चैडविक"], correct: 0 },
+                { question: "परमाणु का नाभिक किसने खोजा?", options: ["रदरफोर्ड", "थॉमसन", "बोर", "चैडविक"], correct: 0 },
+                { question: "हाइड्रोजन स्पेक्ट्रम में कितनी श्रेणियाँ होती हैं?", options: ["5", "3", "4", "6"], correct: 0 },
+                { question: "क्वांटम संख्या 'l' किसे दर्शाती है?", options: ["अज़ीमुथल", "प्रधान", "चुम्बकीय", "स्पिन"], correct: 0 },
+                { question: "ऑर्बिटल में अधिकतम कितने इलेक्ट्रॉन हो सकते हैं?", options: ["2", "1", "3", "4"], correct: 0 }
+            ],
+            3: [
+                { question: "आधुनिक आवर्त सारणी किस पर आधारित है?", options: ["परमाणु क्रमांक", "परमाणु द्रव्यमान", "इलेक्ट्रॉनिक विन्यास", "संयोजकता"], correct: 0 },
+                { question: "आवर्त सारणी में कितने समूह होते हैं?", options: ["18", "8", "16", "10"], correct: 0 },
+                { question: "आवर्त सारणी में कितने आवर्त होते हैं?", options: ["7", "8", "6", "9"], correct: 0 },
+                { question: "क्षार धातु किस समूह में होती हैं?", options: ["1", "2", "17", "18"], correct: 0 },
+                { question: "उत्कृष्ट गैस किस समूह में होती हैं?", options: ["18", "1", "2", "17"], correct: 0 }
+            ],
+            4: [
+                { question: "NaCl में किस प्रकार का बंध होता है?", options: ["आयनिक बंध", "सहसंयोजक बंध", "धात्विक बंध", "हाइड्रोजन बंध"], correct: 0 },
+                { question: "H₂O में किस प्रकार का बंध होता है?", options: ["सहसंयोजक", "आयनिक", "धात्विक", "हाइड्रोजन"], correct: 0 },
+                { question: "लुईस बिंदु संरचना में बंध बनाने के लिए कितने इलेक्ट्रॉनों की आवश्यकता होती है?", options: ["2", "4", "6", "8"], correct: 0 },
+                { question: "VSEPR सिद्धांत किससे संबंधित है?", options: ["अणु की आकृति", "बंध ऊर्जा", "बंध लंबाई", "ध्रुवता"], correct: 0 },
+                { question: "CO₂ अणु की आकृति कैसी होती है?", options: ["रैखिक", "कोणीय", "त्रिकोणीय", "चतुष्फलकीय"], correct: 0 }
+            ],
+            5: [
+                { question: "उष्मागतिकी का प्रथम नियम क्या है?", options: ["ऊर्जा संरक्षण", "एन्ट्रॉपी का बढ़ना", "ऊर्जा का स्थानांतरण", "तापमान का नियम"], correct: 0 },
+                { question: "ΔG का सूत्र क्या है?", options: ["ΔH - TΔS", "ΔH + TΔS", "TΔH - ΔS", "ΔS - TΔH"], correct: 0 },
+                { question: "एन्थैल्पी की इकाई क्या है?", options: ["J/mol", "J/K", "J/s", "J/K·mol"], correct: 0 },
+                { question: "ऊष्माक्षेपी अभिक्रिया में ΔH का मान कैसा होता है?", options: ["ऋणात्मक", "धनात्मक", "शून्य", "अनंत"], correct: 0 },
+                { question: "एन्ट्रॉपी किसकी माप है?", options: ["अव्यवस्था की", "ऊर्जा की", "ताप की", "दाब की"], correct: 0 }
+            ],
+            6: [
+                { question: "साम्यावस्था स्थिरांक K_c का सूत्र क्या है?", options: ["[C]ᶜ[D]ᵈ/[A]ᵃ[B]ᵇ", "[A]ᵃ[B]ᵇ/[C]ᶜ[D]ᵈ", "[C][D]/[A][B]", "[A][B]/[C][D]"], correct: 0 },
+                { question: "pH का सूत्र क्या है?", options: ["-log[H⁺]", "log[H⁺]", "-log[OH⁻]", "log[OH⁻]"], correct: 0 },
+                { question: "शुद्ध जल का pH कितना होता है?", options: ["7", "0", "14", "1"], correct: 0 },
+                { question: "अम्ल का pH मान कैसा होता है?", options: ["7 से कम", "7", "7 से अधिक", "14"], correct: 0 },
+                { question: "ले-शातेलियर का सिद्धांत किससे संबंधित है?", options: ["साम्यावस्था पर प्रभाव", "अभिक्रिया की दर", "ऊर्जा परिवर्तन", "उत्प्रेरक"], correct: 0 }
+            ],
+            7: [
+                { question: "ऑक्सीकरण क्या है?", options: ["इलेक्ट्रॉन का ह्रास", "इलेक्ट्रॉन का ग्रहण", "ऑक्सीजन का योग", "हाइड्रोजन का ह्रास"], correct: 0 },
+                { question: "अपचयन क्या है?", options: ["इलेक्ट्रॉन का ग्रहण", "इलेक्ट्रॉन का ह्रास", "ऑक्सीजन का योग", "हाइड्रोजन का ह्रास"], correct: 0 },
+                { question: "ऑक्सीकारक क्या होता है?", options: ["ऑक्सीकृत होता है", "अपचयित होता है", "इलेक्ट्रॉन ग्रहण करता है", "इलेक्ट्रॉन त्यागता है"], correct: 0 },
+                { question: "अपचायक क्या होता है?", options: ["अपचयित होता है", "ऑक्सीकृत होता है", "इलेक्ट्रॉन ग्रहण करता है", "कोई परिवर्तन नहीं"], correct: 1 },
+                { question: "ऑक्सीकरण संख्या क्या है?", options: ["आवेश", "द्रव्यमान", "आयतन", "घनत्व"], correct: 0 }
+            ],
+            8: [
+                { question: "कार्बनिक यौगिकों में कौन सा तत्व अनिवार्य रूप से होता है?", options: ["कार्बन", "हाइड्रोजन", "ऑक्सीजन", "नाइट्रोजन"], correct: 0 },
+                { question: "आईयूपीएसी क्या है?", options: ["नामकरण की विधि", "अभिक्रिया", "यौगिक", "तत्व"], correct: 0 },
+                { question: "कार्बनिक यौगिकों के शुद्धिकरण की विधि कौन सी है?", options: ["आसवन", "निस्यंदन", "अवक्षेपण", "क्रिस्टलीकरण"], correct: 0 },
+                { question: "क्रोमैटोग्राफी का उपयोग किसके लिए किया जाता है?", options: ["मिश्रण के पृथक्करण", "शुद्धिकरण", "गलनांक ज्ञात करना", "क्वथनांक ज्ञात करना"], correct: 0 },
+                { question: "कार्बनिक यौगिकों में क्रियात्मक समूह क्या होता है?", options: ["अभिक्रियाशील भाग", "अक्रिय भाग", "हाइड्रोकार्बन", "कार्बन श्रृंखला"], correct: 0 }
+            ],
+            9: [
+                { question: "एल्केन का सामान्य सूत्र क्या है?", options: ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₄"], correct: 0 },
+                { question: "एल्कीन का सामान्य सूत्र क्या है?", options: ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙH₂ₙ₊₄"], correct: 0 },
+                { question: "बेन्जीन का आण्विक सूत्र क्या है?", options: ["C₆H₆", "C₆H₁₂", "C₆H₁₄", "C₆H₁₀"], correct: 0 },
+                { question: "मेथेन का सूत्र क्या है?", options: ["CH₄", "C₂H₆", "C₃H₈", "C₄H₁₀"], correct: 0 },
+                { question: "एथीन का सूत्र क्या है?", options: ["C₂H₄", "C₂H₂", "C₂H₆", "C₃H₆"], correct: 0 }
+            ]
+        };
+
+        let currentChapter = 1;
+        let currentMCQIndex = 0;
+        let chapterUserAnswers = {};
+
+        function loadChapters() {
+            const grid = document.getElementById('chapterGrid');
+            grid.innerHTML = '';
+            chapters.forEach(ch => {
+                const card = document.createElement('div');
+                card.className = 'chapter-card';
+                card.innerHTML = `
+                    <div class="chapter-header" style="background: linear-gradient(135deg, ${ch.color} 0%, #764ba2 100%);">
+                        <div class="chapter-number">${ch.num}</div>
+                        <div class="chapter-title">${ch.title}</div>
+                    </div>
+                    <div class="chapter-body">
+                        <div class="chapter-meta">
+                            <span><i class="fas fa-flask"></i> अध्याय ${ch.num}</span>
+                            <span><i class="fas fa-check-circle"></i> 5 MCQs</span>
+                        </div>
+                        <div class="chapter-actions">
+                            <button class="action-btn book-btn" onclick="openBookPDF(${ch.num})"><i class="fas fa-book"></i> Book PDF</button>
+                            <button class="action-btn solution-btn" onclick="openSolutionPDF(${ch.num})"><i class="fas fa-file-alt"></i> Solution PDF</button>
+                            <button class="action-btn mcq-btn" onclick="openChapterMCQ(${ch.num})"><i class="fas fa-question-circle"></i> MCQ</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function openBookPDF(num) { openPDFViewer(num, chapterBookLinks[num], `${chapters[num-1].title} (पुस्तक PDF)`); }
+        function openSolutionPDF(num) { openPDFViewer(num, chapterSolutionLinks[num], `${chapters[num-1].title} (हल PDF)`); }
+
+        function openPDFViewer(num, pdfUrl, title) {
+            document.getElementById('chapterContent').style.display = 'none';
+            document.getElementById('chapterMCQContainer').style.display = 'none';
+            document.getElementById('chapterPDFContainer').style.display = 'block';
+            document.getElementById('chapterPDFTitle').textContent = `🧪 ${title}`;
+            document.getElementById('chapterPDFViewer').src = pdfUrl;
+            document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openChapterMCQ(chapterNum) {
+            currentChapter = chapterNum;
+            currentMCQIndex = 0;
+            if (!chapterUserAnswers[chapterNum]) chapterUserAnswers[chapterNum] = new Array(chapterMCQs[chapterNum].length).fill(-1);
+            document.getElementById('chapterContent').style.display = 'none';
+            document.getElementById('chapterPDFContainer').style.display = 'none';
+            document.getElementById('chapterMCQContainer').style.display = 'block';
+            loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer'));
+            document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function loadChapterMCQ(chapterNum, container) {
+            const mcqs = chapterMCQs[chapterNum];
+            if (!mcqs || mcqs.length === 0) { container.innerHTML = '<p style="text-align: center; padding: 30px;">MCQs not available.</p>'; return; }
+            const q = mcqs[currentMCQIndex];
+            const userAns = chapterUserAnswers[chapterNum][currentMCQIndex];
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                optionsHtml += `<label class="mcq-option"><input type="radio" name="chapterQ" value="${idx}" ${userAns === idx ? 'checked' : ''}><span>${opt}</span></label>`;
+            });
+            container.innerHTML = `
+                <div class="mcq-container">
+                    <div class="mcq-header"><h3><i class="fas fa-question-circle"></i> अध्याय ${chapterNum} - MCQ प्रैक्टिस</h3><div class="mcq-progress">प्रश्न ${currentMCQIndex+1}/${mcqs.length}</div></div>
+                    <div class="mcq-question"><h4>${currentMCQIndex+1}. ${q.question}</h4><div class="mcq-options">${optionsHtml}</div></div>
+                    <div class="mcq-footer">
+                        <button class="mcq-btn" onclick="prevChapterMCQ(${chapterNum})" ${currentMCQIndex===0?'disabled':''}><i class="fas fa-arrow-left"></i> पिछला</button>
+                        <button class="mcq-btn" onclick="nextChapterMCQ(${chapterNum})" ${currentMCQIndex===mcqs.length-1?'disabled':''}>अगला <i class="fas fa-arrow-right"></i></button>
+                        <button class="mcq-btn" onclick="checkChapterMCQ(${chapterNum})" id="chapterSubmitBtn" style="${currentMCQIndex===mcqs.length-1?'inline-flex':'none'}"><i class="fas fa-check"></i> जमा करें</button>
+                    </div>
+                    <div id="chapterResult" style="margin-top:20px; display:none;"></div>
+                </div>
+            `;
+            document.querySelectorAll('input[name="chapterQ"]').forEach(radio => {
+                radio.addEventListener('change', function() { chapterUserAnswers[chapterNum][currentMCQIndex] = parseInt(this.value); });
+            });
+        }
+
+        function prevChapterMCQ(chapterNum) { if(currentMCQIndex>0){ currentMCQIndex--; loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer')); } }
+        function nextChapterMCQ(chapterNum) { const mcqs=chapterMCQs[chapterNum]; if(currentMCQIndex<mcqs.length-1){ currentMCQIndex++; loadChapterMCQ(chapterNum, document.getElementById('chapterMCQViewer')); } }
+        function checkChapterMCQ(chapterNum) {
+            const mcqs=chapterMCQs[chapterNum], answers=chapterUserAnswers[chapterNum];
+            let score=0; for(let i=0;i<mcqs.length;i++) if(answers[i]===mcqs[i].correct) score++;
+            const percentage=(score/mcqs.length)*100;
+            const resultDiv=document.getElementById('chapterResult');
+            resultDiv.style.display='block';
+            if(percentage>=60){
+                resultDiv.innerHTML=`<div style="background:#d4edda; color:#155724; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-trophy" style="font-size:48px; color:#ffd700;"></i><h3>बधाई हो! 🎉</h3><p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p></div>`;
+            } else {
+                resultDiv.innerHTML=`<div style="background:#f8d7da; color:#721c24; padding:20px; border-radius:10px; text-align:center;"><i class="fas fa-flask" style="font-size:48px;"></i><h3>पुनः प्रयास करें 📖</h3><p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p><p>कृपया अध्याय दोबारा पढ़ें और सूत्र याद करें।</p></div>`;
+            }
+        }
+
+        function closePDF() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterPDFContainer').style.display='none'; document.getElementById('chapterPDFViewer').src=''; }
+        function closeMCQ() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterMCQContainer').style.display='none'; }
+        function resetChapterView() { document.getElementById('chapterContent').style.display='block'; document.getElementById('chapterPDFContainer').style.display='none'; document.getElementById('chapterMCQContainer').style.display='none'; document.getElementById('chapterPDFViewer').src=''; }
+        function toggleMenu() { document.getElementById('menu').classList.toggle('show'); }
+        function switchTab(tabName, event) {
+            document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tabName+'Tab').classList.add('active');
+            resetChapterView();
+        }
+        window.onscroll = function() { document.getElementById('backToTop').classList.toggle('show', document.body.scrollTop>200 || document.documentElement.scrollTop>200); };
+        function scrollToTop() { window.scrollTo({top:0, behavior:'smooth'}); }
+
+        loadChapters();
+
+        window.openBookPDF = openBookPDF;
+        window.openSolutionPDF = openSolutionPDF;
+        window.openChapterMCQ = openChapterMCQ;
+        window.closePDF = closePDF;
+        window.closeMCQ = closeMCQ;
+        window.toggleMenu = toggleMenu;
+        window.switchTab = switchTab;
+        window.scrollToTop = scrollToTop;
+        window.prevChapterMCQ = prevChapterMCQ;
+        window.nextChapterMCQ = nextChapterMCQ;
+        window.checkChapterMCQ = checkChapterMCQ;
+    </script>
+</body>
+
+</html>

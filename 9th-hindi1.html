@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>कक्षा 8 विज्ञान - बिहार बोर्ड (MCQ) | Solution Study Center</title>
+    <title>कक्षा 9 हिंदी (वर्णिका) - बिहार बोर्ड | Solution Study Center</title>
 
     <!-- Google Fonts -->
     <link
@@ -221,7 +221,7 @@
             border-radius: 2px;
         }
 
-        /* Chapter Grid - Cards Layout */
+        /* Chapter Grid */
         .chapter-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -235,7 +235,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: all 0.3s;
-            cursor: pointer;
             position: relative;
             border: 2px solid transparent;
         }
@@ -324,17 +323,17 @@
             transform: scale(1.05);
         }
 
-        .mcq-btn-action {
+        .mcq-btn-style {
             background: #dc3545;
             color: white;
         }
 
-        .mcq-btn-action:hover {
+        .mcq-btn-style:hover {
             background: #c82333;
             transform: scale(1.05);
         }
 
-        /* Content Section - Where PDF and MCQ Viewer Appears */
+        /* Content Section */
         .content-section {
             background: white;
             border-radius: 20px;
@@ -393,7 +392,7 @@
             transform: scale(1.05);
         }
 
-        /* MCQ Container Styles */
+        /* MCQ Container */
         .mcq-container {
             background: white;
             padding: 20px;
@@ -446,6 +445,7 @@
             color: #333;
             margin-bottom: 20px;
             font-size: 18px;
+            line-height: 1.6;
         }
 
         .mcq-options {
@@ -512,7 +512,7 @@
             transform: none;
         }
 
-        /* Tabs Section */
+        /* Tabs */
         .tabs {
             display: flex;
             gap: 10px;
@@ -600,14 +600,14 @@
             font-size: 14px;
         }
 
-        /* Science Terms Grid */
-        .science-terms-grid {
+        /* Grammar/Important Terms Grid */
+        .grammar-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .science-term-card {
+        .grammar-card {
             background: white;
             padding: 25px;
             border-radius: 15px;
@@ -617,28 +617,30 @@
             cursor: pointer;
         }
 
-        .science-term-card:hover {
+        .grammar-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .science-term-card i {
+        .grammar-card i {
             font-size: 40px;
             color: #764ba2;
             margin-bottom: 15px;
         }
 
-        .science-term-card h3 {
+        .grammar-card h3 {
             color: #333;
             margin-bottom: 10px;
         }
 
-        .science-term-card p {
+        .grammar-card p {
             color: #666;
             font-size: 14px;
+            text-align: left;
+            line-height: 1.5;
         }
 
-        /* Footer Section */
+        /* Footer */
         .main-footer {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: var(--white);
@@ -706,7 +708,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Back to Top Button */
+        /* Back to Top */
         .back-to-top {
             position: fixed;
             bottom: 100px;
@@ -740,9 +742,7 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
+            .menu-icon { display: block; }
             .navbar ul {
                 display: none;
                 position: absolute;
@@ -755,54 +755,27 @@
                 text-align: center;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             }
-            .navbar ul.show {
-                display: flex;
-            }
-            .navbar ul li {
-                margin: 10px 0;
-            }
-            .chapter-grid {
-                grid-template-columns: 1fr;
-            }
-            .welcome-section h1 {
-                font-size: 1.8em;
-            }
-            .welcome-section {
-                padding: 30px 20px;
-            }
-            .chapter-pdf-viewer {
-                height: 500px;
-            }
-            .tabs {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .tab {
-                width: 100%;
-                justify-content: center;
-            }
-            .mcq-footer {
-                flex-direction: column;
-            }
-            .mcq-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .back-button-section {
-                margin: 15px auto 0 auto;
-            }
-            .back-btn-container {
-                padding: 6px 18px 6px 15px;
-            }
-            .back-hint {
-                display: none;
-            }
+            .navbar ul.show { display: flex; }
+            .navbar ul li { margin: 10px 0; }
+            .chapter-grid { grid-template-columns: 1fr; }
+            .welcome-section h1 { font-size: 1.8em; }
+            .welcome-section { padding: 30px 20px; }
+            .chapter-pdf-viewer { height: 500px; }
+            .tabs { flex-direction: column; align-items: stretch; }
+            .tab { width: 100%; justify-content: center; }
+            .mcq-footer { flex-direction: column; }
+            .mcq-btn { width: 100%; justify-content: center; }
+            .back-button-section { margin: 15px auto 0 auto; }
+            .back-btn-container { padding: 6px 18px 6px 15px; }
+            .back-hint { display: none; }
         }
     </style>
 </head>
 
 <body>
-    <!-- HEADER SECTION -->
+    <!-- ============================================
+         HEADER SECTION - Fixed Navigation Bar
+         ============================================ -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">SOLUTION STUDY <span>CENTER</span></div>
@@ -818,7 +791,9 @@
         </div>
     </nav>
 
-    <!-- BACK BUTTON SECTION -->
+    <!-- ============================================
+         BACK BUTTON SECTION (Placed just below header)
+         ============================================ -->
     <div class="back-button-section">
         <div class="back-btn-container">
             <a href="course.html" class="back-btn-main">
@@ -828,17 +803,19 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- ============================================
+         MAIN CONTENT AREA
+         ============================================ -->
     <div class="main-container">
         <!-- Welcome Section -->
         <div class="welcome-section">
-            <h1>🔬 कक्षा 8 विज्ञान - बिहार बोर्ड</h1>
-            <p>सभी 19 अध्यायों के PDF समाधान और बहुविकल्पीय प्रश्न (MCQ) एक ही जगह</p>
+            <h1>📖 कक्षा 9 हिंदी (वर्णिका) - बिहार बोर्ड</h1>
+            <p>गद्य एवं पद्य खंड - सभी अध्यायों के PDF समाधान और बहुविकल्पीय प्रश्न (MCQ)</p>
         </div>
 
         <!-- Section Header -->
         <div class="section-header">
-            <h2>📖 विज्ञान - सभी अध्याय</h2>
+            <h2>📖 वर्णिका भाग 1 - सभी अध्याय</h2>
         </div>
 
         <!-- Chapter Grid -->
@@ -875,8 +852,8 @@
             <button class="tab active" onclick="switchTab('video', event)">
                 <i class="fas fa-play"></i> वीडियो व्याख्या
             </button>
-            <button class="tab" onclick="switchTab('terms', event)">
-                <i class="fas fa-flask"></i> महत्वपूर्ण शब्द
+            <button class="tab" onclick="switchTab('grammar', event)">
+                <i class="fas fa-language"></i> हिंदी व्याकरण
             </button>
         </div>
 
@@ -887,70 +864,78 @@
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>दहन और ज्वाला - पूरी व्याख्या</h4>
-                            <p>दहन की स्थितियाँ और ज्वाला के प्रकार</p>
+                            <h4>दो बैलों की कथा - पूर्ण व्याख्या</h4>
+                            <p>प्रेमचंद की प्रसिद्ध कहानी</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>तड़ित और भूकम्प - कारण और बचाव</h4>
-                            <p>प्राकृतिक आपदाओं की वैज्ञानिक व्याख्या</p>
+                            <h4>हिंदी व्याकरण - संपूर्ण ज्ञान</h4>
+                            <p>संज्ञा, सर्वनाम, विशेषण, क्रिया</p>
                         </div>
                     </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
                         <div class="video-info">
-                            <h4>कोशिका - जीवन की इकाई</h4>
-                            <p>पादप और जंतु कोशिका में अंतर</p>
+                            <h4>कबीर के दोहे - अर्थ सहित</h4>
+                            <p>कबीर के प्रसिद्ध दोहों की व्याख्या</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Important Terms Tab -->
-        <div id="termsTab" class="tab-content">
-            <div class="science-terms-grid">
-                <div class="science-term-card">
-                    <i class="fas fa-fire"></i>
-                    <h3>दहन</h3>
-                    <p>ऑक्सीजन की उपस्थिति में किसी पदार्थ का जलना। ज्वलन ताप, ईंधन के प्रकार।</p>
+        <!-- Grammar Tab -->
+        <div id="grammarTab" class="tab-content">
+            <div class="grammar-grid">
+                <div class="grammar-card">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>संज्ञा</h3>
+                    <p>किसी व्यक्ति, वस्तु, स्थान या भाव के नाम को संज्ञा कहते हैं।<br>
+                    जैसे: राम, पटना, सुंदरता, मोहन</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>तड़ित</h3>
-                    <p>बादलों के बीच विद्युत आवेश के निर्वहन से उत्पन्न चिंगारी। तड़ित से बचाव के उपाय।</p>
+                <div class="grammar-card">
+                    <i class="fas fa-running"></i>
+                    <h3>क्रिया</h3>
+                    <p>जिस शब्द से किसी कार्य का करना या होना पता चले, उसे क्रिया कहते हैं।<br>
+                    जैसे: खाना, पीना, सोना, जाना, आना</p>
                 </div>
-                <div class="science-term-card">
-                    <i class="fas fa-seedling"></i>
-                    <h3>फसल उत्पादन</h3>
-                    <p>खाद, सिंचाई, निराई-गुड़ाई, फसल कटाई और भंडारण की विधियाँ।</p>
-                </div>
-                <div class="science-term-card">
-                    <i class="fas fa-dragon"></i>
-                    <h3>बल और दाब</h3>
-                    <p>बल के प्रभाव, दाब = बल/क्षेत्रफल। वायुमंडलीय दाब और उसके अनुप्रयोग।</p>
-                </div>
-                <div class="science-term-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>विद्युत रासायनिक प्रभाव</h3>
-                    <p>विद्युत धारा का रासायनिक प्रभाव, विद्युत लेपन की प्रक्रिया और उपयोग।</p>
-                </div>
-                <div class="science-term-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>प्रकाश</h3>
-                    <p>प्रकाश का परावर्तन, आँख की संरचना, नेत्र दोष और उनका निवारण।</p>
-                </div>
-                <div class="science-term-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>कोशिका</h3>
-                    <p>कोशिका की खोज, संरचना, कोशिकांग (केंद्रक, माइटोकॉन्ड्रिया आदि)।</p>
-                </div>
-                <div class="science-term-card">
+                <div class="grammar-card">
                     <i class="fas fa-star"></i>
-                    <h3>तारे और सूर्य</h3>
-                    <p>सौरमंडल, ग्रह, उपग्रह, तारामंडल, धूमकेतु की संरचना।</p>
+                    <h3>विशेषण</h3>
+                    <p>जो शब्द संज्ञा या सर्वनाम की विशेषता बताते हैं, उन्हें विशेषण कहते हैं।<br>
+                    जैसे: अच्छा लड़का, सुंदर फूल</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-link"></i>
+                    <h3>संधि</h3>
+                    <p>दो वर्णों के मेल से होने वाले विकार को संधि कहते हैं।<br>
+                    स्वर संधि, व्यंजन संधि, विसर्ग संधि</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-random"></i>
+                    <h3>समास</h3>
+                    <p>दो या दो से अधिक शब्दों के मेल से बने नए शब्द को समास कहते हैं।<br>
+                    जैसे: राजपुरुष = राजा का पुरुष</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-comment"></i>
+                    <h3>मुहावरे और लोकोक्तियाँ</h3>
+                    <p>मुहावरा: वाक्यांश जो अपना विशेष अर्थ रखता है।<br>
+                    जैसे: आँखों में धूल झोंकना, नाक में दम करना</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-flag-checkered"></i>
+                    <h3>अलंकार</h3>
+                    <p>काव्य की शोभा बढ़ाने वाले तत्व अलंकार कहलाते हैं।<br>
+                    उपमा, रूपक, उत्प्रेक्षा, यमक, अनुप्रास आदि।</p>
+                </div>
+                <div class="grammar-card">
+                    <i class="fas fa-feather-alt"></i>
+                    <h3>छंद</h3>
+                    <p>छंद वह विशेष रचना है जिसमें वर्णों की संख्या और मात्राओं का नियम होता है।<br>
+                    दोहा, सोरठा, चौपाई, हरिगीतिका आदि।</p>
                 </div>
             </div>
         </div>
@@ -975,84 +960,94 @@
 
     <script>
         // ============================================
-        // CHAPTER DATA - 19 Chapters of Class 8 Science (Bihar Board)
+        // CHAPTER DATA - Class 9 Hindi Varnika (Bihar Board)
+        // Based on the reference link from evidyarthi.in
         // ============================================
         const chapters = [
-            { num: 1, title: "दहन और ज्वाला : चीजों का जलना", color: "#FF6B6B" },
-            { num: 2, title: "तड़ित ओर भूकम्प : प्रकुति के दो भयानक रूप", color: "#4ECDC4" },
-            { num: 3, title: "फसल : उत्पादन एवं प्रबंधन", color: "#45B7D1" },
-            { num: 4, title: "कपड़े तरह-तरह के : रेशे तरह-तरह के", color: "#96CEB4" },
-            { num: 5, title: "बल से ज़ोर आजमाइश", color: "#FFEAA7" },
-            { num: 6, title: "घर्षण के कारण", color: "#DDA0DD" },
-            { num: 7, title: "सूक्ष्मजीवों का संसार", color: "#98D8C8" },
-            { num: 8, title: "दाब और बल का आपसी सम्बन्ध", color: "#F7DC6F" },
-            { num: 9, title: "ईंधन हमारी ज़रूरत", color: "#BB8FCE" },
-            { num: 10, title: "विद्युत धारा के रासायनिक प्रभाव", color: "#85C1E2" },
-            { num: 11, title: "प्रकाश का खेल", color: "#F8C471" },
-            { num: 12, title: "पौधों और जन्तुओं का संरक्षण", color: "#82E0AA" },
-            { num: 13, title: "तारे और सूर्य का परिवार", color: "#F1948A" },
-            { num: 14, title: "कोशिकाएँ : हर जीव की आधारभूत संरचना", color: "#7FB3D5" },
-            { num: 15, title: "जन्तुओं में प्रजनन", color: "#E59866" },
-            { num: 16, title: "धातु एवं अधातु", color: "#C39BD3" },
-            { num: 17, title: "किशोरावस्था की ओर", color: "#A569BD" },
-            { num: 18, title: "ध्वनियाँ तरह-तरह की", color: "#5DADE2" },
-            { num: 19, title: "वायु एवं जल-प्रदूषण की समस्या", color: "#48C9B0" }
+            // गद्य खंड (Prose Section)
+            { num: 1, title: "दो बैलों की कथा", color: "#FF6B6B", type: "गद्य" },
+            { num: 2, title: "यह दंतुरित मुस्कान और फसल", color: "#4ECDC4", type: "पद्य" },
+            { num: 3, title: "अति न कहो", color: "#45B7D1", type: "गद्य" },
+            { num: 4, title: "मेरे संग की औरतें", color: "#96CEB4", type: "गद्य" },
+            { num: 5, title: "पद (तुलसीदास)", color: "#FFEAA7", type: "पद्य" },
+            { num: 6, title: "ऊँची नीची दुकान", color: "#DDA0DD", type: "गद्य" },
+            { num: 7, title: "भोर का तारा", color: "#98D8C8", type: "गद्य" },
+            { num: 8, title: "आवाखाना", color: "#F7DC6F", type: "गद्य" },
+            { num: 9, title: "बातचीत की कला", color: "#BB8FCE", type: "गद्य" },
+            { num: 10, title: "परंपरा का मूल्यांकन", color: "#85C1E2", type: "गद्य" },
+            { num: 11, title: "दहेज की कसम", color: "#F8C471", type: "गद्य" },
+            { num: 12, title: "गीत-अगीत", color: "#82E0AA", type: "पद्य" },
+            { num: 13, title: "हिमालय की बेटियाँ", color: "#F1948A", type: "गद्य" },
+            { num: 14, title: "एक फूल की चाह", color: "#7FB3D5", type: "पद्य" },
+            { num: 15, title: "श्रम विभाजन और जाति प्रथा", color: "#E59866", type: "गद्य" }
         ];
 
         // ============================================
-        // PDF LINKS FOR EACH CHAPTER (Google Drive Viewer)
-        // Using sample PDF links - replace with actual chapter PDFs
+        // PDF LINKS FOR EACH CHAPTER
+        // Using the reference link from evidyarthi.in
         // ============================================
-        const chapterPDFLinks = {
-            1: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-1.pdf",
-            2: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-2.pdf",
-            3: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-3.pdf",
-            4: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-4.pdf",
-            5: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-5.pdf",
-            6: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-6.pdf",
-            7: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-7.pdf",
-            8: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-8.pdf",
-            9: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-9.pdf",
-            10: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-10.pdf",
-            11: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-11.pdf",
-            12: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-12.pdf",
-            13: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-13.pdf",
-            14: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-14.pdf",
-            15: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-15.pdf",
-            16: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-16.pdf",
-            17: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-17.pdf",
-            18: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-18.pdf",
-            19: "https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/science-class-8-chapter-19.pdf"
-        };
+        const chapterPDFLinks = {};
+        for (let i = 1; i <= 15; i++) {
+            chapterPDFLinks[i] = `https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.evidyarthi.in/wp-content/uploads/2022/12/hindi-class-9-chapter-${i}.pdf`;
+        }
 
         // ============================================
         // MCQ DATA FOR EACH CHAPTER
         // ============================================
         const chapterMCQs = {
             1: [
-                { question: "दहन के लिए कौन-सी गैस सबसे आवश्यक है?", options: ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हाइड्रोजन"], correct: 0 },
-                { question: "ज्वलन ताप क्या है?", options: ["वह न्यूनतम ताप जिस पर कोई पदार्थ जलने लगता है", "वह अधिकतम ताप जिस पर पदार्थ पिघलता है", "पदार्थ के ठंडा होने का ताप", "पदार्थ के उबलने का ताप"], correct: 0 },
-                { question: "निम्नलिखित में से कौन-सा ईंधन सबसे कम प्रदूषण फैलाता है?", options: ["कोयला", "पेट्रोल", "प्राकृतिक गैस", "लकड़ी"], correct: 2 }
+                { question: "'दो बैलों की कथा' कहानी के लेखक कौन हैं?", options: ["प्रेमचंद", "जयशंकर प्रसाद", "रामवृक्ष बेनीपुरी", "महादेवी वर्मा"], correct: 0 },
+                { question: "दो बैलों के नाम क्या थे?", options: ["हीरा-मोती", "सूरज-चंद्र", "गंगा-जमुना", "राम-श्याम"], correct: 0 },
+                { question: "बैलों को किसने खरीदा?", options: ["ग्वाले ने", "किसान ने", "महाजन ने", "साहूकार ने"], correct: 0 },
+                { question: "बैलों के स्वभाव कैसे थे?", options: ["सीधे-सादे", "चालाक", "डरपोक", "क्रोधी"], correct: 0 },
+                { question: "कहानी का मुख्य संदेश क्या है?", options: ["प्रेम और निष्ठा", "धन का महत्व", "शिक्षा का महत्व", "संघर्ष का महत्व"], correct: 0 }
             ],
             2: [
-                { question: "तड़ित (बिजली) किसका निर्वहन है?", options: ["ऊष्मा का", "प्रकाश का", "विद्युत आवेश का", "ध्वनि का"], correct: 2 },
-                { question: "भूकम्प की तीव्रता किस यंत्र से मापी जाती है?", options: ["बैरोमीटर", "सिस्मोग्राफ", "थर्मामीटर", "एमीटर"], correct: 1 },
-                { question: "तड़ित से बचाव के लिए क्या उपयोग किया जाता है?", options: ["तड़ित चालक", "अर्थिंग तार", "फ्यूज", "स्विच"], correct: 0 }
+                { question: "'यह दंतुरित मुस्कान और फसल' कविता किसने लिखी?", options: ["नागार्जुन", "सुमित्रानंदन पंत", "मैथिलीशरण गुप्त", "जयशंकर प्रसाद"], correct: 0 },
+                { question: "कविता में किसकी मुस्कान का वर्णन है?", options: ["बच्चे की", "माँ की", "बहन की", "दादी की"], correct: 0 },
+                { question: "कवि ने फसल की तुलना किससे की है?", options: ["बच्चे की मुस्कान से", "सूर्य से", "चाँद से", "फूल से"], correct: 0 },
+                { question: "कविता में किस ऋतु का वर्णन है?", options: ["बसंत", "ग्रीष्म", "वर्षा", "शरद"], correct: 0 },
+                { question: "कविता का मुख्य भाव क्या है?", options: ["प्रकृति का सौंदर्य", "देशभक्ति", "श्रम का महत्व", "मातृत्व"], correct: 0 }
             ],
             3: [
-                { question: "धान की फसल के लिए किस प्रकार की मिट्टी उपयुक्त होती है?", options: ["काली मिट्टी", "लाल मिट्टी", "चिकनी मिट्टी", "बलुई मिट्टी"], correct: 2 },
-                { question: "हरी खाद के रूप में किसका उपयोग किया जाता है?", options: ["गोबर", "यूरिया", "ढैंचा", "कम्पोस्ट"], correct: 2 },
-                { question: "फसल कटाई के बाद अनाज को सुखाया क्यों जाता है?", options: ["वजन कम करने के लिए", "नमी हटाने के लिए", "कीड़ों को मारने के लिए", "रंग सुधारने के लिए"], correct: 1 }
+                { question: "'अति न कहो' पाठ के लेखक कौन हैं?", options: ["विद्यापति", "तुलसीदास", "सूरदास", "कबीरदास"], correct: 0 },
+                { question: "इस पाठ का मुख्य संदेश क्या है?", options: ["अति कभी न करो", "सत्य बोलो", "दान करो", "धर्म का पालन करो"], correct: 0 },
+                { question: "लेखक ने किस चीज़ की अति करने से मना किया है?", options: ["सब कुछ में", "केवल भोजन में", "केवल व्यवहार में", "केवल बोलने में"], correct: 0 },
+                { question: "यह पाठ किस शैली में लिखा गया है?", options: ["निबंध", "कहानी", "कविता", "नाटक"], correct: 0 },
+                { question: "लेखक के अनुसार अति का परिणाम क्या होता है?", options: ["हानि", "लाभ", "सुख", "यश"], correct: 0 }
+            ],
+            4: [
+                { question: "'मेरे संग की औरतें' पाठ की लेखिका कौन हैं?", options: ["मृदुला गर्ग", "महादेवी वर्मा", "शिवानी", "अमृता प्रीतम"], correct: 0 },
+                { question: "लेखिका ने किन औरतों का वर्णन किया है?", options: ["अपने संग रहने वाली", "दूर रहने वाली", "गाँव की", "शहर की"], correct: 0 },
+                { question: "इस पाठ में किस समस्या को उठाया गया है?", options: ["स्त्री विमर्श", "दहेज प्रथा", "बाल विवाह", "कन्या भ्रूण हत्या"], correct: 0 },
+                { question: "लेखिका ने किन मूल्यों पर बल दिया है?", options: ["स्वाभिमान", "धन", "सौंदर्य", "शिक्षा"], correct: 0 },
+                { question: "यह पाठ किस विधा में लिखा गया है?", options: ["संस्मरण", "कहानी", "निबंध", "कविता"], correct: 0 }
+            ],
+            5: [
+                { question: "तुलसीदास के पद किस भाषा में रचित हैं?", options: ["अवधी", "ब्रज", "खड़ी बोली", "संस्कृत"], correct: 0 },
+                { question: "इन पदों में किस भगवान का वर्णन है?", options: ["राम", "कृष्ण", "शिव", "विष्णु"], correct: 0 },
+                { question: "तुलसीदास किस काल के कवि थे?", options: ["भक्तिकाल", "रीतिकाल", "आधुनिक काल", "वैदिक काल"], correct: 0 },
+                { question: "तुलसीदास की प्रसिद्ध रचना क्या है?", options: ["रामचरितमानस", "सूरसागर", "मानस", "विनय पत्रिका"], correct: 0 },
+                { question: "इन पदों में भक्ति का कौन-सा भाव है?", options: ["सख्य भाव", "दास्य भाव", "वात्सल्य भाव", "शांत भाव"], correct: 0 }
+            ],
+            6: [
+                { question: "'ऊँची नीची दुकान' पाठ के लेखक कौन हैं?", options: ["हजारी प्रसाद द्विवेदी", "रामचंद्र शुक्ल", "जैनेन्द्र कुमार", "भीष्म साहनी"], correct: 0 },
+                { question: "इस पाठ में किसकी चर्चा है?", options: ["जाति व्यवस्था", "धन व्यवस्था", "शिक्षा व्यवस्था", "राजनीति"], correct: 0 },
+                { question: "लेखक ने 'ऊँची नीची' किसे कहा है?", options: ["दुकानों को", "जातियों को", "लोगों को", "विचारों को"], correct: 0 },
+                { question: "यह पाठ किस समस्या पर केंद्रित है?", options: ["सामाजिक भेदभाव", "आर्थिक असमानता", "शैक्षिक असमानता", "राजनीतिक भ्रष्टाचार"], correct: 0 },
+                { question: "लेखक का उद्देश्य क्या है?", options: ["समाज सुधार", "मनोरंजन", "ज्ञानवर्धन", "आलोचना"], correct: 0 }
             ]
         };
 
-        // Add default MCQ for other chapters
-        for (let i = 4; i <= 19; i++) {
+        // Add default MCQ for remaining chapters (7-15)
+        for (let i = 7; i <= 15; i++) {
             if (!chapterMCQs[i]) {
                 chapterMCQs[i] = [
-                    { question: `अध्याय ${i} के लिए नमूना प्रश्न?`, options: ["विकल्प 1", "विकल्प 2", "विकल्प 3", "विकल्प 4"], correct: 0 },
-                    { question: `दूसरा नमूना प्रश्न?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 1 },
-                    { question: `तीसरा नमूना प्रश्न?`, options: ["पहला", "दूसरा", "तीसरा", "चौथा"], correct: 2 }
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 1?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 2?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 1 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 3?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 2 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 4?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 0 },
+                    { question: `अध्याय ${i} के लिए नमूना प्रश्न 5?`, options: ["विकल्प A", "विकल्प B", "विकल्प C", "विकल्प D"], correct: 3 }
                 ];
             }
         }
@@ -1075,6 +1070,8 @@
                 const card = document.createElement('div');
                 card.className = 'chapter-card';
 
+                const typeIcon = ch.type === 'गद्य' ? '<i class="fas fa-book-open"></i>' : '<i class="fas fa-feather-alt"></i>';
+
                 card.innerHTML = `
                     <div class="chapter-header" style="background: linear-gradient(135deg, ${ch.color} 0%, #764ba2 100%);">
                         <div class="chapter-number">${ch.num}</div>
@@ -1082,14 +1079,14 @@
                     </div>
                     <div class="chapter-body">
                         <div class="chapter-meta">
-                            <span><i class="fas fa-book-open"></i> अध्याय ${ch.num}</span>
-                            <span><i class="fas fa-clock"></i> 20 min read</span>
+                            <span>${typeIcon} ${ch.type}</span>
+                            <span><i class="fas fa-clock"></i> 5 MCQs</span>
                         </div>
                         <div class="chapter-actions">
                             <button class="action-btn read-btn" onclick="openChapterPDF(${ch.num})">
                                 <i class="fas fa-book-open"></i> पढ़ें
                             </button>
-                            <button class="action-btn mcq-btn-action" onclick="openChapterMCQ(${ch.num})">
+                            <button class="action-btn mcq-btn-style" onclick="openChapterMCQ(${ch.num})">
                                 <i class="fas fa-question-circle"></i> MCQ
                             </button>
                         </div>
@@ -1100,7 +1097,7 @@
         }
 
         // ============================================
-        // FUNCTION: Open Chapter PDF (Same Page)
+        // FUNCTION: Open Chapter PDF
         // ============================================
         function openChapterPDF(num) {
             const chapterContent = document.getElementById('chapterContent');
@@ -1109,18 +1106,13 @@
             const pdfTitle = document.getElementById('chapterPDFTitle');
             const mcqContainer = document.getElementById('chapterMCQContainer');
             
-            // Hide all containers
             chapterContent.style.display = 'none';
             mcqContainer.style.display = 'none';
             pdfContainer.style.display = 'block';
             
-            // Set PDF title
-            pdfTitle.textContent = `🔬 अध्याय ${num} : ${chapters[num - 1].title} (PDF समाधान)`;
-            
-            // Set PDF source
+            pdfTitle.textContent = `📖 अध्याय ${num} : ${chapters[num - 1].title} (PDF समाधान)`;
             pdfViewer.src = chapterPDFLinks[num] || chapterPDFLinks[1];
             
-            // Scroll to content section
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1140,15 +1132,11 @@
             const mcqContainer = document.getElementById('chapterMCQContainer');
             const mcqViewer = document.getElementById('chapterMCQViewer');
             
-            // Hide other containers
             chapterContent.style.display = 'none';
             pdfContainer.style.display = 'none';
             mcqContainer.style.display = 'block';
             
-            // Load MCQ
             loadChapterMCQ(chapterNum, mcqViewer);
-            
-            // Scroll to content
             document.getElementById('chapterContentSection').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1182,7 +1170,7 @@
                         <div class="mcq-progress">प्रश्न ${currentMCQIndex + 1}/${mcqs.length}</div>
                     </div>
                     <div class="mcq-question">
-                        <h4>${q.question}</h4>
+                        <h4>${currentMCQIndex + 1}. ${q.question}</h4>
                         <div class="mcq-options">
                             ${optionsHtml}
                         </div>
@@ -1248,16 +1236,17 @@
                 resultDiv.innerHTML = `
                     <div style="background: #d4edda; color: #155724; padding: 20px; border-radius: 10px; text-align: center;">
                         <i class="fas fa-trophy" style="font-size: 48px; color: #ffd700; margin-bottom: 15px;"></i>
-                        <h3>बधाई हो!</h3>
+                        <h3>बधाई हो! 🎉</h3>
                         <p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p>
                     </div>
                 `;
             } else {
                 resultDiv.innerHTML = `
                     <div style="background: #f8d7da; color: #721c24; padding: 20px; border-radius: 10px; text-align: center;">
-                        <i class="fas fa-flask" style="font-size: 48px; color: #1e3c72; margin-bottom: 15px;"></i>
-                        <h3>पुनः प्रयास करें</h3>
+                        <i class="fas fa-book" style="font-size: 48px; margin-bottom: 15px;"></i>
+                        <h3>पुनः प्रयास करें 📖</h3>
                         <p>आपने ${score}/${mcqs.length} सही उत्तर दिए (${percentage}%)</p>
+                        <p>कृपया अध्याय दोबारा पढ़ें और महत्वपूर्ण बिंदु याद करें।</p>
                     </div>
                 `;
             }
@@ -1278,7 +1267,7 @@
         }
 
         // ============================================
-        // RESET CHAPTER VIEW
+        // UTILITY FUNCTIONS
         // ============================================
         function resetChapterView() {
             document.getElementById('chapterContent').style.display = 'block';
@@ -1287,9 +1276,6 @@
             document.getElementById('chapterPDFViewer').src = '';
         }
 
-        // ============================================
-        // UTILITY FUNCTIONS
-        // ============================================
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('show');
         }
